@@ -12,7 +12,7 @@ export default {
   },
   secondary: {
     main: "#FFA700",
-    light: "#fff",
+    light: "#C8EECD",
     dark: "#f9f9f9",
   },
   success: {

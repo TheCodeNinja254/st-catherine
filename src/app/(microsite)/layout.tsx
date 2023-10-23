@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ padding: 0, margin: 0 }}>
+      <body style={{ paddingBottom: 0, margin: 0 }}>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

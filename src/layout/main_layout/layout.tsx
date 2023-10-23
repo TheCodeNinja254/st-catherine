@@ -3,7 +3,7 @@
 import { Box, ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 import React, { Suspense, useState } from "react";
-import { Appbar, NavigationEvents, SuspenseLoader } from "@/components";
+import { Appbar, Footer, NavigationEvents, SuspenseLoader } from "@/components";
 import LayoutProps from "@/interfaces/LayoutProps";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -19,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Box>
           <Appbar handleDrawerToggle={handleDrawerToggle} showMenuIcon />
           <main>{children}</main>
+          <Footer />
         </Box>
       </Suspense>
     </ThemeProvider>
