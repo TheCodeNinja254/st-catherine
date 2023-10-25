@@ -19,6 +19,7 @@ const PopularLinks = () => {
     <Card
       variant="elevation"
       sx={{
+        boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.15)",
         borderRadius: 2,
         [theme.breakpoints.up("md")]: {
           marginLeft: theme.spacing(6),

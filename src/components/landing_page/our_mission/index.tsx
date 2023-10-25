@@ -1,0 +1,74 @@
+import Image from "next/image";
+import {
+  Box,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
+import Link from "next/link";
+import ourMissionOne from "@/assets/images/our_misison_1.png";
+import ourMissionTwo from "@/assets/images/ourMissionTwo.png";
+import ourMissionThree from "@/assets/images/ourMissionThree.png";
+import { SectionTitle } from "@/components";
+import { ArrowForward } from "@mui/icons-material";
+
+const OurMission = () => {
+  const theme = useTheme();
+
+  return (
+    <Box sx={{ paddingBottom: theme.spacing(8) }}>
+      <Container>
+        <Grid container spacing={5}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Stack direction="row" spacing={1}>
+              <Image src={ourMissionOne} alt="our mission" height={580} />
+              <Box>
+                <Stack direction="column" spacing={1}>
+                  <Image src={ourMissionTwo} alt="our mission" height={286} />
+                  <Image src={ourMissionThree} alt="our mission" height={286} />
+                </Stack>
+              </Box>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Box sx={{ marginTop: theme.spacing(10) }}>
+              <SectionTitle title="Our Mission" />
+            </Box>
+            <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>
+              We, the community of St. Catherine of Siena Parish- Kitisuru, in
+              the Archdiocese of Nairobi, guided by our patroness Saint
+              Catherine of Siena and amidst our multicultural diversity, are
+              called to celebrate God’s presence in our lives, by being
+              prayerful and proclaiming the good news of Jesus Christ in the
+              spirit of faith and service to all who seek shelter in our paris
+            </Typography>
+            <Link href="/">
+              <Stack direction="row">
+                <Typography
+                  sx={{
+                    marginTop: theme.spacing(6),
+                    color: theme.palette.primary.main,
+                  }}
+                >
+                  More
+                </Typography>
+                <ArrowForward
+                  sx={{
+                    marginTop: theme.spacing(6),
+                    marginLeft: theme.spacing(2),
+                    color: theme.palette.primary.main,
+                    fontSize: 20,
+                  }}
+                />
+              </Stack>
+            </Link>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default OurMission;

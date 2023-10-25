@@ -70,7 +70,7 @@ const Appbar: React.FC<AppbarProps> = ({
           container
           sx={{
             display: "flex",
-            justifyContent: "space-evenly",
+            justifyContent: isMobile ? "space-between" : "space-evenly",
             alignItems: "center",
           }}
         >
