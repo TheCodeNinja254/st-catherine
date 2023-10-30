@@ -3,8 +3,8 @@ import MainLayout from "@/layout/main_layout";
 import "@/theme/global.css";
 
 export const metadata = {
-  title: "St. Catherine Of Sienna - Parish",
-  description: "St. Catherine Of Sienna - Archdiocese of Nairobi, Kenya",
+  title: "St. Catherine Of Siena - Parish",
+  description: "St. Catherine Of Siena - Archdiocese of Nairobi, Kenya",
 };
 
 export default function RootLayout({

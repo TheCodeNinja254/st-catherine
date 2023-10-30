@@ -173,7 +173,7 @@ const Footer = () => {
           }}
         >
           Copyright @ {currentYear()} Designed by Brian Wabai.| St Catherine of
-          Sienna - Parish
+          Siena - Parish
         </Typography>
       </Container>
     </Box>

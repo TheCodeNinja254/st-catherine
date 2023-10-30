@@ -31,7 +31,7 @@ const PhotoGallery = () => {
         >
           <ImageList variant="masonry" cols={isMobile ? 2 : 5} gap={8}>
             {photoGalleryContent.map((item: PhotoGalleryContentType) => (
-              <ImageListItem key={item.img}>
+              <ImageListItem key={item.id}>
                 <img
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.img}?w=248&fit=crop&auto=format`}

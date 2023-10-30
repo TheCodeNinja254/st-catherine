@@ -51,12 +51,12 @@ const photoGalleryContent: PhotoGalleryContentType[] = [
     title: "six",
   },
   {
-    id: 9,
+    id: 10,
     img: "/images/gallery/five.png",
     title: "five",
   },
   {
-    id: 10,
+    id: 11,
     img: "/images/gallery/six.png",
     title: "six",
   },

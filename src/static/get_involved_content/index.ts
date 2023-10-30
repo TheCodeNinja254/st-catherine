@@ -11,7 +11,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
     id: 1,
     title: "Funding Appeal",
     content:
-      "St Catherine of Sienna Kitisuru Diocese of Nairobi stands on\n" +
+      "St Catherine of Siena Kitisuru Diocese of Nairobi stands on\n" +
       "                    a 5 acre parcel of land in Kitisuru. It is led by the Parish\n" +
       "                    Priest, Fr. Gideon Kizito. The Parish has a membership that\n" +
       "                    now...",

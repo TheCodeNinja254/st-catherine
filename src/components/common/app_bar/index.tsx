@@ -62,7 +62,7 @@ const Appbar: React.FC<AppbarProps> = ({
       elevation={0}
       sx={{
         backgroundColor:
-          scrollYPosition > 200 ? theme.palette.primary.main : "transparent",
+          scrollYPosition > 100 ? theme.palette.primary.main : "transparent",
       }}
     >
       <MyToolbar>
@@ -151,6 +151,10 @@ const Appbar: React.FC<AppbarProps> = ({
                       padding: "3px 30px",
                       lineHeight: "24px",
                       letterSpacing: "-2%",
+                      "&:hover": {
+                        backgroundColor: theme.palette.primary.main,
+                        color: theme.palette.common.white,
+                      },
                     }}
                   >
                     Register Now

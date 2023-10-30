@@ -2,7 +2,11 @@ import { Box } from "@mui/material";
 import React from "react";
 import HeroSectionProps from "@/interfaces/HeroSectionProps";
 
-const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({
+  children,
+  height,
+  imageHeight,
+}) => {
   const bg = `rgba(19, 20, 102, 0.5)`;
 
   return (
@@ -11,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
         {
           position: "block",
           backgroundPosition: "center",
-          height: "125vh",
+          height: height || "125vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         },
@@ -25,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             backgroundImage: "url(/images/hero_bacground.png)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            height: "90vh",
+            height: imageHeight || "90vh",
           },
           {
             "&:before": {
@@ -34,7 +38,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
               top: 0,
               left: 0,
               width: "100%",
-              height: "90vh",
+              height: imageHeight || "90vh",
               backgroundColor: bg,
               pointerEvents: "none",
             },
@@ -47,7 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
               position: "relative",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "125vh",
+              height: height || "125vh",
             },
           ]}
         >
