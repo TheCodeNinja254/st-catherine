@@ -11,7 +11,11 @@ import photoGalleryContent, {
   PhotoGalleryContentType,
 } from "@/static/photo_gallery_content";
 
-const PhotoGallery = () => {
+interface PhotoGalleryProps {
+  height?: number | string;
+}
+
+const PhotoGallery = ({ height }: PhotoGalleryProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -24,7 +28,7 @@ const PhotoGallery = () => {
         <Box
           sx={{
             width: "100%",
-            height: 600,
+            height: height || 600,
             overflowY: "scroll",
             marginTop: theme.spacing(4),
           }}

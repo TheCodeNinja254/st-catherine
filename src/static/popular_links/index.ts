@@ -44,12 +44,12 @@ const popularLinks: PopularLinkCategory[] = [
       {
         id: 2,
         title: "Church Choir",
-        url: "/",
+        url: "/about-us/church-choir",
       },
       {
         id: 3,
         title: "Youth",
-        url: "/",
+        url: "/about-us/our-youth",
       },
       {
         id: 4,
