@@ -46,7 +46,11 @@ const ChurchChoirContentSection = () => {
             </ListItem>
           ))}
         </List>
-        <SectionTitle title="Achievements" />
+        <Box
+          sx={{ marginTop: theme.spacing(3), marginBottom: theme.spacing(3) }}
+        >
+          <SectionTitle title="Achievements" />
+        </Box>
         <List dense>
           {achievements?.map((val: string) => (
             <ListItem key={val}>

@@ -137,11 +137,11 @@ const Appbar: React.FC<AppbarProps> = ({
                     disableElevation
                     sx={{
                       color:
-                        scrollYPosition > 200
+                        scrollYPosition > 100
                           ? theme.palette.primary.main
                           : theme.palette.common.white,
                       backgroundColor:
-                        scrollYPosition > 200
+                        scrollYPosition > 100
                           ? theme.palette.common.white
                           : theme.palette.primary.main,
                       fontFamily: "Futura",

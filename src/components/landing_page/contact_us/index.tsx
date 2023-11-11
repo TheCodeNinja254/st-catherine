@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { MyButton } from "@/styled_components";
 import ContactUsPhoneIcon from "@/assets/svgs/ContactUsPhoneIcon";
-import { CustomInputNoBorder, SectionTitle } from "@/components";
+import { CustomInputNoBorder, SectionTitle } from "@/components/common";
 import EmailUsIcon from "@/assets/svgs/EmailUsIcon";
 import ScheduleIcon from "@/assets/svgs/ScheduleIcon";
 
@@ -18,7 +18,7 @@ const ContactUs = () => {
   const theme = useTheme();
 
   return (
-    <Card sx={{ marginTop: theme.spacing(8), paddingTop: theme.spacing(8) }}>
+    <Card sx={{ paddingTop: theme.spacing(8) }}>
       <CardContent>
         <Container>
           <Grid container spacing={3}>
