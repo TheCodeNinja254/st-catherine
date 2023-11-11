@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <>
       <ContactUsIntro />
-      {/* <GoogleMapSection /> */}
       <ContactUS />
     </>
   );
