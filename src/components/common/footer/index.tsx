@@ -28,8 +28,8 @@ const Footer = () => {
       sx={{
         color: theme.palette.common.white,
         backgroundColor: theme.palette.primary.main,
-        paddingTop: theme.spacing(7),
-        paddingBottom: theme.spacing(4),
+        paddingTop: theme.spacing(4),
+        paddingBottom: theme.spacing(2),
         [theme.breakpoints.down("sm")]: {
           paddingTop: theme.spacing(4),
         },

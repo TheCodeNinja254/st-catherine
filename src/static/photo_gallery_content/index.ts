@@ -7,58 +7,143 @@ export type PhotoGalleryContentType = {
 const photoGalleryContent: PhotoGalleryContentType[] = [
   {
     id: 1,
-    img: "/images/gallery/one.png",
+    img: "/st-catherine/images/gallery/one.png",
     title: "one",
   },
   {
     id: 2,
-    img: "/images/gallery/two.png",
+    img: "/st-catherine/images/gallery/two.png",
     title: "two",
   },
   {
     id: 3,
-    img: "/images/gallery/three.png",
+    img: "/st-catherine/images/gallery/three.png",
     title: "three",
   },
   {
     id: 4,
-    img: "/images/gallery/four.png",
+    img: "/st-catherine/images/gallery/four.png",
     title: "four",
   },
   {
     id: 5,
-    img: "/images/gallery/five.png",
+    img: "/st-catherine/images/gallery/five.png",
     title: "five",
   },
   {
     id: 6,
-    img: "/images/gallery/six.png",
+    img: "/st-catherine/images/gallery/six.png",
     title: "six",
   },
   {
     id: 7,
-    img: "/images/gallery/four.png",
-    title: "four",
+    img: "/st-catherine/images/gallery/seven.jpg",
+    title: "seven",
   },
   {
     id: 8,
-    img: "/images/gallery/five.png",
-    title: "five",
+    img: "/st-catherine/images/gallery/eight.jpg",
+    title: "eight",
   },
   {
     id: 9,
-    img: "/images/gallery/six.png",
-    title: "six",
+    img: "/st-catherine/images/gallery/nine.jpg",
+    title: "nine",
   },
   {
     id: 10,
-    img: "/images/gallery/five.png",
-    title: "five",
+    img: "/st-catherine/images/gallery/ten.jpg",
+    title: "ten",
   },
   {
     id: 11,
-    img: "/images/gallery/six.png",
-    title: "six",
+    img: "/st-catherine/images/gallery/eleven.jpg",
+    title: "eleven",
+  },
+  {
+    id: 12,
+    img: "/st-catherine/images/gallery/12.jpg",
+    title: "12",
+  },
+  {
+    id: 13,
+    img: "/st-catherine/images/gallery/13.jpg",
+    title: "13",
+  },
+  {
+    id: 14,
+    img: "/st-catherine/images/gallery/14.jpg",
+    title: "14",
+  },
+  {
+    id: 15,
+    img: "/st-catherine/images/gallery/15.jpg",
+    title: "15",
+  },
+  {
+    id: 16,
+    img: "/st-catherine/images/gallery/16.jpg",
+    title: "16",
+  },
+  {
+    id: 17,
+    img: "/st-catherine/images/gallery/17.jpg",
+    title: "17",
+  },
+  {
+    id: 18,
+    img: "/st-catherine/images/gallery/18.jpg",
+    title: "18",
+  },
+  {
+    id: 19,
+    img: "/st-catherine/images/gallery/19.jpg",
+    title: "19",
+  },
+  {
+    id: 20,
+    img: "/st-catherine/images/gallery/20.jpg",
+    title: "20",
+  },
+  {
+    id: 21,
+    img: "/st-catherine/images/gallery/21.jpg",
+    title: "21",
+  },
+  {
+    id: 22,
+    img: "/st-catherine/images/gallery/22.jpg",
+    title: "22",
+  },
+  {
+    id: 23,
+    img: "/st-catherine/images/gallery/23.jpg",
+    title: "23",
+  },
+  {
+    id: 24,
+    img: "/st-catherine/images/gallery/24.jpg",
+    title: "24",
+  },
+  {
+    id: 25,
+    img: "/st-catherine/images/gallery/25.jpg",
+    title: "25",
+  },
+  {
+    id: 26,
+    img: "/st-catherine/images/gallery/26.jpg",
+    title: "26",
+  },
+  {
+    id: 27,
+    img: "/st-catherine/images/gallery/27.jpg",
+    title: "27",
+  },
+  {
+    id: 28,
+    img: "/st-catherine/images/gallery/28.jpg",
+    title: "28",
   },
 ];
 

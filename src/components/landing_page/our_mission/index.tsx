@@ -8,9 +8,9 @@ import {
   useTheme,
 } from "@mui/material";
 import Link from "next/link";
-import ourMissionOne from "@/assets/images/our_misison_1.png";
-import ourMissionTwo from "@/assets/images/ourMissionTwo.png";
-import ourMissionThree from "@/assets/images/ourMissionThree.png";
+import ourMissionOne from "@/assets/images/vicar.jpg";
+import ourMissionTwo from "@/assets/images/mission2.jpg";
+import ourMissionThree from "@/assets/images/mission3.jpg";
 import { SectionTitle } from "@/components";
 import { ArrowForward } from "@mui/icons-material";
 
@@ -23,11 +23,11 @@ const OurMission = () => {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Stack direction="row" spacing={1}>
-              <Image src={ourMissionOne} alt="our mission" height={580} />
+              <Image src={ourMissionOne} alt="our mission" height={510} />
               <Box>
                 <Stack direction="column" spacing={1}>
-                  <Image src={ourMissionTwo} alt="our mission" height={286} />
-                  <Image src={ourMissionThree} alt="our mission" height={286} />
+                  <Image src={ourMissionTwo} alt="our mission" height={250} />
+                  <Image src={ourMissionThree} alt="our mission" height={250} />
                 </Stack>
               </Box>
             </Stack>

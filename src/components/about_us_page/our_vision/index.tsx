@@ -9,7 +9,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Link from "next/link";
-import background from "@/assets/images/hero_background.png";
+import background from "@/assets/images/our_vision.jpg";
 import { SectionTitle } from "@/components";
 import { ArrowForward } from "@mui/icons-material";
 

@@ -16,7 +16,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "                    Priest, Fr. Gideon Kizito. The Parish has a membership that\n" +
       "                    now...",
     learnMoreLink: "/",
-    imageLink: "/images/getInvolvedOne.png",
+    imageLink: "/st-catherine/images/fundingAppeal.png",
   },
   {
     id: 2,
@@ -26,17 +26,17 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "                    Elizabeth and St. Teresa communities, offer important\n" +
       "                    avenues for genuine and supportive Church-community....",
     learnMoreLink: "/",
-    imageLink: "/images/getInvolvedThree.png",
+    imageLink: "/st-catherine/images/getInvolvedOne.png",
   },
   {
     id: 3,
-    title: "Pontifical Missionary Childhood",
+    title: "Ecclesial Groups",
     content:
       "The small Christian comThe PMC group was founded in 1843 by\n" +
       "                    Bishop Charles de Forbin Hanson in France. These are\n" +
       "                    children within the age bracket of 0-14 years.....",
     learnMoreLink: "/",
-    imageLink: "/images/getInvolvedTwo.png",
+    imageLink: "/st-catherine/images/getInvolvedThree.jpg",
   },
 ];
 

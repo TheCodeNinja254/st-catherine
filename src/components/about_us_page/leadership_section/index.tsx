@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import background from "@/assets/images/leadership.png";
+import background from "@/assets/images/ourValues2.jpg";
 import { SectionTitle } from "@/components";
 
 const LeadershipSection = () => {

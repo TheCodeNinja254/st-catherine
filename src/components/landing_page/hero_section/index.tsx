@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           {
             position: "block",
             backgroundPosition: "center",
-            backgroundImage: "url(/images/hero_bacground.png)",
+            backgroundImage: "url(/st-catherine/images/bg2.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             height: imageHeight || "90vh",

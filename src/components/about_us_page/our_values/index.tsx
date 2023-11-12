@@ -11,9 +11,9 @@ import {
   useTheme,
 } from "@mui/material";
 import Link from "next/link";
-import ourMissionOne from "@/assets/images/our_misison_1.png";
-import ourMissionTwo from "@/assets/images/ourMissionTwo.png";
-import ourMissionThree from "@/assets/images/ourMissionThree.png";
+import ourMissionOne from "@/assets/images/ourValues1.jpg";
+import ourMissionTwo from "@/assets/images/ourValues2.jpg";
+import ourMissionThree from "@/assets/images/ourValues3.jpg";
 import { SectionTitle } from "@/components";
 import { ArrowForward } from "@mui/icons-material";
 import ourValues from "@/static/our_values";
