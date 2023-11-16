@@ -3,9 +3,10 @@
 import OurMission from "@/components/landing_page/our_mission";
 import {
   AboutIntroContent,
+  DominicanOrder,
+  KeyFacts,
   LeadershipSection,
   OurValues,
-  OurVision,
 } from "@/components/about_us_page";
 import { Box, useTheme } from "@mui/material";
 
@@ -18,9 +19,10 @@ const Home = () => {
       <Box sx={{ marginTop: theme.spacing(5) }}>
         <OurMission />
       </Box>
-      <OurVision />
+      <KeyFacts />
       <OurValues />
       <LeadershipSection />
+      <DominicanOrder />
     </>
   );
 };

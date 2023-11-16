@@ -9,25 +9,23 @@ const AboutIntroContent = () => {
     <HeroSection height="50vh" imageHeight="50vh">
       <Container sx={{ paddingTop: "20vh" }}>
         <Typography
-          variant="h1"
-          textAlign="center"
-          sx={{ color: theme.palette.common.white }}
-        >
-          St. Catherine of
-          <br />
-          Siena -{" "}
-          <span style={{ color: theme.palette.secondary.main }}>Parish</span>
-        </Typography>
-        <Typography
           variant="h4"
-          textAlign="center"
+          textAlign="left"
           sx={{
-            color: theme.palette.common.white,
+            color: theme.palette.secondary.main,
             marginTop: theme.spacing(2),
             marginBottom: theme.spacing(3),
           }}
         >
-          About the Church
+          This week’s bible verse
+        </Typography>
+        <Typography
+          variant="h1"
+          textAlign="left"
+          sx={{ color: theme.palette.common.white }}
+        >
+          “Jesus looked at them and said, With man, its impossible But not with
+          God “
         </Typography>
       </Container>
     </HeroSection>

@@ -18,7 +18,7 @@ const popularLinks: PopularLinkCategory[] = [
       {
         id: 1,
         title: "This Week’s Bulletin",
-        url: "/",
+        url: "/announcements",
       },
       {
         id: 2,
