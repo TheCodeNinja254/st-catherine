@@ -12,7 +12,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { MyAppBar, MyButton, MyToolbar } from "@/styled_components";
+import { MyAppBar, MyToolbar } from "@/styled_components";
 import Link from "next/link";
 import Image from "next/image";
 import name_logo from "@/assets/svgs/name_logo.svg";
@@ -130,36 +130,36 @@ const Appbar: React.FC<AppbarProps> = ({
                   </Link>
                 ))}
 
-                <Link href="/register">
-                  <MyButton
-                    size="small"
-                    variant="contained"
-                    disableElevation
-                    sx={{
-                      color:
-                        scrollYPosition > 100
-                          ? theme.palette.primary.main
-                          : theme.palette.common.white,
-                      backgroundColor:
-                        scrollYPosition > 100
-                          ? theme.palette.common.white
-                          : theme.palette.primary.main,
-                      fontFamily: "Futura",
-                      px: theme.spacing(1.5),
-                      fontSize: "14px",
-                      marginLeft: theme.spacing(6),
-                      padding: "3px 30px",
-                      lineHeight: "24px",
-                      letterSpacing: "-2%",
-                      "&:hover": {
-                        backgroundColor: theme.palette.primary.main,
-                        color: theme.palette.common.white,
-                      },
-                    }}
-                  >
-                    Register Now
-                  </MyButton>
-                </Link>
+                {/* <Link href="/register"> */}
+                {/*  <MyButton */}
+                {/*    size="small" */}
+                {/*    variant="contained" */}
+                {/*    disableElevation */}
+                {/*    sx={{ */}
+                {/*      color: */}
+                {/*        scrollYPosition > 100 */}
+                {/*          ? theme.palette.primary.main */}
+                {/*          : theme.palette.common.white, */}
+                {/*      backgroundColor: */}
+                {/*        scrollYPosition > 100 */}
+                {/*          ? theme.palette.common.white */}
+                {/*          : theme.palette.primary.main, */}
+                {/*      fontFamily: "Futura", */}
+                {/*      px: theme.spacing(1.5), */}
+                {/*      fontSize: "14px", */}
+                {/*      marginLeft: theme.spacing(6), */}
+                {/*      padding: "3px 30px", */}
+                {/*      lineHeight: "24px", */}
+                {/*      letterSpacing: "-2%", */}
+                {/*      "&:hover": { */}
+                {/*        backgroundColor: theme.palette.primary.main, */}
+                {/*        color: theme.palette.common.white, */}
+                {/*      }, */}
+                {/*    }} */}
+                {/*  > */}
+                {/*    Register Now */}
+                {/*  </MyButton> */}
+                {/* </Link> */}
               </Box>
             </Grid>
           ) : (

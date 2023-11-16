@@ -18,7 +18,12 @@ const OurMission = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ paddingBottom: theme.spacing(8) }}>
+    <Box
+      sx={{
+        paddingBottom: theme.spacing(8),
+        backgroundColor: theme.palette.background.default,
+      }}
+    >
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>

@@ -18,7 +18,7 @@ const ContactUs = () => {
   const theme = useTheme();
 
   return (
-    <Card sx={{ paddingTop: theme.spacing(8) }}>
+    <Card sx={{ paddingTop: theme.spacing(8) }} elevation={0}>
       <CardContent>
         <Container>
           <Grid container spacing={3}>

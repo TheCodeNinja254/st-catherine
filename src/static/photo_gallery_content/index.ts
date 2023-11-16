@@ -6,36 +6,6 @@ export type PhotoGalleryContentType = {
 
 const photoGalleryContent: PhotoGalleryContentType[] = [
   {
-    id: 1,
-    img: "/st-catherine/images/gallery/one.png",
-    title: "one",
-  },
-  {
-    id: 2,
-    img: "/st-catherine/images/gallery/two.png",
-    title: "two",
-  },
-  {
-    id: 3,
-    img: "/st-catherine/images/gallery/three.png",
-    title: "three",
-  },
-  {
-    id: 4,
-    img: "/st-catherine/images/gallery/four.png",
-    title: "four",
-  },
-  {
-    id: 5,
-    img: "/st-catherine/images/gallery/five.png",
-    title: "five",
-  },
-  {
-    id: 6,
-    img: "/st-catherine/images/gallery/six.png",
-    title: "six",
-  },
-  {
     id: 7,
     img: "/st-catherine/images/gallery/seven.jpg",
     title: "seven",
@@ -49,11 +19,6 @@ const photoGalleryContent: PhotoGalleryContentType[] = [
     id: 9,
     img: "/st-catherine/images/gallery/nine.jpg",
     title: "nine",
-  },
-  {
-    id: 10,
-    img: "/st-catherine/images/gallery/ten.jpg",
-    title: "ten",
   },
   {
     id: 11,

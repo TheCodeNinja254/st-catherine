@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       <AboutIntroContent />
-      <Box sx={{ marginTop: theme.spacing(6) }}>
+      <Box sx={{ marginTop: theme.spacing(5) }}>
         <OurMission />
       </Box>
       <OurVision />

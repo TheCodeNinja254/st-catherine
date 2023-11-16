@@ -10,22 +10,20 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Link from "next/link";
-import ourMissionOne from "@/assets/images/ourValues1.jpg";
-import ourMissionTwo from "@/assets/images/ourValues2.jpg";
-import ourMissionThree from "@/assets/images/ourValues3.jpg";
-import { SectionTitle } from "@/components";
-import { ArrowForward } from "@mui/icons-material";
-import ourValues from "@/static/our_values";
+import mapImage from "@/assets/images/map.png";
 
-const OurValues = () => {
+import { SectionTitle } from "@/components/common";
+import Link from "next/link";
+import { ArrowForward } from "@mui/icons-material";
+
+const Directions = () => {
   const theme = useTheme();
 
   return (
     <Box
       sx={{
         paddingBottom: theme.spacing(8),
-        paddingTop: theme.spacing(8),
+        paddingTop: theme.spacing(5),
         backgroundColor: theme.palette.background.default,
       }}
     >
@@ -33,29 +31,20 @@ const OurValues = () => {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Stack direction="row" spacing={1}>
-              <Image src={ourMissionOne} alt="our mission" height={580} />
-              <Box>
-                <Stack direction="column" spacing={1}>
-                  <Image src={ourMissionTwo} alt="our mission" height={286} />
-                  <Image src={ourMissionThree} alt="our mission" height={286} />
-                </Stack>
-              </Box>
+              <Image src={mapImage} alt="tithes_offerings" width={510} />
             </Stack>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box sx={{ marginTop: theme.spacing(10) }}>
-              <SectionTitle title="Our Values" />
+              <SectionTitle title="Directions" />
             </Box>
-            <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>
-              Being a church in Nairobi endowed with a diverse range of
-              international cultures, we
-            </Typography>
             <List dense>
-              {ourValues?.map((val: string) => (
-                <ListItem key={val}>
-                  <ListItemText primary={val} />
-                </ListItem>
-              ))}
+              <ListItem>
+                <ListItemText primary="St Catherine of Siena Catholic Church" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="QQ8G+M34, Peponi Rd, Nairobi City" />
+              </ListItem>
             </List>
             <Link href="/">
               <Stack direction="row">
@@ -65,7 +54,7 @@ const OurValues = () => {
                     color: theme.palette.primary.main,
                   }}
                 >
-                  More
+                  Ope Maps
                 </Typography>
                 <ArrowForward
                   sx={{
@@ -84,4 +73,4 @@ const OurValues = () => {
   );
 };
 
-export default OurValues;
+export default Directions;

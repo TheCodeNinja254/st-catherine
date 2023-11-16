@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardActions,
@@ -20,14 +21,22 @@ const GetInvolved = () => {
   const theme = useTheme();
 
   return (
-    <Card elevation={0} sx={{ paddingTop: theme.spacing(4) }}>
+    <Box
+      sx={{
+        paddingTop: theme.spacing(4),
+        backgroundColor: theme.palette.background.default,
+      }}
+    >
       <CardContent>
         <Container>
           <SectionTitle title="Get Involved" />
           <Grid container spacing={2} sx={{ marginTop: theme.spacing(4) }}>
             {getInvolvedContent?.map((content: GetInvolvedContentType) => (
               <Grid item xs={12} sm={12} md={6} lg={4} xl={4} key={content.id}>
-                <Card elevation={0}>
+                <Card
+                  elevation={0}
+                  sx={{ backgroundColor: theme.palette.background.default }}
+                >
                   <CardMedia
                     sx={{ height: 290, borderRadius: 2 }}
                     image={content.imageLink}
@@ -59,7 +68,7 @@ const GetInvolved = () => {
           </Grid>
         </Container>
       </CardContent>
-    </Card>
+    </Box>
   );
 };
 
