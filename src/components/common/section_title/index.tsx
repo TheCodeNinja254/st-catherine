@@ -4,7 +4,7 @@ const SectionTitle = ({ title }: { title: string }) => {
   const theme = useTheme();
 
   return (
-    <Box>
+    <Box sx={{ marginLeft: theme.spacing(2) }}>
       <Typography variant="h1" sx={{ color: theme.palette.primary.main }}>
         {title}
       </Typography>

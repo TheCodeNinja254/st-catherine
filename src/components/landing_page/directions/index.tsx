@@ -54,7 +54,7 @@ const Directions = () => {
                     color: theme.palette.primary.main,
                   }}
                 >
-                  Ope Maps
+                  Open Maps
                 </Typography>
                 <ArrowForward
                   sx={{

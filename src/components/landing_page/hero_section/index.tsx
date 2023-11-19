@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import React from "react";
 import HeroSectionProps from "@/interfaces/HeroSectionProps";
 
@@ -8,6 +8,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageHeight,
 }) => {
   const bg = `rgba(19, 20, 102, 0.5)`;
+  const theme = useTheme();
 
   return (
     <Box
@@ -18,6 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           height: height || "125vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundColor: theme.palette.background.default,
         },
       ]}
     >
@@ -46,14 +48,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         ]}
       >
         <Box
-          sx={[
-            {
-              position: "relative",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              height: height || "125vh",
-            },
-          ]}
+          sx={{
+            position: "relative",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: height || "125vh",
+          }}
         >
           {children}
         </Box>
