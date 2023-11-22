@@ -28,7 +28,6 @@ const Appbar: React.FC<AppbarProps> = ({
   const [, setActive] = useState(1);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [scrollYPosition, setScrollYPosition] = useState(0);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const pathName = usePathname();
 

@@ -132,6 +132,7 @@ const AppBarMenuItem = ({
                       borderRadius: "20px",
                       color: theme.palette.primary.main,
                     },
+                    color: theme.palette.primary.main,
                     borderRadius: "20px",
                   }}
                 >
