@@ -9,8 +9,14 @@ import {
   useTheme,
 } from "@mui/material";
 import React, { useState } from "react";
-import BaptismContent from "@/components/sacraments_page/content_switch_section/content/baptism_content";
 import { useRouter } from "next/navigation";
+import EucharistContent from "@/components/sacraments_page/content_switch_section/content/eucharist_content";
+import ReconciliationContent from "@/components/sacraments_page/content_switch_section/content/reconciliation_content";
+import AnointingContent from "@/components/sacraments_page/content_switch_section/content/annointing_content";
+import MarriageContent from "@/components/sacraments_page/content_switch_section/content/marriage_content";
+import HolyOrdersContent from "@/components/sacraments_page/content_switch_section/content/holy_orders_content";
+import BaptismContent from "./content/baptism_content";
+import ConfirmationContent from "./content/confirmation_content";
 
 type SacramentCategoriesType = {
   id: number;
@@ -108,6 +114,12 @@ const ContentSwitchSection = (props: any) => {
         </Grid>
         <Grid item xs={8}>
           {activeTab === "baptism" && <BaptismContent />}
+          {activeTab === "confirmation" && <ConfirmationContent />}
+          {activeTab === "eucharist" && <EucharistContent />}
+          {activeTab === "reconciliation" && <ReconciliationContent />}
+          {activeTab === "anointing-of-the-sick" && <AnointingContent />}
+          {activeTab === "marriage" && <MarriageContent />}
+          {activeTab === "holy-orders" && <HolyOrdersContent />}
         </Grid>
       </Grid>
     </Container>

@@ -1,7 +1,7 @@
 import { ParapgrapSectionText, SectionTitle } from "@/components";
 import { Box, useTheme } from "@mui/material";
 import React from "react";
-import ListSectionText from "../../../common/list_section_text";
+import ListSectionText from "@/components/common/list_section_text";
 
 const BaptismContent = () => {
   const theme = useTheme();
