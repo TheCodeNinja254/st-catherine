@@ -2,7 +2,6 @@
 
 import {
   Box,
-  Button,
   Grid,
   IconButton,
   Theme,
@@ -13,11 +12,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { MyAppBar, MyToolbar } from "@/styled_components";
-import Link from "next/link";
 import Image from "next/image";
 import name_logo from "@/assets/svgs/name_logo.svg";
 import { LinkItem, linkItems } from "@/static/links";
 import AppbarProps from "@/interfaces/AppbarProps";
+import Link from "next/link";
+import AppBarMenuItem from "@/components/common/app_bar_menu_item";
 
 const Appbar: React.FC<AppbarProps> = ({
   showMenuIcon,
@@ -28,6 +28,7 @@ const Appbar: React.FC<AppbarProps> = ({
   const [, setActive] = useState(1);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [scrollYPosition, setScrollYPosition] = useState(0);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const pathName = usePathname();
 
@@ -51,10 +52,6 @@ const Appbar: React.FC<AppbarProps> = ({
       }
     });
   }, [router, pathName]);
-
-  const handleRouteChange = (linkId: number): void => {
-    setActive(linkId);
-  };
 
   return (
     <MyAppBar
@@ -96,70 +93,14 @@ const Appbar: React.FC<AppbarProps> = ({
                 }}
               >
                 {linkItems.map((item: LinkItem) => (
-                  <Link href={item.uri} key={item.id}>
-                    <Button
-                      onClick={() => handleRouteChange(item.id)}
-                      sx={{
-                        color:
-                          pathName === item.uri
-                            ? theme.palette.secondary.main
-                            : theme.palette.common.white,
-                        marginLeft: theme.spacing(2),
-                        fontSize: "14px",
-                        padding: "3px 30px",
-                        px: theme.spacing(1.5),
-                        fontFamily: "Futura",
-                        lineHeight: "24px",
-                        letterSpacing: "-2%",
-                        borderRadius: 20,
-                        "&: hover": {
-                          borderRadius: 20,
-                          backgroundColor:
-                            scrollYPosition > 200
-                              ? theme.palette.common.white
-                              : theme.palette.primary.main,
-                          color:
-                            scrollYPosition > 200
-                              ? theme.palette.primary.main
-                              : theme.palette.common.white,
-                        },
-                      }}
-                    >
-                      {item.name}
-                    </Button>
-                  </Link>
+                  <AppBarMenuItem
+                    key={item.id}
+                    item={item}
+                    scrollYPosition={scrollYPosition}
+                    setActive={setActive}
+                    pathName={pathName}
+                  />
                 ))}
-
-                {/* <Link href="/register"> */}
-                {/*  <MyButton */}
-                {/*    size="small" */}
-                {/*    variant="contained" */}
-                {/*    disableElevation */}
-                {/*    sx={{ */}
-                {/*      color: */}
-                {/*        scrollYPosition > 100 */}
-                {/*          ? theme.palette.primary.main */}
-                {/*          : theme.palette.common.white, */}
-                {/*      backgroundColor: */}
-                {/*        scrollYPosition > 100 */}
-                {/*          ? theme.palette.common.white */}
-                {/*          : theme.palette.primary.main, */}
-                {/*      fontFamily: "Futura", */}
-                {/*      px: theme.spacing(1.5), */}
-                {/*      fontSize: "14px", */}
-                {/*      marginLeft: theme.spacing(6), */}
-                {/*      padding: "3px 30px", */}
-                {/*      lineHeight: "24px", */}
-                {/*      letterSpacing: "-2%", */}
-                {/*      "&:hover": { */}
-                {/*        backgroundColor: theme.palette.primary.main, */}
-                {/*        color: theme.palette.common.white, */}
-                {/*      }, */}
-                {/*    }} */}
-                {/*  > */}
-                {/*    Register Now */}
-                {/*  </MyButton> */}
-                {/* </Link> */}
               </Box>
             </Grid>
           ) : (

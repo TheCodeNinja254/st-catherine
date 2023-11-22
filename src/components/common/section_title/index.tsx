@@ -5,7 +5,13 @@ const SectionTitle = ({ title }: { title: string }) => {
 
   return (
     <Box sx={{ marginLeft: theme.spacing(2) }}>
-      <Typography variant="h1" sx={{ color: theme.palette.primary.main }}>
+      <Typography
+        variant="h1"
+        sx={{
+          color: theme.palette.primary.main,
+          marginBottom: theme.spacing(1),
+        }}
+      >
         {title}
       </Typography>
       <Divider
