@@ -35,4 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 #To be removed
-/public/st-catherine/
+#/public/st-catherine/
