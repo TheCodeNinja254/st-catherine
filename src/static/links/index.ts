@@ -21,7 +21,7 @@ export const linkItems: LinkItem[] = [
     subMenus: [
       { id: 1, uri: "/", name: "New Parishoners" },
       { id: 2, uri: "/", name: "Directory Update" },
-      { id: 3, uri: "/", name: "From Fr. Tesha" },
+      { id: 3, uri: "/about-us/from-fathers-desk", name: "From Fr. Tesha" },
     ],
   },
   {

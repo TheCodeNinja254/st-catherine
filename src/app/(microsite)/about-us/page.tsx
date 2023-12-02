@@ -4,6 +4,7 @@ import OurMission from "@/components/landing_page/our_mission";
 import {
   AboutIntroContent,
   DominicanOrder,
+  Introduction,
   KeyFacts,
   LeadershipSection,
   OurValues,
@@ -16,6 +17,9 @@ const Home = () => {
   return (
     <>
       <AboutIntroContent />
+      <Box sx={{ marginTop: theme.spacing(0) }}>
+        <Introduction />
+      </Box>
       <Box sx={{ marginTop: theme.spacing(5) }}>
         <OurMission />
       </Box>
