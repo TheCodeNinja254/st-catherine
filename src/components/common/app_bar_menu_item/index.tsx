@@ -4,13 +4,13 @@ import { LinkItem, SubMenuLinkItem } from "@/static/links";
 import Link from "next/link";
 
 const AppBarMenuItem = ({
-  key,
+  uniqueId,
   item,
   scrollYPosition,
   setActive,
   pathName,
 }: {
-  key: number;
+  uniqueId: number;
   item: LinkItem;
   setActive: (linkId: number) => void;
   scrollYPosition: number;
@@ -35,7 +35,7 @@ const AppBarMenuItem = ({
   };
 
   return (
-    <React.Fragment key={key}>
+    <React.Fragment key={uniqueId}>
       {item?.subMenus && item?.subMenus?.length > 0 ? (
         <Button
           key={item.id}
@@ -122,7 +122,15 @@ const AppBarMenuItem = ({
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
         >
-          <Box p={1} width={230}>
+          <Box
+            p={1}
+            width={230}
+            sx={{
+              backgroundColor: theme.palette.primary.main,
+              margin: theme.spacing(-1),
+              elevation: 0,
+            }}
+          >
             {item.subMenus.map((subMenuItem: SubMenuLinkItem) => (
               <Link href={subMenuItem.uri} key={subMenuItem.id}>
                 <MenuItem
@@ -130,9 +138,9 @@ const AppBarMenuItem = ({
                   sx={{
                     "&:hover": {
                       borderRadius: "20px",
-                      color: theme.palette.primary.main,
+                      color: theme.palette.secondary.main,
                     },
-                    color: theme.palette.primary.main,
+                    color: theme.palette.common.white,
                     borderRadius: "20px",
                   }}
                 >

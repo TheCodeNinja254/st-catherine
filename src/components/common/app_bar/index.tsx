@@ -115,7 +115,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
       />
       <List>
         {linkItems.map((linkItem: LinkItem) => (
-          <>
+          <React.Fragment key={linkItem.id}>
             {linkItem?.subMenus && linkItem?.subMenus.length > 0 ? (
               <>
                 <ListItem disablePadding>
@@ -185,7 +185,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                 </ListItemButton>
               </ListItem>
             )}
-          </>
+          </React.Fragment>
         ))}
       </List>
     </Box>
@@ -262,13 +262,15 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                   }}
                 >
                   {linkItems.map((item: LinkItem) => (
-                    <AppBarMenuItem
-                      key={item.id}
-                      item={item}
-                      scrollYPosition={scrollYPosition}
-                      setActive={setActive}
-                      pathName={pathName}
-                    />
+                    <React.Fragment key={item.id}>
+                      <AppBarMenuItem
+                        uniqueId={item.id}
+                        item={item}
+                        scrollYPosition={scrollYPosition}
+                        setActive={setActive}
+                        pathName={pathName}
+                      />
+                    </React.Fragment>
                   ))}
                 </Box>
               </Grid>

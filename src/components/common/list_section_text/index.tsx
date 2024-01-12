@@ -9,8 +9,11 @@ const ListSectionText = ({ content }: { content: string[] }) => {
       {content?.map((contentText: string) => (
         <Stack direction="row">
           <CircleIcon
-            fontSize="small"
-            sx={{ marginRight: theme.spacing(2), marginTop: theme.spacing(1) }}
+            fontSize="inherit"
+            sx={{
+              marginRight: theme.spacing(2),
+              marginTop: theme.spacing(0.5),
+            }}
           />
           <Typography paragraph>{contentText}</Typography>
         </Stack>

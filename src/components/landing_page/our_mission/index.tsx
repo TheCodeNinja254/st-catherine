@@ -21,6 +21,7 @@ const OurMission = () => {
 
   return (
     <Box
+      id="mission"
       sx={{
         paddingBottom: theme.spacing(8),
         backgroundColor: theme.palette.background.default,

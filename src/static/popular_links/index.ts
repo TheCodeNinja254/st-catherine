@@ -21,14 +21,9 @@ const popularLinks: PopularLinkCategory[] = [
         url: "/announcements",
       },
       {
-        id: 2,
-        title: "Next Week’s Bulletin",
-        url: "/",
-      },
-      {
         id: 3,
-        title: "Special Thanks",
-        url: "/",
+        title: "Special Announcements",
+        url: "/special-announcements",
       },
     ],
   },

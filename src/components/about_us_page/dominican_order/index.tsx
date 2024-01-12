@@ -17,6 +17,7 @@ const DominicanOrder = () => {
 
   return (
     <Box
+      id="dominican-order"
       sx={{
         paddingBottom: theme.spacing(8),
         backgroundColor: theme.palette.background.default,

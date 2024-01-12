@@ -56,7 +56,7 @@ const GalleryViewModal = ({ open, setOpen, image }: GalleryViewModalProps) => {
             sx={{ color: theme.palette.common.white }}
             variant="caption"
           >
-            No description to show
+            {image!.img} No description to show
           </Typography>
         </Box>
         <Button

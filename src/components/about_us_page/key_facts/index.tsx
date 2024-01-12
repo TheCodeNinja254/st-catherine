@@ -18,7 +18,7 @@ const KeyFacts = () => {
   const theme = useTheme();
 
   return (
-    <Card sx={{ paddingBottom: theme.spacing(8) }} elevation={0}>
+    <Card sx={{ paddingBottom: theme.spacing(8) }} elevation={0} id="key-facts">
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>

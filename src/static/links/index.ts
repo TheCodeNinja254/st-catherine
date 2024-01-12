@@ -19,6 +19,7 @@ export const linkItems: LinkItem[] = [
     uri: "/",
     row: 1,
     subMenus: [
+      { id: 0, uri: "/", name: "Home" },
       { id: 1, uri: "/", name: "New Parishoners" },
       { id: 2, uri: "/", name: "Directory Update" },
       { id: 3, uri: "/about-us/from-fathers-desk", name: "From Fr. Tesha" },
@@ -30,10 +31,10 @@ export const linkItems: LinkItem[] = [
     uri: "/about-us",
     row: 1,
     subMenus: [
-      { id: 1, uri: "/", name: "Our Mission" },
-      { id: 2, uri: "/", name: "Key Facts" },
-      { id: 3, uri: "/", name: "Our Leadership" },
-      { id: 4, uri: "/", name: "Dominican Order" },
+      { id: 1, uri: "/about-us#mission", name: "Our Mission" },
+      { id: 2, uri: "/about-us#key-facts", name: "Key Facts" },
+      { id: 3, uri: "/about-us#leadership", name: "Our Leadership" },
+      { id: 4, uri: "/about-us#dominican-order", name: "Dominican Order" },
     ],
   },
   {
@@ -55,7 +56,7 @@ export const linkItems: LinkItem[] = [
       { id: 7, uri: "/sacraments/holy-orders", name: "Holy Orders" },
     ],
   },
-  { id: 3, name: "Ministries", uri: "/", row: 1 },
-  { id: 3, name: "Giving", uri: "/", row: 1 },
-  { id: 5, name: "Contact Us", uri: "/contact-us", row: 1 },
+  { id: 4, name: "Ministries", uri: "/", row: 1 },
+  { id: 5, name: "Giving", uri: "/", row: 1 },
+  { id: 6, name: "Contact Us", uri: "/contact-us", row: 1 },
 ];

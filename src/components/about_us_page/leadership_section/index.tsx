@@ -15,7 +15,11 @@ const LeadershipSection = () => {
   const theme = useTheme();
 
   return (
-    <Card elevation={0} sx={{ paddingBottom: theme.spacing(6) }}>
+    <Card
+      elevation={0}
+      sx={{ paddingBottom: theme.spacing(6) }}
+      id="leadership"
+    >
       <CardContent>
         <Container>
           <Box sx={{ marginTop: theme.spacing(10) }}>
