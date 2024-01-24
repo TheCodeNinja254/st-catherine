@@ -4,13 +4,19 @@ const ScheduleIcon = () => {
   return (
     <SvgIcon width={100} height={100} data-cy="logo" viewBox="0 0 65 65">
       <svg
-        width="56"
+        width="57"
         height="56"
-        viewBox="0 0 56 56"
+        viewBox="0 0 57 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect width="56" height="56" fill="url(#pattern0)" fillOpacity="0.75" />
+        <rect
+          x="0.5"
+          width="56"
+          height="56"
+          fill="url(#pattern0)"
+          fillOpacity="0.75"
+        />
         <defs>
           <pattern
             id="pattern0"

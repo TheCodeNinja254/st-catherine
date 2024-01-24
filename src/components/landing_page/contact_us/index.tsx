@@ -9,10 +9,11 @@ import {
   useTheme,
 } from "@mui/material";
 import { MyButton } from "@/styled_components";
-import ContactUsPhoneIcon from "@/assets/svgs/ContactUsPhoneIcon";
+import ContactUsPhoneIcon from "@/assets/svgs/phoneUs.png";
 import { CustomInputNoBorder, SectionTitle } from "@/components/common";
-import EmailUsIcon from "@/assets/svgs/EmailUsIcon";
-import ScheduleIcon from "@/assets/svgs/ScheduleIcon";
+import EmailUsIcon from "@/assets/svgs/emailUs.png";
+import ScheduleIcon from "@/assets/svgs/clock.png";
+import Image from "next/image";
 
 const ContactUs = () => {
   const theme = useTheme();
@@ -28,8 +29,16 @@ const ContactUs = () => {
               </Box>
               <Box sx={{ marginTop: theme.spacing(4) }}>
                 <Stack direction="row" spacing={2}>
-                  <Box display="flex" alignContent="center">
-                    <ContactUsPhoneIcon />
+                  <Box
+                    display="flex"
+                    alignContent="center"
+                    sx={{ paddingTop: 1 }}
+                  >
+                    <Image
+                      src={ContactUsPhoneIcon}
+                      alt="Our Schedule"
+                      height={35}
+                    />
                   </Box>
                   <Box>
                     <Typography sx={{ fontWeight: 700, fontSize: 24 }}>
@@ -45,8 +54,12 @@ const ContactUs = () => {
                   spacing={2}
                   sx={{ marginTop: theme.spacing(4) }}
                 >
-                  <Box display="flex" alignContent="center">
-                    <EmailUsIcon />
+                  <Box
+                    display="flex"
+                    alignContent="center"
+                    sx={{ paddingTop: 1 }}
+                  >
+                    <Image src={EmailUsIcon} alt="Our Schedule" height={35} />
                   </Box>
                   <Box>
                     <Typography sx={{ fontWeight: 700, fontSize: 24 }}>
@@ -62,8 +75,12 @@ const ContactUs = () => {
                   spacing={2}
                   sx={{ marginTop: theme.spacing(4) }}
                 >
-                  <Box display="flex" alignContent="center">
-                    <ScheduleIcon />
+                  <Box
+                    display="flex"
+                    alignContent="center"
+                    sx={{ paddingTop: 1 }}
+                  >
+                    <Image src={ScheduleIcon} alt="Our Schedule" height={35} />
                   </Box>
                   <Box>
                     <Typography sx={{ fontWeight: 700, fontSize: 24 }}>
