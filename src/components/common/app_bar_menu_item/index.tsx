@@ -138,7 +138,17 @@ const AppBarMenuItem = ({
                   sx={{
                     "&:hover": {
                       borderRadius: "20px",
-                      color: theme.palette.secondary.main,
+                      color: theme.palette.common.white,
+                      "&::after": {
+                        content: "''",
+                        position: "absolute",
+                        left: 15,
+                        right: 140,
+                        bottom: 0,
+                        height: "4px",
+                        backgroundColor: theme.palette.secondary.main,
+                        borderRadius: "20px",
+                      },
                     },
                     color: theme.palette.common.white,
                     borderRadius: "20px",

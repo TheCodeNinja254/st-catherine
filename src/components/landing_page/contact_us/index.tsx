@@ -45,7 +45,7 @@ const ContactUs = () => {
                       Give us a call.
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 200 }}>
-                      +254 712 345 678
+                      +254 701 699 104
                     </Typography>
                   </Box>
                 </Stack>
@@ -66,7 +66,7 @@ const ContactUs = () => {
                       Send us an email
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 200 }}>
-                      stcatherine@gmail.com
+                      admin@stcatherineofsiena.co.ke
                     </Typography>
                   </Box>
                 </Stack>

@@ -109,23 +109,25 @@ const Footer = () => {
             >
               Menu
             </Typography>
-            {linkItems.map((link) => (
-              <Link href={link.uri} key={link.id}>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: 200,
-                    marginTop: theme.spacing(1),
-                    color: theme.palette.common.white,
-                    "&:hover": {
-                      color: theme.palette.secondary.main,
-                    },
-                  }}
-                >
-                  {link.name}
-                </Typography>
-              </Link>
-            ))}
+            {linkItems
+              .filter((l) => l.id !== 3)
+              .map((link) => (
+                <Link href={link.uri} key={link.id}>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: 200,
+                      marginTop: theme.spacing(1),
+                      color: theme.palette.common.white,
+                      "&:hover": {
+                        color: theme.palette.secondary.main,
+                      },
+                    }}
+                  >
+                    {link.name}
+                  </Typography>
+                </Link>
+              ))}
           </Grid>
           {popular_links.map((linkCat: PopularLinkCategory) => (
             <Grid item xs={12} sm={6} md={4} lg={3} xl={3} key={linkCat.id}>
@@ -172,8 +174,7 @@ const Footer = () => {
             color: theme.palette.secondary.light,
           }}
         >
-          Copyright @ {currentYear()} Designed by Brian Wabai.| St Catherine of
-          Siena - Parish
+          Copyright @ {currentYear()} St Catherine of Siena - Parish
         </Typography>
       </Container>
     </Box>

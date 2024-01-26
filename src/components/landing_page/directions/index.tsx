@@ -15,17 +15,16 @@ import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import { SectionTitle } from "@/components/common";
 import Link from "next/link";
 import { ArrowForward } from "@mui/icons-material";
-import mapStyles from "@/static/mapStyles";
+import churchMapIcon from "@/assets/svgs/logo_icon.svg";
 import { useCallback, useRef } from "react";
 
-const mapIcon =
-  "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|46BD61";
+const mapIcon = churchMapIcon;
 
 const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY as string;
 
 const initialCenter = {
-  lat: -1.246373,
-  lng: 36.6819471,
+  lat: -1.2333579319246752,
+  lng: 36.765261899184175,
 };
 
 const initialZoom = 15;
@@ -33,8 +32,8 @@ const initialZoom = 15;
 const libraries = ["places"];
 
 const options = {
-  styles: mapStyles,
-  disableDefaultUI: true,
+  styles: [],
+  disableDefaultUI: false,
   zoomControl: true,
   gestureHandling: "greedy",
 };
@@ -93,9 +92,13 @@ const Directions = () => {
                 onLoad={onMapLoad}
               >
                 <Marker
-                  position={{ lat: -1.246373, lng: 36.6819471 }}
+                  position={{
+                    lat: -1.2333579319246752,
+                    lng: 36.765261899184175,
+                  }}
                   icon={{
                     url: mapIcon,
+                    scaledSize: new window.google.maps.Size(30, 30),
                   }}
                   label="St Catherine of Siena Catholic Church"
                 />
