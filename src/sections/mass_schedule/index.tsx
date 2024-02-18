@@ -11,13 +11,19 @@ import {
 import massSchedule from "@/assets/images/massSchedule.png";
 
 import { SectionTitle } from "@/components/common";
+import { MassScheduleCard } from "@/components";
 
 const MassSchedule = () => {
   const theme = useTheme();
 
+  const showImage: boolean = false;
+
   return (
     <Card
-      sx={{ paddingBottom: theme.spacing(8), paddingTop: theme.spacing(5) }}
+      sx={{
+        paddingBottom: theme.spacing(8),
+        paddingTop: theme.spacing(5),
+      }}
       elevation={0}
     >
       <Container>
@@ -37,9 +43,13 @@ const MassSchedule = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Stack direction="row" spacing={1}>
-              <Image src={massSchedule} alt="our mission" width={510} />
-            </Stack>
+            {showImage ? (
+              <Stack direction="row" spacing={1}>
+                <Image src={massSchedule} alt="our mission" width={510} />
+              </Stack>
+            ) : (
+              <MassScheduleCard />
+            )}
           </Grid>
         </Grid>
       </Container>
