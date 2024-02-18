@@ -11,9 +11,12 @@ import {
 import tithesOfferings from "@/assets/images/tithesOfferings.png";
 
 import { SectionTitle } from "@/components/common";
+import FundingCard from "@/components/funding_card";
 
 const TithesOfferings = () => {
   const theme = useTheme();
+
+  const showImage: boolean = false;
 
   return (
     <Card
@@ -23,9 +26,17 @@ const TithesOfferings = () => {
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Stack direction="row" spacing={1}>
-              <Image src={tithesOfferings} alt="tithes_offerings" width={510} />
-            </Stack>
+            {showImage ? (
+              <Stack direction="row" spacing={1}>
+                <Image
+                  src={tithesOfferings}
+                  alt="tithes_offerings"
+                  width={510}
+                />
+              </Stack>
+            ) : (
+              <FundingCard />
+            )}
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box sx={{ marginTop: theme.spacing(10) }}>
