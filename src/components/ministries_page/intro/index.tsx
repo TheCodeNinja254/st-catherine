@@ -22,7 +22,14 @@ const MinistriesIntro = () => {
         <Typography
           variant="body1"
           textAlign="left"
-          sx={{ color: theme.palette.common.white }}
+          sx={{
+            color: theme.palette.common.white,
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
         >
           &quot; Go, therefore, and make disciples of all nations, baptizing
           them in the name of the Father, and of the Son, and of the Holy

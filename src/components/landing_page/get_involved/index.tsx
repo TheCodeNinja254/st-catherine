@@ -45,7 +45,10 @@ const GetInvolved = () => {
                   <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                     <Card
                       elevation={0}
-                      sx={{ backgroundColor: theme.palette.background.default }}
+                      sx={{
+                        backgroundColor: theme.palette.common.white,
+                        borderRadius: 3,
+                      }}
                     >
                       <CardMedia
                         sx={{ height: 290, borderRadius: 2 }}
@@ -61,7 +64,17 @@ const GetInvolved = () => {
                         >
                           {content.title}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{
+                            display: "-webkit-box",
+                            WebkitLineClamp: 3,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                          }}
+                        >
                           {content.content}
                         </Typography>
                       </CardContent>
