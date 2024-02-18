@@ -8,12 +8,10 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import Link from "next/link";
 import ourMissionOne from "@/assets/images/vicar.jpg";
 import ourMissionTwo from "@/assets/images/mission2.jpg";
 import ourMissionThree from "@/assets/images/mission3.jpg";
 import { SectionTitle } from "@/components";
-import { ArrowForward } from "@mui/icons-material";
 
 const OurMission = () => {
   const theme = useTheme();
@@ -67,26 +65,26 @@ const OurMission = () => {
               prayerful and proclaiming the good news of Jesus Christ in the
               spirit of faith and service to all who seek shelter in our paris
             </Typography>
-            <Link href="/">
-              <Stack direction="row">
-                <Typography
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  More
-                </Typography>
-                <ArrowForward
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    marginLeft: theme.spacing(2),
-                    color: theme.palette.primary.main,
-                    fontSize: 20,
-                  }}
-                />
-              </Stack>
-            </Link>
+            {/* <Link href="/"> */}
+            {/*  <Stack direction="row"> */}
+            {/*    <Typography */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*      }} */}
+            {/*    > */}
+            {/*      More */}
+            {/*    </Typography> */}
+            {/*    <ArrowForward */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        marginLeft: theme.spacing(2), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*        fontSize: 20, */}
+            {/*      }} */}
+            {/*    /> */}
+            {/*  </Stack> */}
+            {/* </Link> */}
           </Grid>
         </Grid>
       </Container>

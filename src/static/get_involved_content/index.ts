@@ -26,7 +26,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "                    Elizabeth and St. Teresa communities, offer important\n" +
       "                    avenues for genuine and supportive Church-community....",
     learnMoreLink: "/scc",
-    imageLink: "/st-catherine/images/getInvolvedOne.png",
+    imageLink: "/images/gallery/20.jpg",
   },
   {
     id: 3,

@@ -1,12 +1,12 @@
 export type ContentWriteUpInterface = {
   id: number;
-  type: "title" | "paragraph" | "list";
+  type: "title" | "paragraph" | "list" | "subTitle" | "subTitle2";
   text: string | string[];
 };
 
-export type MinistriesContentInterface = {
+export type ContentInterface = {
   id: number;
-  ministryId: number;
+  relationId: number;
   content: ContentWriteUpInterface[];
 };
 
@@ -29,15 +29,15 @@ const ministries = [
 
 export default ministries;
 
-export const ministriesContent: MinistriesContentInterface[] = [
+export const ministriesContent: ContentInterface[] = [
   {
     id: 1,
-    ministryId: 2,
+    relationId: 2,
     content: [
       {
         id: 1,
         type: "title",
-        text: ["The Lectors and Cantors Ministry"],
+        text: "The Lectors and Cantors Ministry",
       },
       {
         id: 2,
@@ -52,12 +52,12 @@ export const ministriesContent: MinistriesContentInterface[] = [
   },
   {
     id: 2,
-    ministryId: 1,
+    relationId: 1,
     content: [
       {
         id: 1,
         type: "title",
-        text: ["Ministry Of Charity"],
+        text: "Ministry Of Charity",
       },
       {
         id: 2,

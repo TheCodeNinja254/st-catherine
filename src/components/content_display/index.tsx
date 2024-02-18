@@ -1,6 +1,7 @@
 import {
   ListSectionText,
   ParapgrapSectionText,
+  SectionSubTitle,
   SectionTitle,
 } from "@/components/common";
 import { Box, useTheme } from "@mui/material";
@@ -36,6 +37,14 @@ const ContentDisplay: React.FC<ContentDisplayProps> = ({ title, content }) => {
                   key={item.id}
                   content={item.text as string[]}
                 />
+              )}
+
+              {item.type === "subTitle" && (
+                <SectionSubTitle variant="h3" text={item.text as string} />
+              )}
+
+              {item.type === "subTitle2" && (
+                <SectionSubTitle variant="h4" text={item.text as string} />
               )}
             </React.Fragment>
           ))}

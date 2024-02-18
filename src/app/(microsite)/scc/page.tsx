@@ -1,12 +1,12 @@
 "use client";
 
 import SccPage from "@/shared/scc_page";
-import ministries from "@/static/ministries";
+import sccInfo from "@/static/scc";
 
 const Page = () => {
   return (
     <>
-      <SccPage defaultContentId={ministries[0].id} />
+      <SccPage defaultContentId={sccInfo[0].id} />
     </>
   );
 };

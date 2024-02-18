@@ -41,6 +41,13 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
             gutterBottom
             variant="h5"
             component="div"
+            sx={{
+              display: "-webkit-box",
+              WebkitLineClamp: 1,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
           >
             {title}
           </Typography>

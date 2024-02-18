@@ -48,8 +48,8 @@ const popularLinks: PopularLinkCategory[] = [
       },
       {
         id: 4,
-        title: "Parish Pastoral Council",
-        url: "/",
+        title: "Ministries",
+        url: "/ministries",
       },
     ],
   },
@@ -65,7 +65,7 @@ const popularLinks: PopularLinkCategory[] = [
       {
         id: 2,
         title: "Small Christian Communities (S.C.C)",
-        url: "/",
+        url: "/scc",
       },
       {
         id: 3,

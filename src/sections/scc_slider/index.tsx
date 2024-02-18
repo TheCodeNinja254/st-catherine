@@ -15,8 +15,8 @@ import {
   useTheme,
 } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
-import ministries from "@/static/ministries";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
+import sccInfo from "@/static/scc";
 
 const SccSlider: React.FC<SliderContainerSwitcherProps> = ({
   contentTypeID,
@@ -49,7 +49,7 @@ const SccSlider: React.FC<SliderContainerSwitcherProps> = ({
   return (
     <WrapperContainer variant="default" fullWidth>
       <Container>
-        <SectionTitle title="Small Christian Communities (SCC)" />
+        <SectionTitle title="Small Christian Communities (SCC) and more" />
         <Typography
           sx={{ marginTop: theme.spacing(4), marginBottom: theme.spacing(4) }}
         >
@@ -57,10 +57,14 @@ const SccSlider: React.FC<SliderContainerSwitcherProps> = ({
           your communities farewell.
         </Typography>
         <Box sx={{ marginTop: theme.spacing(4) }}>
-          <AppSwipeableCarousel showNavButtons loop slidesPerPage={slidesCount}>
-            {ministries.map((ministry) => (
+          <AppSwipeableCarousel
+            showNavButtons
+            loop={false}
+            slidesPerPage={slidesCount}
+          >
+            {sccInfo.map((content) => (
               <SwiperSlide
-                key={ministry.id}
+                key={content.id}
                 style={{
                   // height: "100%",
                   display: "flex",
@@ -71,14 +75,14 @@ const SccSlider: React.FC<SliderContainerSwitcherProps> = ({
                   <TopMediaActionableCard
                     variant="paper"
                     onClick={() =>
-                      handleContentChange(ministry.id, ministry.name)
+                      handleContentChange(content.id, content.name)
                     }
-                    description={ministry.description}
-                    id={ministry.id}
+                    description={content.description}
+                    id={content.id}
                     action="see more"
-                    image={ministry.imageURL}
-                    title={ministry.name}
-                    active={contentTypeID === ministry.id}
+                    image={content.imageURL}
+                    title={content.name}
+                    active={contentTypeID === content.id}
                   />
                 </Grid>
               </SwiperSlide>

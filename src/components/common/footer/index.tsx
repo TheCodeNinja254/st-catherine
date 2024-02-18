@@ -16,12 +16,22 @@ import popular_links, {
   PopularLink,
   PopularLinkCategory,
 } from "@/static/popular_links";
-import React from "react";
+import React, { useState } from "react";
 import { MyButton } from "@/styled_components";
 import currentYear from "@/utils/currentYear";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
   const theme = useTheme();
+  const router = useRouter();
+
+  const [recipientMail, setRecipientMail] = useState("");
+
+  const handleSubmit = () => {
+    router.push(
+      `mailto:info@st-catherine.co.ke.com?subject=SubscriptionToNewsletter&body=${recipientMail}`
+    );
+  };
 
   return (
     <Box
@@ -73,14 +83,20 @@ const Footer = () => {
                 <OutlinedInput
                   fullWidth
                   id="outlined-adornment-password"
-                  type="text"
+                  type="email"
+                  onChange={(e) => setRecipientMail(e.target.value)}
                   sx={{
                     borderRadius: 20,
                     borderColor: theme.palette.common.white,
                   }}
                   endAdornment={
                     <InputAdornment position="end">
-                      <MyButton variant="contained" disableElevation>
+                      <MyButton
+                        variant="contained"
+                        disabled={recipientMail === ""}
+                        disableElevation
+                        onClick={() => handleSubmit()}
+                      >
                         Subscribe
                       </MyButton>
                     </InputAdornment>

@@ -4,14 +4,11 @@ import {
   Card,
   Container,
   Grid,
-  Stack,
   Typography,
   useTheme,
 } from "@mui/material";
-import Link from "next/link";
 import background from "@/assets/images/our_vision.jpg";
 import { SectionTitle } from "@/components";
-import { ArrowForward } from "@mui/icons-material";
 
 const OurVision = () => {
   const theme = useTheme();
@@ -35,26 +32,26 @@ const OurVision = () => {
               nourishment in a peaceful atmosphere, inspiring all to the love of
               God’s Grace in a culture cordially centered in Christ.
             </Typography>
-            <Link href="/">
-              <Stack direction="row">
-                <Typography
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  More
-                </Typography>
-                <ArrowForward
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    marginLeft: theme.spacing(2),
-                    color: theme.palette.primary.main,
-                    fontSize: 20,
-                  }}
-                />
-              </Stack>
-            </Link>
+            {/* <Link href="/"> */}
+            {/*  <Stack direction="row"> */}
+            {/*    <Typography */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*      }} */}
+            {/*    > */}
+            {/*      More */}
+            {/*    </Typography> */}
+            {/*    <ArrowForward */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        marginLeft: theme.spacing(2), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*        fontSize: 20, */}
+            {/*      }} */}
+            {/*    /> */}
+            {/*  </Stack> */}
+            {/* </Link> */}
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box sx={{ paddingTop: theme.spacing(4) }}>

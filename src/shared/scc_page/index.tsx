@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MinistriesContent, SccSlider } from "@/sections";
+import { SccContent, SccSlider } from "@/sections";
 import { Box } from "@mui/material";
 import MinistriesPageProps from "@/interfaces/MinistriesPageProps";
 import MinistriesIntro from "@/components/ministries_page";
@@ -16,7 +16,7 @@ const SccPage: React.FC<MinistriesPageProps> = ({ defaultContentId }) => {
         contentTypeID={contentTypeID}
         setContentTypeID={setContentTypeID}
       />
-      <MinistriesContent contentTypeID={contentTypeID} />
+      <SccContent contentTypeID={contentTypeID} />
     </Box>
   );
 };

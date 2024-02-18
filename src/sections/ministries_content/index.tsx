@@ -11,7 +11,7 @@ const MinistriesContent: React.FC<
   const theme = useTheme();
 
   const renderedContent = ministriesContent.filter(
-    (min) => min.ministryId === contentTypeID
+    (min) => min.relationId === contentTypeID
   );
 
   return (

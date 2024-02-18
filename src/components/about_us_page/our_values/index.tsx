@@ -10,12 +10,10 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Link from "next/link";
 import ourMissionOne from "@/assets/images/ourValues1.jpg";
 import ourMissionTwo from "@/assets/images/ourValues2.jpg";
 import ourMissionThree from "@/assets/images/ourValues3.jpg";
 import { SectionTitle } from "@/components";
-import { ArrowForward } from "@mui/icons-material";
 import ourValues from "@/static/our_values";
 
 const OurValues = () => {
@@ -55,26 +53,26 @@ const OurValues = () => {
                 </ListItem>
               ))}
             </List>
-            <Link href="/">
-              <Stack direction="row">
-                <Typography
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  More
-                </Typography>
-                <ArrowForward
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    marginLeft: theme.spacing(2),
-                    color: theme.palette.primary.main,
-                    fontSize: 20,
-                  }}
-                />
-              </Stack>
-            </Link>
+            {/* <Link href="/"> */}
+            {/*  <Stack direction="row"> */}
+            {/*    <Typography */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*      }} */}
+            {/*    > */}
+            {/*      More */}
+            {/*    </Typography> */}
+            {/*    <ArrowForward */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        marginLeft: theme.spacing(2), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*        fontSize: 20, */}
+            {/*      }} */}
+            {/*    /> */}
+            {/*  </Stack> */}
+            {/* </Link> */}
           </Grid>
         </Grid>
       </Container>

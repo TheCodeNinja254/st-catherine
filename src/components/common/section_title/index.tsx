@@ -6,10 +6,14 @@ const SectionTitle = ({ title }: { title: string }) => {
   return (
     <Box sx={{ marginLeft: theme.spacing(2) }}>
       <Typography
-        variant="h1"
         sx={{
+          fontFamily: "Futura Std Bold",
           color: theme.palette.primary.main,
           marginBottom: theme.spacing(1),
+          fontSize: 35,
+          [theme.breakpoints.down("sm")]: {
+            fontSize: 22,
+          },
         }}
       >
         {title}
