@@ -4,7 +4,9 @@ const ParapgrapSectionText = ({ content }: { content: string[] }) => {
   return (
     <Box>
       {content?.map((contentText: string) => (
-        <Typography paragraph>{contentText}</Typography>
+        <Typography key={contentText} paragraph>
+          {contentText}
+        </Typography>
       ))}
     </Box>
   );

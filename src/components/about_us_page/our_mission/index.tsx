@@ -23,7 +23,7 @@ const OurMission = () => {
     <Box
       id="mission"
       sx={{
-        paddingBottom: theme.spacing(8),
+        // paddingBottom: theme.spacing(8),
         backgroundColor: theme.palette.background.default,
         [theme.breakpoints.down("sm")]: {
           marginTop: theme.spacing(55),

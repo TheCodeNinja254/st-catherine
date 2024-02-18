@@ -23,7 +23,7 @@ const MassSchedule = () => {
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Box sx={{ marginTop: theme.spacing(10) }}>
+            <Box sx={{ marginTop: theme.spacing(5) }}>
               <SectionTitle title="Mass Schedule" />
             </Box>
             <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>

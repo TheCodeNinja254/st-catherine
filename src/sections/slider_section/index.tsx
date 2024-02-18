@@ -5,7 +5,7 @@ import { OurMission, OurValues, OurVision } from "@/components/about_us_page";
 
 const SliderSection: React.FC = () => {
   return (
-    <AppSwipeableCarousel showNavButtons slidesPerPage={1} loop>
+    <AppSwipeableCarousel showNavButtons={false} slidesPerPage={1} loop>
       <SwiperSlide>
         <OurMission />
       </SwiperSlide>

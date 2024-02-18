@@ -241,9 +241,10 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
             }}
           >
             <Grid
+              item
               sx={{
                 display: "flex",
-                alignItems: "center",
+                justifyContent: "space-between",
                 [theme.breakpoints.between("sm", "md")]: {
                   marginBottom: theme.spacing(2),
                 },
@@ -254,11 +255,11 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
               </Link>
             </Grid>
             {!isMobile ? (
-              <Grid>
+              <Grid item>
                 <Box
                   sx={{
                     display: { xs: "none", sm: "block", marginRight: 0 },
-                    justifyContent: "space-evenly",
+                    justifyContent: "space-between",
                   }}
                 >
                   {linkItems.map((item: LinkItem) => (

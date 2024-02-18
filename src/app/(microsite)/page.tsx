@@ -9,7 +9,7 @@ import {
   TithesOfferings,
 } from "@/components";
 import IntroContent from "@/components/landing_page/intro_content";
-import SliderSection from "@/sections/slider_section";
+import { SliderSection } from "@/sections";
 
 const Home = () => {
   return (

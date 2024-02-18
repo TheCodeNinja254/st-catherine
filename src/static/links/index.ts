@@ -56,7 +56,7 @@ export const linkItems: LinkItem[] = [
       { id: 7, uri: "/sacraments/holy-orders", name: "Holy Orders" },
     ],
   },
-  { id: 4, name: "Ministries", uri: "/", row: 1 },
+  { id: 4, name: "Ministries", uri: "/ministries", row: 1 },
   { id: 5, name: "Giving", uri: "/", row: 1 },
   { id: 6, name: "Contact Us", uri: "/contact-us", row: 1 },
 ];

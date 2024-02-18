@@ -24,8 +24,6 @@ const OurValues = () => {
   return (
     <Box
       sx={{
-        paddingBottom: theme.spacing(8),
-        paddingTop: theme.spacing(8),
         backgroundColor: theme.palette.background.default,
       }}
     >

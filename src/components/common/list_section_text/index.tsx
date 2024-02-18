@@ -7,7 +7,7 @@ const ListSectionText = ({ content }: { content: string[] }) => {
   return (
     <Box>
       {content?.map((contentText: string) => (
-        <Stack direction="row">
+        <Stack direction="row" key={contentText}>
           <CircleIcon
             fontSize="inherit"
             sx={{

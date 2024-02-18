@@ -39,7 +39,7 @@ img {
 .swiper-common .swiper-wrapper {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    height: 515px;
+    /*height: 515px;*/
 }
 
 .swiper-about {

@@ -25,7 +25,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "The small Christian communities (SCC) such as St. Rose, St.\n" +
       "                    Elizabeth and St. Teresa communities, offer important\n" +
       "                    avenues for genuine and supportive Church-community....",
-    learnMoreLink: "/",
+    learnMoreLink: "/scc",
     imageLink: "/st-catherine/images/getInvolvedOne.png",
   },
   {
@@ -45,7 +45,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "The small Christian comThe PMC group was founded in 1843 by\n" +
       "                    Bishop Charles de Forbin Hanson in France. These are\n" +
       "                    children within the age bracket of 0-14 years.....",
-    learnMoreLink: "/",
+    learnMoreLink: "/ministries",
     imageLink: "/st-catherine/images/getInvolvedThree.jpg",
   },
 ];
