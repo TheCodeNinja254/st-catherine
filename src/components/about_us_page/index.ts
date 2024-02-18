@@ -8,3 +8,4 @@ export { default as KeyFacts } from "./key_facts";
 export { default as DominicanOrder } from "./dominican_order";
 export { default as Introduction } from "./introduction";
 export { default as FathersMessage } from "./fathers_message";
+export { default as OurMission } from "./our_mission";

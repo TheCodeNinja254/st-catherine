@@ -38,6 +38,16 @@ const getInvolvedContent: GetInvolvedContentType[] = [
     learnMoreLink: "/",
     imageLink: "/st-catherine/images/getInvolvedThree.jpg",
   },
+  {
+    id: 4,
+    title: "Ministries",
+    content:
+      "The small Christian comThe PMC group was founded in 1843 by\n" +
+      "                    Bishop Charles de Forbin Hanson in France. These are\n" +
+      "                    children within the age bracket of 0-14 years.....",
+    learnMoreLink: "/",
+    imageLink: "/st-catherine/images/getInvolvedThree.jpg",
+  },
 ];
 
 export default getInvolvedContent;

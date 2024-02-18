@@ -1,6 +1,5 @@
 "use client";
 
-import OurMission from "@/components/landing_page/our_mission";
 import {
   AboutIntroContent,
   DominicanOrder,
@@ -10,6 +9,7 @@ import {
   OurValues,
 } from "@/components/about_us_page";
 import { Box, useTheme } from "@mui/material";
+import OurMission from "../../../components/about_us_page/our_mission";
 
 const Home = () => {
   const theme = useTheme();

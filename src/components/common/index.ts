@@ -6,3 +6,4 @@ export { default as SectionTitle } from "./section_title";
 export { default as CustomInputNoBorder } from "./inputs";
 export { default as ParapgrapSectionText } from "./parapgraph_section";
 export { default as ListSectionText } from "./list_section_text";
+export { default as AppSwipeableCarousel } from "./app_swipeable_carousel";

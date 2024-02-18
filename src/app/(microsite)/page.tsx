@@ -1,6 +1,5 @@
 "use client";
 
-import OurMission from "@/components/landing_page/our_mission";
 import GetInvolved from "@/components/landing_page/get_involved";
 import PhotoGallery from "@/components/landing_page/photo_gallery";
 import {
@@ -9,13 +8,14 @@ import {
   MassSchedule,
   TithesOfferings,
 } from "@/components";
-import IntroContent from "../../components/landing_page/intro_content";
+import IntroContent from "@/components/landing_page/intro_content";
+import SliderSection from "@/sections/slider_section";
 
 const Home = () => {
   return (
     <>
       <IntroContent />
-      <OurMission />
+      <SliderSection />
       <MassSchedule />
       <GetInvolved />
       <TithesOfferings />

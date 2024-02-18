@@ -14,6 +14,8 @@ type GalleryViewModalProps = {
   image: PhotoGalleryContentType | undefined;
 };
 
+const placeholderBlurImage: string = "LAIz|-~VIvRM^v%0R:s:00R*t6og";
+
 const GalleryViewModal = ({ open, setOpen, image }: GalleryViewModalProps) => {
   const theme = useTheme();
 
@@ -39,6 +41,8 @@ const GalleryViewModal = ({ open, setOpen, image }: GalleryViewModalProps) => {
               alt={image!.title}
               objectFit="contain"
               fill
+              placeholder={`data:image/${placeholderBlurImage}`}
+              blurDataURL={placeholderBlurImage}
             />
           </Box>
         </CardContent>
