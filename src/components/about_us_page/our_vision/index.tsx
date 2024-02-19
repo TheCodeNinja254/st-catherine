@@ -19,13 +19,23 @@ const OurVision: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
     <Card
       sx={{
         backgroundColor: backgroundColor || theme.palette.common.white,
+        [theme.breakpoints.down("sm")]: {
+          marginTop: theme.spacing(19),
+        },
       }}
       elevation={0}
     >
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Box sx={{ marginTop: theme.spacing(10) }}>
+            <Box
+              sx={{
+                marginTop: theme.spacing(10),
+                [theme.breakpoints.down("sm")]: {
+                  marginTop: theme.spacing(0),
+                },
+              }}
+            >
               <SectionTitle title="Our Vision" />
             </Box>
             <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>
@@ -34,26 +44,6 @@ const OurVision: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
               nourishment in a peaceful atmosphere, inspiring all to the love of
               God’s Grace in a culture cordially centered in Christ.
             </Typography>
-            {/* <Link href="/"> */}
-            {/*  <Stack direction="row"> */}
-            {/*    <Typography */}
-            {/*      sx={{ */}
-            {/*        marginTop: theme.spacing(6), */}
-            {/*        color: theme.palette.primary.main, */}
-            {/*      }} */}
-            {/*    > */}
-            {/*      More */}
-            {/*    </Typography> */}
-            {/*    <ArrowForward */}
-            {/*      sx={{ */}
-            {/*        marginTop: theme.spacing(6), */}
-            {/*        marginLeft: theme.spacing(2), */}
-            {/*        color: theme.palette.primary.main, */}
-            {/*        fontSize: 20, */}
-            {/*      }} */}
-            {/*    /> */}
-            {/*  </Stack> */}
-            {/* </Link> */}
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box sx={{ paddingTop: theme.spacing(4) }}>

@@ -48,7 +48,7 @@ const Footer = () => {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <Typography variant="h4" sx={{ fontWeight: 700 }}>
+            <Typography variant="h4" sx={{ fontFamily: "Futura Std Bold" }}>
               Bulletin
             </Typography>
             <Divider
@@ -118,10 +118,13 @@ const Footer = () => {
       />
       <Container>
         <Grid container spacing={4}>
-          <Grid item xs={12} sm={6} md={4} lg={3} xl={3}>
+          <Grid item xs={6} sm={6} md={4} lg={3} xl={3}>
             <Typography
               variant="h5"
-              sx={{ fontWeight: 700, marginTop: theme.spacing(4) }}
+              sx={{
+                fontFamily: "Futura Std Bold",
+                marginTop: theme.spacing(4),
+              }}
             >
               Menu
             </Typography>
@@ -132,7 +135,7 @@ const Footer = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      fontWeight: 200,
+                      fontFamily: "Futura Light BT",
                       marginTop: theme.spacing(1),
                       color: theme.palette.common.white,
                       "&:hover": {
@@ -146,10 +149,13 @@ const Footer = () => {
               ))}
           </Grid>
           {popular_links.map((linkCat: PopularLinkCategory) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} xl={3} key={linkCat.id}>
+            <Grid item xs={6} sm={6} md={4} lg={3} xl={3} key={linkCat.id}>
               <Typography
                 variant="h5"
-                sx={{ fontWeight: 700, marginTop: theme.spacing(4) }}
+                sx={{
+                  fontFamily: "Futura Std Bold",
+                  marginTop: theme.spacing(4),
+                }}
               >
                 {linkCat.category}
               </Typography>
@@ -158,7 +164,7 @@ const Footer = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      fontWeight: 200,
+                      fontFamily: "Futura Light BT",
                       marginTop: theme.spacing(1),
                       color: theme.palette.common.white,
                       "&:hover": {

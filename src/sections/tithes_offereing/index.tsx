@@ -39,7 +39,14 @@ const TithesOfferings = () => {
             )}
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Box sx={{ marginTop: theme.spacing(10) }}>
+            <Box
+              sx={{
+                marginTop: theme.spacing(10),
+                [theme.breakpoints.down("sm")]: {
+                  marginTop: theme.spacing(1),
+                },
+              }}
+            >
               <SectionTitle title="Tithes & Offerings" />
             </Box>
             <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>

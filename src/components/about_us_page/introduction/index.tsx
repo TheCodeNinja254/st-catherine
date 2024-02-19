@@ -26,7 +26,7 @@ const Introduction = () => {
       sx={{
         paddingBottom: theme.spacing(8),
         [theme.breakpoints.down("sm")]: {
-          marginTop: theme.spacing(55),
+          marginTop: theme.spacing(0),
         },
       }}
       elevation={0}

@@ -147,7 +147,12 @@ const FundingCard: React.FC = () => {
                     (Enter one of the below)
                   </span>
                 </Typography>
-                <Stack direction="row" sx={{ marginTop: theme.spacing(2) }}>
+                <Stack
+                  spacing={2}
+                  direction={{ xs: "column", sm: "row" }}
+                  useFlexGap
+                  sx={{ marginTop: theme.spacing(2) }}
+                >
                   {mpesaAccountOptions.map((item) => (
                     <Chip
                       label={item}

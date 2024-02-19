@@ -25,7 +25,7 @@ const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
       sx={{
         backgroundColor: backgroundColor || theme.palette.background.default,
         [theme.breakpoints.down("sm")]: {
-          marginTop: theme.spacing(55),
+          marginTop: theme.spacing(19),
         },
       }}
     >
@@ -55,7 +55,14 @@ const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
             </Stack>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Box sx={{ marginTop: theme.spacing(10) }}>
+            <Box
+              sx={{
+                marginTop: theme.spacing(10),
+                [theme.breakpoints.down("sm")]: {
+                  marginTop: theme.spacing(3),
+                },
+              }}
+            >
               <SectionTitle title="Our Mission" />
             </Box>
             <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>
@@ -66,26 +73,6 @@ const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
               prayerful and proclaiming the good news of Jesus Christ in the
               spirit of faith and service to all who seek shelter in our paris
             </Typography>
-            {/* <Link href="/"> */}
-            {/*  <Stack direction="row"> */}
-            {/*    <Typography */}
-            {/*      sx={{ */}
-            {/*        marginTop: theme.spacing(6), */}
-            {/*        color: theme.palette.primary.main, */}
-            {/*      }} */}
-            {/*    > */}
-            {/*      More */}
-            {/*    </Typography> */}
-            {/*    <ArrowForward */}
-            {/*      sx={{ */}
-            {/*        marginTop: theme.spacing(6), */}
-            {/*        marginLeft: theme.spacing(2), */}
-            {/*        color: theme.palette.primary.main, */}
-            {/*        fontSize: 20, */}
-            {/*      }} */}
-            {/*    /> */}
-            {/*  </Stack> */}
-            {/* </Link> */}
           </Grid>
         </Grid>
       </Container>

@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import HeroSectionProps from "@/interfaces/HeroSectionProps";
 
@@ -10,16 +10,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   const bg = `rgba(19, 20, 102, 0.5)`;
   const theme = useTheme();
 
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const calculatedHeight = isMobile ? "125vh" : "105vh";
+
   return (
     <Box
       sx={[
         {
           position: "block",
           backgroundPosition: "center",
-          height: height || "125vh",
+          height: height || calculatedHeight,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: theme.palette.common.white,
         },
       ]}
     >

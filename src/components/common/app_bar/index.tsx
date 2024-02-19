@@ -28,7 +28,7 @@ import { LinkItem, linkItems, SubMenuLinkItem } from "@/static/links";
 import AppbarProps from "@/interfaces/AppbarProps";
 import Link from "next/link";
 import AppBarMenuItem from "@/components/common/app_bar_menu_item";
-import { Cancel, KeyboardArrowUp } from "@mui/icons-material";
+import { Cancel, KeyboardArrowUp, Notifications } from "@mui/icons-material";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -50,6 +50,10 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
     menuId: 0,
     openState: false,
   });
+
+  const handleOpenSubMenu = (_menuId: number) => {
+    setMobileSubMenuCollapse({ menuId: _menuId, openState: true });
+  };
 
   const { menuId, openState } = mobileSubMenuCollapse;
 
@@ -120,12 +124,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
               <>
                 <ListItem disablePadding>
                   <ListItemButton
-                    onClick={() =>
-                      setMobileSubMenuCollapse({
-                        menuId: linkItem.id,
-                        openState: !openState,
-                      })
-                    }
+                    onClick={() => handleOpenSubMenu(linkItem.id)}
                   >
                     <ListItemText
                       primary={
@@ -251,7 +250,11 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
               }}
             >
               <Link href="/">
-                <Image src={name_logo} alt="St. Catherine" height={25} />
+                <Image
+                  src={name_logo}
+                  alt="St. Catherine"
+                  height={isMobile ? 15 : 25}
+                />
               </Link>
             </Grid>
             {!isMobile ? (
@@ -273,16 +276,40 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                       />
                     </React.Fragment>
                   ))}
+                  <Link href="/announcements">
+                    <IconButton
+                      size="large"
+                      edge="end"
+                      color="inherit"
+                      aria-label="menu"
+                      sx={{
+                        marginRight: theme.spacing(1),
+                        color: theme.palette.common.white,
+                      }}
+                    >
+                      <Notifications />
+                    </IconButton>
+                  </Link>
                 </Box>
               </Grid>
             ) : (
               <Grid item sm={1} xs={1}>
                 {showMenuIcon && (
-                  <Box
-                    display="flex"
-                    justifyContent="right"
-                    alignItems="center"
-                  >
+                  <Box display="flex" justifyContent="right" alignItems="right">
+                    <Link href="/announcements">
+                      <IconButton
+                        size="large"
+                        edge="end"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{
+                          marginRight: theme.spacing(1),
+                          color: theme.palette.common.white,
+                        }}
+                      >
+                        <Notifications />
+                      </IconButton>
+                    </Link>
                     <IconButton
                       size="large"
                       edge="end"

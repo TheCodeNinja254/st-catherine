@@ -19,11 +19,7 @@ const AboutIntroContent = () => {
         >
           This week’s bible verse
         </Typography>
-        <Typography
-          variant="h1"
-          textAlign="left"
-          sx={{ color: theme.palette.common.white }}
-        >
+        <Typography textAlign="left" sx={{ color: theme.palette.common.white }}>
           “Jesus looked at them and said, With man, its impossible But not with
           God “
         </Typography>

@@ -44,14 +44,17 @@ const MassScheduleCard: React.FC = () => {
           </Typography>
         </Divider>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={1}>
           {massSchedule
             .filter((ms: MassScheduleInteface) => ms.day === "sunday")
             .map((ms) => (
-              <Grid item xs={6} key={ms.id}>
+              <Grid item xs={5} key={ms.id}>
                 <Typography
-                  variant="h4"
-                  sx={{ marginTop: theme.spacing(3), fontWeight: 700 }}
+                  variant="h5"
+                  sx={{
+                    marginTop: theme.spacing(3),
+                    fontFamily: "Futura Std Bold",
+                  }}
                 >
                   Sunday Masses
                 </Typography>
@@ -59,17 +62,20 @@ const MassScheduleCard: React.FC = () => {
                   {ms.services.map((s) => (
                     <Stack
                       key={s.id}
-                      spacing={3}
+                      spacing={1}
                       direction="row"
                       justifyContent="space-between"
                       sx={{
                         paddingRight: theme.spacing(4),
                       }}
                     >
-                      <Typography color={theme.palette.text.disabled}>
+                      <Typography
+                        variant="body2"
+                        color={theme.palette.text.disabled}
+                      >
                         {s.hour}
                       </Typography>
-                      <Typography>{s.serviceDesc}</Typography>
+                      <Typography variant="body2">{s.serviceDesc}</Typography>
                     </Stack>
                   ))}
                 </Box>
@@ -78,17 +84,20 @@ const MassScheduleCard: React.FC = () => {
 
           <Divider
             orientation="vertical"
-            sx={{ marginTop: theme.spacing(10) }}
+            sx={{ marginTop: theme.spacing(8) }}
             flexItem
           />
 
           {massSchedule
             .filter((ms: MassScheduleInteface) => ms.day === "weekday")
             .map((ms) => (
-              <Grid item xs={5} key={ms.id}>
+              <Grid item xs={6} key={ms.id}>
                 <Typography
-                  variant="h4"
-                  sx={{ marginTop: theme.spacing(3), fontWeight: 700 }}
+                  variant="h5"
+                  sx={{
+                    marginTop: theme.spacing(3),
+                    fontFamily: "Futura Std Bold",
+                  }}
                 >
                   Other Services
                 </Typography>
@@ -96,17 +105,22 @@ const MassScheduleCard: React.FC = () => {
                   {ms.services.map((s) => (
                     <Stack
                       key={s.id}
-                      spacing={3}
+                      spacing={1}
                       direction="row"
                       justifyContent="space-between"
                       sx={{
                         paddingRight: theme.spacing(0),
                       }}
                     >
-                      <Typography color={theme.palette.text.disabled}>
+                      <Typography
+                        variant="body2"
+                        color={theme.palette.text.disabled}
+                      >
                         {s.hour}
                       </Typography>
-                      <Typography>{s.serviceDesc}</Typography>
+                      <Typography variant="body2" align="right">
+                        {s.serviceDesc}
+                      </Typography>
                     </Stack>
                   ))}
                 </Box>
@@ -116,10 +130,16 @@ const MassScheduleCard: React.FC = () => {
           {massSchedule
             .filter((ms: MassScheduleInteface) => ms.day === "special")
             .map((ms) => (
-              <Grid item xs={5} key={ms.id}>
+              <Grid item xs={8} key={ms.id}>
                 <Typography
-                  variant="h4"
-                  sx={{ marginTop: theme.spacing(3), fontWeight: 700 }}
+                  variant="h5"
+                  sx={{
+                    marginTop: theme.spacing(3),
+                    fontFamily: "Futura Std Bold",
+                    [theme.breakpoints.down("sm")]: {
+                      marginTop: theme.spacing(1),
+                    },
+                  }}
                 >
                   Special Services
                 </Typography>

@@ -18,6 +18,32 @@ const AppBarMenuItem = ({
 }) => {
   const theme: Theme = useTheme();
 
+  const buttonStyling = {
+    color:
+      pathName === item.uri
+        ? theme.palette.secondary.main
+        : theme.palette.common.white,
+    marginLeft: theme.spacing(2),
+    fontSize: "14px",
+    padding: "3px 30px",
+    px: theme.spacing(1.5),
+    fontFamily: "Futura",
+    lineHeight: "24px",
+    letterSpacing: "-2%",
+    borderRadius: 20,
+    "&: hover": {
+      borderRadius: 20,
+      backgroundColor:
+        scrollYPosition > 200
+          ? theme.palette.common.white
+          : theme.palette.primary.main,
+      color:
+        scrollYPosition > 200
+          ? theme.palette.primary.main
+          : theme.palette.common.white,
+    },
+  };
+
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenUserMenu = (event: any) => {
@@ -40,64 +66,13 @@ const AppBarMenuItem = ({
         <Button
           key={item.id}
           onMouseEnter={(e) => handleRouteChange(e, item.id)}
-          sx={{
-            color:
-              pathName === item.uri
-                ? theme.palette.secondary.main
-                : theme.palette.common.white,
-            marginLeft: theme.spacing(2),
-            fontSize: "14px",
-            padding: "3px 30px",
-            px: theme.spacing(1.5),
-            fontFamily: "Futura",
-            lineHeight: "24px",
-            letterSpacing: "-2%",
-            borderRadius: 20,
-            "&: hover": {
-              borderRadius: 20,
-              backgroundColor:
-                scrollYPosition > 200
-                  ? theme.palette.common.white
-                  : theme.palette.primary.main,
-              color:
-                scrollYPosition > 200
-                  ? theme.palette.primary.main
-                  : theme.palette.common.white,
-            },
-          }}
+          sx={buttonStyling}
         >
           {item.name}
         </Button>
       ) : (
         <Link href={item.uri}>
-          <Button
-            key={item.id}
-            sx={{
-              color:
-                pathName === item.uri
-                  ? theme.palette.secondary.main
-                  : theme.palette.common.white,
-              marginLeft: theme.spacing(2),
-              fontSize: "14px",
-              padding: "3px 30px",
-              px: theme.spacing(1.5),
-              fontFamily: "Futura",
-              lineHeight: "24px",
-              letterSpacing: "-2%",
-              borderRadius: 20,
-              "&: hover": {
-                borderRadius: 20,
-                backgroundColor:
-                  scrollYPosition > 200
-                    ? theme.palette.common.white
-                    : theme.palette.primary.main,
-                color:
-                  scrollYPosition > 200
-                    ? theme.palette.primary.main
-                    : theme.palette.common.white,
-              },
-            }}
-          >
+          <Button key={item.id} sx={buttonStyling}>
             {item.name}
           </Button>
         </Link>
@@ -121,6 +96,8 @@ const AppBarMenuItem = ({
           }}
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
+          onClick={handleCloseUserMenu}
+          onBackdropClick={handleCloseUserMenu}
         >
           <Box
             p={1}

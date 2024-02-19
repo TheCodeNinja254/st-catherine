@@ -31,6 +31,11 @@ export const linkItems: LinkItem[] = [
     uri: "/about-us",
     row: 1,
     subMenus: [
+      {
+        id: 0,
+        name: "About St. Catherine",
+        uri: "/about-us",
+      },
       { id: 1, uri: "/about-us#mission", name: "Our Mission" },
       { id: 2, uri: "/about-us#key-facts", name: "Key Facts" },
       { id: 3, uri: "/about-us#leadership", name: "Our Leadership" },
@@ -58,5 +63,6 @@ export const linkItems: LinkItem[] = [
   },
   { id: 4, name: "Ministries", uri: "/ministries", row: 1 },
   { id: 5, name: "SCC", uri: "/scc", row: 1 },
-  { id: 6, name: "Contact Us", uri: "/contact-us", row: 1 },
+  { id: 6, name: "Gallery", uri: "/gallery", row: 1 },
+  { id: 7, name: "Contact Us", uri: "/contact-us", row: 1 },
 ];

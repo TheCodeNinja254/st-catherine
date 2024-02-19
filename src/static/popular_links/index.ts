@@ -17,13 +17,13 @@ const popularLinks: PopularLinkCategory[] = [
     links: [
       {
         id: 1,
-        title: "This Week’s Bulletin",
-        url: "/announcements",
+        title: "About the Church",
+        url: "/about-us",
       },
       {
         id: 3,
-        title: "Special Announcements",
-        url: "/special-announcements",
+        title: "This Week’s Bulletin",
+        url: "/announcements",
       },
     ],
   },

@@ -53,7 +53,7 @@ const PopularLinks = () => {
                   textTransform: "uppercase",
                   color: theme.palette.primary.main,
                   fontSize: 18,
-                  fontWeight: 700,
+                  fontFamily: "Futura Std Bold",
                 }}
               >
                 {linkCat.category}

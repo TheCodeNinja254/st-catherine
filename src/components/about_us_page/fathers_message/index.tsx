@@ -34,12 +34,15 @@ const FathersMessage = () => {
       sx={{
         paddingBottom: theme.spacing(8),
         [theme.breakpoints.down("sm")]: {
-          marginTop: theme.spacing(55),
+          marginTop: theme.spacing(0),
         },
       }}
       elevation={0}
     >
       <Container>
+        <Box sx={{ marginTop: theme.spacing(10) }}>
+          <SectionTitle title="From Fr. Tesha" />
+        </Box>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Stack
@@ -55,9 +58,6 @@ const FathersMessage = () => {
             </Stack>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Box sx={{ marginTop: theme.spacing(10) }}>
-              <SectionTitle title="From Fr. Tesha" />
-            </Box>
             <Box sx={{ marginTop: theme.spacing(3) }}>
               <ParapgrapSectionText content={introContent} />
             </Box>
