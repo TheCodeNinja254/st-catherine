@@ -9,14 +9,16 @@ import {
 } from "@mui/material";
 import background from "@/assets/images/our_vision.jpg";
 import { SectionTitle } from "@/components";
+import React from "react";
+import SliderComponentsProps from "@/interfaces/SliderComponentsProps";
 
-const OurVision = () => {
+const OurVision: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
   const theme = useTheme();
 
   return (
     <Card
       sx={{
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: backgroundColor || theme.palette.common.white,
       }}
       elevation={0}
     >

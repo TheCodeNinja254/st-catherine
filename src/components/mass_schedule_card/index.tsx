@@ -121,7 +121,7 @@ const MassScheduleCard: React.FC = () => {
                   variant="h4"
                   sx={{ marginTop: theme.spacing(3), fontWeight: 700 }}
                 >
-                  Other Services
+                  Special Services
                 </Typography>
                 <Box sx={{ marginTop: theme.spacing(2) }}>
                   {ms.services.map((s) => (

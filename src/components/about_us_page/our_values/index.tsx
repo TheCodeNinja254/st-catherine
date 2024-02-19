@@ -15,14 +15,16 @@ import ourMissionTwo from "@/assets/images/ourValues2.jpg";
 import ourMissionThree from "@/assets/images/ourValues3.jpg";
 import { SectionTitle } from "@/components";
 import ourValues from "@/static/our_values";
+import React from "react";
+import SliderComponentsProps from "@/interfaces/SliderComponentsProps";
 
-const OurValues = () => {
+const OurValues: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
   const theme = useTheme();
 
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: backgroundColor || theme.palette.background.default,
       }}
     >
       <Container>

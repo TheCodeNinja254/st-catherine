@@ -9,7 +9,6 @@ import {
   useTheme,
 } from "@mui/material";
 import massSchedule from "@/assets/images/massSchedule.png";
-
 import { SectionTitle } from "@/components/common";
 import { MassScheduleCard } from "@/components";
 

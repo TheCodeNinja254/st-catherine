@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 import {
   Box,
   Container,
@@ -12,8 +13,9 @@ import ourMissionOne from "@/assets/images/vicar.jpg";
 import ourMissionTwo from "@/assets/images/mission2.jpg";
 import ourMissionThree from "@/assets/images/mission3.jpg";
 import { SectionTitle } from "@/components";
+import SliderComponentsProps from "@/interfaces/SliderComponentsProps";
 
-const OurMission = () => {
+const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -21,8 +23,7 @@ const OurMission = () => {
     <Box
       id="mission"
       sx={{
-        // paddingBottom: theme.spacing(8),
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: backgroundColor || theme.palette.background.default,
         [theme.breakpoints.down("sm")]: {
           marginTop: theme.spacing(55),
         },
