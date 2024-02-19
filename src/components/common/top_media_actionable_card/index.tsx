@@ -29,15 +29,15 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
             ? theme.palette.background.paper
             : theme.palette.background.default,
         border: active
-          ? `2px solid ${theme.palette.primary.main}`
-          : `2px solid ${theme.palette.background[variant]}`,
+          ? `1px solid ${theme.palette.secondary.main}`
+          : `1px solid ${theme.palette.background[variant]}`,
       }}
     >
       <CardActionArea onClick={() => onClick(id)}>
         <CardMedia component="img" height="100" image={image} alt={title} />
         <CardContent>
           <Typography
-            color={active ? "primary" : ""}
+            color={active ? "secondary" : ""}
             gutterBottom
             variant="h5"
             component="div"
@@ -67,7 +67,7 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
           {action && (
             <Typography
               align="right"
-              color={active ? "primary" : ""}
+              color={active ? "secondary" : ""}
               sx={{ marginTop: theme.spacing(2) }}
             >
               ...{action}

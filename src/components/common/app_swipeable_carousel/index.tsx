@@ -48,6 +48,7 @@ const AppSwipeableCarousel: React.FC<AppSwipeableCarouselProps> = ({
         autoplay={{
           delay: 4000,
           disableOnInteraction: true,
+          pauseOnMouseEnter: true,
         }}
         grabCursor
       >
