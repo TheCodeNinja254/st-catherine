@@ -148,7 +148,7 @@ const FundingCard: React.FC = () => {
                   </span>
                 </Typography>
                 <Stack
-                  spacing={2}
+                  spacing={1}
                   direction={{ xs: "column", sm: "row" }}
                   useFlexGap
                   sx={{ marginTop: theme.spacing(2) }}
@@ -156,7 +156,7 @@ const FundingCard: React.FC = () => {
                   {mpesaAccountOptions.map((item) => (
                     <Chip
                       label={item}
-                      sx={{ marginRight: theme.spacing(0.5) }}
+                      // sx={{ marginRight: theme.spacing(0.5) }}
                     />
                   ))}
                 </Stack>
