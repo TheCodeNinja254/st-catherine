@@ -18,9 +18,9 @@ const AppBarMenuItem = ({
   setActive,
   pathName,
 }: {
-  uniqueId: string;
+  uniqueId: number;
   item: LinkItem;
-  setActive: (linkId: string) => void;
+  setActive: (linkId: number) => void;
   scrollYPosition: number;
   pathName: string;
 }) => {
@@ -62,7 +62,7 @@ const AppBarMenuItem = ({
     setAnchorElUser(null);
   };
 
-  const handleRouteChange = (e: any, linkId: string): void => {
+  const handleRouteChange = (e: any, linkId: number): void => {
     handleCloseUserMenu();
     handleOpenUserMenu(e);
     setActive(linkId);

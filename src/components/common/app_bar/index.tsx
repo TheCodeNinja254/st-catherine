@@ -17,7 +17,6 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { v4 as uuidv4 } from "uuid";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback, useEffect, useState } from "react";
@@ -36,7 +35,7 @@ type Anchor = "top" | "left" | "bottom" | "right";
 const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
   const theme: Theme = useTheme();
   const router = useRouter();
-  const [, setActive] = useState(uuidv4());
+  const [, setActive] = useState(1);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [scrollYPosition, setScrollYPosition] = useState(0);
 
@@ -48,11 +47,11 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
   });
 
   const [mobileSubMenuCollapse, setMobileSubMenuCollapse] = useState({
-    menuId: uuidv4(),
+    menuId: 0,
     openState: false,
   });
 
-  const handleOpenSubMenu = (_menuId: string) => {
+  const handleOpenSubMenu = (_menuId: number) => {
     setMobileSubMenuCollapse({ menuId: _menuId, openState: true });
   };
 
