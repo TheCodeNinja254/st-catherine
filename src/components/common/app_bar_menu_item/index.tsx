@@ -70,6 +70,7 @@ const AppBarMenuItem = ({
 
   return (
     <React.Fragment key={uniqueId}>
+      {/* @ts-ignore */}
       {item?.subMenus?.length || item?.cascadingMenu?.length > 0 ? (
         <Button
           key={item.id}
