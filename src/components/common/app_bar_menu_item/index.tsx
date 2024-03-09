@@ -18,9 +18,9 @@ const AppBarMenuItem = ({
   setActive,
   pathName,
 }: {
-  uniqueId: number;
+  uniqueId: string;
   item: LinkItem;
-  setActive: (linkId: number) => void;
+  setActive: (linkId: string) => void;
   scrollYPosition: number;
   pathName: string;
 }) => {
