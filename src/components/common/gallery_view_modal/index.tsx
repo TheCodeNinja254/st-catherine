@@ -42,7 +42,7 @@ const GalleryViewModal = ({ open, setOpen, image }: GalleryViewModalProps) => {
               objectFit="contain"
               fill
               placeholder={`data:image/${placeholderBlurImage}`}
-              blurDataURL={placeholderBlurImage}
+              blurDataURL={`data:image/${placeholderBlurImage}`}
             />
           </Box>
         </CardContent>
@@ -60,7 +60,7 @@ const GalleryViewModal = ({ open, setOpen, image }: GalleryViewModalProps) => {
             sx={{ color: theme.palette.common.white }}
             variant="caption"
           >
-            {image!.img} No description to show
+            No description to show
           </Typography>
         </Box>
         <Button
