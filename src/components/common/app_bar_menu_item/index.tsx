@@ -179,7 +179,7 @@ const AppBarMenuItem = ({
             }}
           >
             {item.cascadingMenu?.map((cascItem: CascadingMenuItem) => (
-              <Box sx={{ marginBottom: theme.spacing(2) }}>
+              <Box sx={{ marginBottom: theme.spacing(2) }} key={cascItem.id}>
                 <Typography
                   color="secondary"
                   sx={{ marginLeft: theme.spacing(2) }}

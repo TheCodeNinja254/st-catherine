@@ -45,6 +45,12 @@ export const linkItems: LinkItem[] = [
     ],
   },
   {
+    id: 2.1,
+    name: "St. Martin De Porres",
+    uri: "/st-martin-de-porres",
+    row: 1,
+  },
+  {
     id: 3,
     name: "Liturgy & Sacraments",
     uri: "/sacraments",
@@ -126,6 +132,10 @@ export const linkItems: LinkItem[] = [
           { id: 3, uri: "/", name: "The Lectors" },
           { id: 4, uri: "/", name: "The Ushers" },
           { id: 5, uri: "/", name: "The Altar Servers" },
+          { id: 6, uri: "/", name: "PMC" },
+          { id: 7, uri: "/", name: "YCA" },
+          { id: 8, uri: "/", name: "MYM" },
+          { id: 9, uri: "/about-us/our-youth", name: "Youth" },
         ],
       },
       {
