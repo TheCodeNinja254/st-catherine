@@ -62,31 +62,33 @@ const SccSlider: React.FC<SliderContainerSwitcherProps> = ({
             loop={false}
             slidesPerPage={slidesCount}
           >
-            {sccInfo.map((content) => (
-              <SwiperSlide
-                key={content.id}
-                style={{
-                  // height: "100%",
-                  display: "flex",
-                  alignItems: "stretch",
-                }}
-              >
-                <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
-                  <TopMediaActionableCard
-                    variant="paper"
-                    onClick={() =>
-                      handleContentChange(content.id, content.name)
-                    }
-                    description={content.description}
-                    id={content.id}
-                    action="see more"
-                    image={content.imageURL}
-                    title={content.name}
-                    active={contentTypeID === content.id}
-                  />
-                </Grid>
-              </SwiperSlide>
-            ))}
+            {sccInfo
+              .filter((sccContent) => sccContent.showOnSlider)
+              .map((content) => (
+                <SwiperSlide
+                  key={content.id}
+                  style={{
+                    // height: "100%",
+                    display: "flex",
+                    alignItems: "stretch",
+                  }}
+                >
+                  <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
+                    <TopMediaActionableCard
+                      variant="paper"
+                      onClick={() =>
+                        handleContentChange(content.id, content.name)
+                      }
+                      description={content.description}
+                      id={content.id}
+                      action="see more"
+                      image={content.imageURL}
+                      title={content.name}
+                      active={contentTypeID === content.id}
+                    />
+                  </Grid>
+                </SwiperSlide>
+              ))}
           </AppSwipeableCarousel>
         </Box>
       </Container>

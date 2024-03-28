@@ -45,9 +45,9 @@ export const linkItems: LinkItem[] = [
     ],
   },
   {
-    id: 2.1,
+    id: 6,
     name: "St. Martin De Porres",
-    uri: "/st-martin-de-porres",
+    uri: "/scc/1/st.-martin-de-porres-kibarange-catholic-church:-outstation",
     row: 1,
   },
   {
@@ -161,11 +161,6 @@ export const linkItems: LinkItem[] = [
         label: "Small Christian Communities",
         subMenus: [
           {
-            id: 1,
-            uri: "/scc/1/st.-martin-de-porres-kibarange-catholic-church:-outstation",
-            name: "St. Martin De Porres",
-          },
-          {
             id: 2,
             uri: "/scc/2/st.-clare",
             name: "St. Claire",
@@ -189,6 +184,11 @@ export const linkItems: LinkItem[] = [
             id: 7,
             uri: "/scc/7/st.-jude",
             name: "St. Jude",
+          },
+          {
+            id: 8,
+            uri: "/scc/8/st.-vincent-de-paul",
+            name: "St. Vincent de Paul",
           },
         ],
       },

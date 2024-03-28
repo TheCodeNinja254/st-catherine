@@ -18,23 +18,12 @@ const photoGalleryContent: PhotoGalleryContentType[] = [
     title: "eight",
     category: "service",
   },
-  // {
-  //   id: 11,
-  //   img: "/st-catherine/images/gallery/eleven.jpg",
-  //   title: "eleven",
-  // category: "general",
-  // },
   {
     id: 12,
     img: "/st-catherine/images/gallery/12.jpg",
     title: "12",
     category: "general",
   },
-  // {
-  //   id: 13,
-  //   img: "/st-catherine/images/gallery/13.jpg",
-  //   title: "13",
-  // },
   {
     id: 14,
     img: "/st-catherine/images/gallery/14.jpg",
@@ -53,11 +42,12 @@ const photoGalleryContent: PhotoGalleryContentType[] = [
     title: "16",
     category: "general",
   },
-  // {
-  //   id: 17,
-  //   img: "/st-catherine/images/gallery/17.jpg",
-  //   title: "17",
-  // },
+  {
+    id: 17,
+    img: "/st-catherine/images/gallery/father-thomas.png",
+    title: "Father Thomas, Assistant Parish Priest",
+    category: "general",
+  },
   {
     id: 18,
     img: "/st-catherine/images/gallery/18.jpg",
@@ -123,6 +113,12 @@ const photoGalleryContent: PhotoGalleryContentType[] = [
     img: "/st-catherine/images/gallery/28.jpg",
     title: "28",
     category: "leadership",
+  },
+  {
+    id: 29,
+    img: "/st-catherine/images/gallery/img_1.jpg",
+    title: "28",
+    category: "general",
   },
 ];
 

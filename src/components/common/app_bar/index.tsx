@@ -24,7 +24,12 @@ import { usePathname, useRouter } from "next/navigation";
 import { MyAppBar, MyToolbar } from "@/styled_components";
 import Image from "next/image";
 import name_logo from "@/assets/svgs/name_logo.svg";
-import { LinkItem, linkItems, SubMenuLinkItem } from "@/static/links";
+import {
+  CascadingMenuItem,
+  LinkItem,
+  linkItems,
+  SubMenuLinkItem,
+} from "@/static/links";
 import AppbarProps from "@/interfaces/AppbarProps";
 import Link from "next/link";
 import AppBarMenuItem from "@/components/common/app_bar_menu_item";
@@ -51,11 +56,15 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
     openState: false,
   });
 
-  const handleOpenSubMenu = (_menuId: number) => {
-    setMobileSubMenuCollapse({ menuId: _menuId, openState: true });
-  };
-
   const { menuId, openState } = mobileSubMenuCollapse;
+
+  const handleOpenSubMenu = (_menuId: number) => {
+    if (_menuId === menuId) {
+      setMobileSubMenuCollapse({ menuId: _menuId, openState: !openState });
+    } else {
+      setMobileSubMenuCollapse({ menuId: _menuId, openState: true });
+    }
+  };
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -83,7 +92,6 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
         backgroundColor: theme.palette.primary.main,
       }}
       role="presentation"
-      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Stack
@@ -120,7 +128,78 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
       <List>
         {linkItems.map((linkItem: LinkItem) => (
           <React.Fragment key={linkItem.id}>
-            {linkItem?.subMenus && linkItem?.subMenus.length > 0 ? (
+            {linkItem?.cascadingMenu && linkItem?.cascadingMenu?.length > 0 && (
+              <>
+                <ListItem disablePadding>
+                  <ListItemButton
+                    onClick={() => handleOpenSubMenu(linkItem.id)}
+                  >
+                    <ListItemText
+                      primary={
+                        <Stack direction="row" justifyContent="center">
+                          <Typography>{linkItem.name}</Typography>
+                          {menuId === linkItem.id && openState ? (
+                            <KeyboardArrowUp />
+                          ) : (
+                            <KeyboardArrowDownIcon />
+                          )}
+                        </Stack>
+                      }
+                      sx={{
+                        color: theme.palette.common.white,
+                        textAlign: "center",
+                      }}
+                      color={theme.palette.common.white}
+                    />
+                  </ListItemButton>
+                </ListItem>
+                <Collapse in={menuId === linkItem.id && openState}>
+                  <Divider />
+                  {linkItem.cascadingMenu.map((cascItem: CascadingMenuItem) => (
+                    <Box
+                      sx={{ marginBottom: theme.spacing(2) }}
+                      key={cascItem.id}
+                    >
+                      <Typography
+                        align="center"
+                        color="secondary"
+                        sx={{
+                          marginTop: theme.spacing(2),
+                          fontWeight: 700,
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        {cascItem.label}
+                      </Typography>
+                      <List>
+                        {cascItem.subMenus.map(
+                          (cascSubItem: SubMenuLinkItem) => (
+                            <ListItem disablePadding key={cascItem.id}>
+                              <ListItemButton
+                                onClick={() =>
+                                  handleRouteChange(cascSubItem.uri, "top")
+                                }
+                              >
+                                <ListItemText
+                                  primary={cascSubItem.name}
+                                  sx={{
+                                    color: theme.palette.common.white,
+                                    textAlign: "center",
+                                  }}
+                                  color={theme.palette.common.white}
+                                />
+                              </ListItemButton>
+                            </ListItem>
+                          )
+                        )}
+                      </List>
+                    </Box>
+                  ))}
+                  <Divider />
+                </Collapse>
+              </>
+            )}
+            {linkItem?.subMenus && linkItem?.subMenus.length > 0 && (
               <>
                 <ListItem disablePadding>
                   <ListItemButton
@@ -168,21 +247,24 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                   <Divider />
                 </Collapse>
               </>
-            ) : (
-              <ListItem key={linkItem.id} disablePadding>
-                <ListItemButton
-                  onClick={() => handleRouteChange(linkItem.uri, "top")}
-                >
-                  <ListItemText
-                    primary={linkItem.name}
-                    sx={{
-                      color: theme.palette.common.white,
-                      textAlign: "center",
-                    }}
-                    color={theme.palette.common.white}
-                  />
-                </ListItemButton>
-              </ListItem>
+            )}
+            {!linkItem?.subMenus && !linkItem?.cascadingMenu && (
+              <List>
+                <ListItem key={linkItem.id} disablePadding>
+                  <ListItemButton
+                    onClick={() => handleRouteChange(linkItem.uri, "top")}
+                  >
+                    <ListItemText
+                      primary={linkItem.name}
+                      sx={{
+                        color: theme.palette.common.white,
+                        textAlign: "center",
+                      }}
+                      color={theme.palette.common.white}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </List>
             )}
           </React.Fragment>
         ))}

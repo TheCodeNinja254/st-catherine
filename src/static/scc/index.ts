@@ -3,6 +3,7 @@ import { ContentInterface } from "@/static/ministries";
 const sccInfo = [
   {
     id: 1,
+    showOnSlider: false,
     name: "St. Martin De Porres Kibarange Catholic Church: Outstation",
     imageURL: "/images/getInvolvedThree.jpg",
     description:
@@ -10,20 +11,23 @@ const sccInfo = [
   },
   {
     id: 2,
+    showOnSlider: true,
     name: "St. Clare",
-    imageURL: "/images/getInvolvedThree.jpg",
+    imageURL: "/images/scc/st-clare.png",
     description:
       "Inspired by the teachings of St. Francis of Assisi, St Clare of Assisi born in July 16, 1194, Assisi, Italy and died August 11, 1253",
   },
   {
     id: 3,
+    showOnSlider: true,
     name: "St. Elizabeth",
-    imageURL: "/images/getInvolvedThree.jpg",
+    imageURL: "/images/scc/st-elizabeth.png",
     description:
       "St. Elizabeth Small Christian Community (SCC) is named after its Patron saint is St. Elizabeth, the Mother of John the Baptist",
   },
   {
     id: 4,
+    showOnSlider: false,
     name: "Development Committee",
     imageURL: "/images/getInvolvedThree.jpg",
     description:
@@ -31,24 +35,36 @@ const sccInfo = [
   },
   {
     id: 5,
+    showOnSlider: true,
     name: "St. Rose",
-    imageURL: "/images/getInvolvedThree.jpg",
+    imageURL: "/images/scc/st-rose.png",
     description:
       "St. Rose Small Christian Community was started in the year 2000. It witnessed the birth of St. Catherine of Siena Parish in November 2002.",
   },
   {
     id: 6,
+    showOnSlider: true,
     name: "St. Teresa",
-    imageURL: "/images/getInvolvedThree.jpg",
+    imageURL: "/images/scc/st-teresa.png",
     description:
       "St. Teresa S.C.C. is named after our patron saint; St. Teresa of Avila. St. Teresa",
   },
   {
     id: 7,
+    showOnSlider: true,
     name: "St. Jude",
-    imageURL: "/images/getInvolvedThree.jpg",
+    imageURL: "/images/scc/st-jude.png",
     description:
       "St. Jude S.C.C. is named after our patron saint; St. Jude Thaddeus. St. Jude is the Patron Saint of Hope and impossible causes and one of Jesus' original twelve Apostles.",
+  },
+  {
+    id: 8,
+    showOnSlider: true,
+    name: "St. Vincent de Paul",
+    imageURL: "/images/scc/st-vincent.png",
+    description:
+      "St Vincent de Paul SCC was formed in the year 2014 by Catholics living along Lower Kabete Road and\n" +
+      "initially comprised 6 families.",
   },
 ];
 
@@ -300,6 +316,44 @@ export const sccContent: ContentInterface[] = [
           "St. Jude S.C.C. is named after our patron saint; St. Jude Thaddeus. St. Jude is the Patron Saint of Hope and impossible causes and one of Jesus' original twelve Apostles.",
           "St. Jude Jumuiya covers the Gathiga - locality. St. Jude consists of approximately 16 families. We hold our Jumuiya Prayer meetings every 3rd Sunday of the month after the second Mass, outside Makuti church within the church’s’ compound.",
           "For more information please feel free to contact the parish office. Thank you and God bless",
+        ],
+      },
+    ],
+  },
+  {
+    id: 8,
+    relationId: 8,
+    content: [
+      {
+        id: 1,
+        type: "title",
+        text: "St. Vincent de Paul",
+      },
+      {
+        id: 2,
+        type: "paragraph",
+        text: [
+          "St Vincent de Paul SCC was formed in the year 2014 by Catholics living along Lower Kabete Road and initially comprised 6 families.",
+          'St. Vincent de Paul (24 April 1581-27 September 1660) was a French Roman Catholic priest who dedicated himself to serving the poor. He was canonized in 1737 and is renowned for his compassion, humility and generosity and is known as the "Great Apostle of Charity". his feast day is celebrated on 27th September; the day of his death.',
+          "The SCC was commissioned by Fr. Gideon Muchera in 2014.",
+          'Our vision: "To grow spiritually and put into practice the word of God by our actions James 2:20 - It is by my deeds that I will show you my faith"',
+        ],
+      },
+      {
+        id: 3,
+        type: "subTitle",
+        text: "SCC activities",
+      },
+      {
+        id: 4,
+        type: "list",
+        text: [
+          "Meetings: Hold monthly meetings for prayers including mass whenever possible and discussing the topic of the month. Meetings to be held on the third Thursday of every Month.",
+          "Mass: Animation of mass as per schedules of St. Catherine of Siena Parish.",
+          "Contributions: Make monthly and annual financial contributions towards the Church project as allocated by the Fund raising committee.",
+          "Charity: Make contributions towards charitable causes within and outside St. Catherine of Siena Parish.",
+          "Church functions: Assist in organizing and participate in church functions.",
+          "Report: Give quarterly reports to PPC.",
         ],
       },
     ],

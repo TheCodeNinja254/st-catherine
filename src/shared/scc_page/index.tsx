@@ -12,10 +12,12 @@ const SccPage: React.FC<MinistriesPageProps> = ({ defaultContentId }) => {
   return (
     <Box>
       <MinistriesIntro />
-      <SccSlider
-        contentTypeID={contentTypeID}
-        setContentTypeID={setContentTypeID}
-      />
+      {contentTypeID !== 1 && contentTypeID !== 4 && (
+        <SccSlider
+          contentTypeID={contentTypeID}
+          setContentTypeID={setContentTypeID}
+        />
+      )}
       <SccContent contentTypeID={contentTypeID} />
     </Box>
   );
