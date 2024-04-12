@@ -1,9 +1,9 @@
 import { Box, Container, Typography, useTheme } from "@mui/material";
 import { HeroSection, PopularLinks } from "@/components";
-import logo_icon from "@/assets/svgs/logo_icon.svg";
 import Image from "next/image";
 import React from "react";
 import { MyButton } from "@/styled_components";
+import logo_icon from "@/assets/images/st-catherine.png";
 
 const IntroContent = () => {
   const theme = useTheme();

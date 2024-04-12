@@ -47,7 +47,7 @@ export const linkItems: LinkItem[] = [
   {
     id: 6,
     name: "St. Martin De Porres",
-    uri: "/scc/1/st.-martin-de-porres-kibarange-catholic-church:-outstation",
+    uri: "/scc/1/st.-martin-de-porres-kibagare-catholic-church:-outstation",
     row: 1,
   },
   {
@@ -128,7 +128,7 @@ export const linkItems: LinkItem[] = [
         label: "Parish Ministries",
         subMenus: [
           { id: 1, uri: "/", name: "Liturgy Committee" },
-          { id: 2, uri: "/", name: "The Choir" },
+          { id: 2, uri: "/about-us/church-choir", name: "The Choir" },
           { id: 3, uri: "/", name: "The Lectors" },
           { id: 4, uri: "/", name: "The Ushers" },
           { id: 5, uri: "/", name: "The Altar Servers" },

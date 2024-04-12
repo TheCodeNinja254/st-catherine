@@ -4,7 +4,7 @@ const sccInfo = [
   {
     id: 1,
     showOnSlider: false,
-    name: "St. Martin De Porres Kibarange Catholic Church: Outstation",
+    name: "St. Martin De Porres Kibagare Catholic Church: Outstation",
     imageURL: "/images/getInvolvedThree.jpg",
     description:
       "The Church was named after its Patron saint, 'St. Martin De Porres', which is normally celebrated in November every year.",
@@ -76,9 +76,15 @@ export const sccContent: ContentInterface[] = [
     relationId: 1,
     content: [
       {
+        id: 0,
+        type: "image",
+        link: "/st-catherine/images/st-martin.png",
+      },
+      {
         id: 1,
         type: "title",
-        text: "St. Martin De Porres Kibarange Catholic Church: Outstation",
+
+        text: "St. Martin De Porres Kibagare Catholic Church: Outstation",
       },
       {
         id: 2,

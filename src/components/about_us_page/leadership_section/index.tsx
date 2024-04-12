@@ -8,7 +8,8 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import background from "@/assets/images/ourValues2.jpg";
+import leadership from "@/assets/images/leadership.jpg";
+import leadership2 from "@/assets/images/leadership2.jpg";
 import { SectionTitle } from "@/components";
 
 const LeadershipSection = () => {
@@ -54,14 +55,14 @@ const LeadershipSection = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Box sx={{ paddingTop: theme.spacing(4) }}>
-                <Image src={background} alt="our mission" height={300} />
+                <Image src={leadership} alt="our mission" height={300} />
               </Box>
             </Grid>
           </Grid>
           <Grid container spacing={8} sx={{ marginTop: theme.spacing(3) }}>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Box sx={{ paddingTop: theme.spacing(4) }}>
-                <Image src={background} alt="our mission" height={300} />
+                <Image src={leadership2} alt="our mission" height={380} />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>

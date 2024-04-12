@@ -1,16 +1,7 @@
 import Image from "next/image";
-import {
-  Box,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
-import background from "@/assets/images/domonicanOrder.png";
+import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
+import background from "@/assets/images/dominicanOrder.jpg";
 import { SectionTitle } from "@/components";
-import { ArrowForward } from "@mui/icons-material";
-import Link from "next/link";
 
 const DominicanOrder = () => {
   const theme = useTheme();
@@ -40,26 +31,26 @@ const DominicanOrder = () => {
               between democratically constituted chapters, or legislative
               assemblies, and strong but elected superiors.....
             </Typography>
-            <Link href="/">
-              <Stack direction="row">
-                <Typography
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  Learn More
-                </Typography>
-                <ArrowForward
-                  sx={{
-                    marginTop: theme.spacing(6),
-                    marginLeft: theme.spacing(2),
-                    color: theme.palette.primary.main,
-                    fontSize: 20,
-                  }}
-                />
-              </Stack>
-            </Link>
+            {/* <Link href="/"> */}
+            {/*  <Stack direction="row"> */}
+            {/*    <Typography */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*      }} */}
+            {/*    > */}
+            {/*      Learn More */}
+            {/*    </Typography> */}
+            {/*    <ArrowForward */}
+            {/*      sx={{ */}
+            {/*        marginTop: theme.spacing(6), */}
+            {/*        marginLeft: theme.spacing(2), */}
+            {/*        color: theme.palette.primary.main, */}
+            {/*        fontSize: 20, */}
+            {/*      }} */}
+            {/*    /> */}
+            {/*  </Stack> */}
+            {/* </Link> */}
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box sx={{ paddingTop: theme.spacing(4) }}>

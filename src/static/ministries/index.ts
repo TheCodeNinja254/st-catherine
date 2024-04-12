@@ -1,7 +1,8 @@
 export type ContentWriteUpInterface = {
   id: number;
-  type: "title" | "paragraph" | "list" | "subTitle" | "subTitle2";
-  text: string | string[];
+  type: "title" | "paragraph" | "list" | "subTitle" | "subTitle2" | "image";
+  link?: string;
+  text?: string | string[];
 };
 
 export type ContentInterface = {

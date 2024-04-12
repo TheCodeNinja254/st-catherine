@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import ourMissionOne from "@/assets/images/churchFull.jpg";
+import ourMissionOne from "@/assets/images/churchPhoto.jpg";
 import { SectionTitle } from "@/components";
 import ParapgrapSectionText from "../../common/parapgraph_section";
 
@@ -45,12 +45,12 @@ const Introduction = () => {
             <Stack
               direction="row"
               spacing={1}
-              sx={{ marginTop: theme.spacing(4) }}
+              sx={{ marginTop: isMobile ? theme.spacing(4) : theme.spacing(8) }}
             >
               <Image
                 src={ourMissionOne}
                 alt="our mission"
-                height={isMobile ? 354 : 400}
+                height={isMobile ? 354 : 500}
               />
             </Stack>
           </Grid>

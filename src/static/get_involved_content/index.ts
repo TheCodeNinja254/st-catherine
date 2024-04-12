@@ -2,7 +2,7 @@ export type GetInvolvedContentType = {
   id: number;
   title: string;
   content: string;
-  learnMoreLink: string;
+  learnMoreLink?: string;
   imageLink: string;
 };
 
@@ -15,8 +15,8 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "                    a 5 acre parcel of land in Kitisuru. It is led by the Parish\n" +
       "                    Priest, Fr. Gideon Kizito. The Parish has a membership that\n" +
       "                    now...",
-    learnMoreLink: "/",
-    imageLink: "/st-catherine/images/fundingAppeal.png",
+    learnMoreLink: undefined,
+    imageLink: "/st-catherine/images/fundraising.jpg",
   },
   {
     id: 2,
@@ -25,18 +25,18 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "The small Christian communities (SCC) such as St. Rose, St.\n" +
       "                    Elizabeth and St. Teresa communities, offer important\n" +
       "                    avenues for genuine and supportive Church-community....",
-    learnMoreLink: "/scc",
-    imageLink: "/images/gallery/20.jpg",
+    learnMoreLink: "/scc/2/st.-clare",
+    imageLink: "/st-catherine/images/scc.png",
   },
   {
     id: 3,
     title: "Ecclesial Groups",
     content:
-      "The small Christian comThe PMC group was founded in 1843 by\n" +
+      "The small Christian com The PMC group was founded in 1843 by\n" +
       "                    Bishop Charles de Forbin Hanson in France. These are\n" +
       "                    children within the age bracket of 0-14 years.....",
-    learnMoreLink: "/",
-    imageLink: "/st-catherine/images/getInvolvedThree.jpg",
+    learnMoreLink: "/about-us/our-youth",
+    imageLink: "/st-catherine/images/ecc.png",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
       "                    Bishop Charles de Forbin Hanson in France. These are\n" +
       "                    children within the age bracket of 0-14 years.....",
     learnMoreLink: "/ministries",
-    imageLink: "/st-catherine/images/getInvolvedThree.jpg",
+    imageLink: "/st-catherine/images/ministries.png",
   },
 ];
 

@@ -79,11 +79,13 @@ const GetInvolved = () => {
                         </Typography>
                       </CardContent>
                       <CardActions>
-                        <Link href={content.learnMoreLink}>
-                          <Button size="small">
-                            Learn More <ChevronRight />
-                          </Button>
-                        </Link>
+                        {content.learnMoreLink && (
+                          <Link href={content.learnMoreLink}>
+                            <Button size="small">
+                              Learn More <ChevronRight />
+                            </Button>
+                          </Link>
+                        )}
                       </CardActions>
                     </Card>
                   </Grid>

@@ -9,9 +9,9 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import ourMissionOne from "@/assets/images/vicar.jpg";
-import ourMissionTwo from "@/assets/images/mission2.jpg";
-import ourMissionThree from "@/assets/images/mission3.jpg";
+import ourMissionOne from "@/assets/images/vicar1.jpg";
+import ourMissionTwo from "@/assets/images/mission34.jpg";
+import ourMissionThree from "@/assets/images/mission4.jpg";
 import { SectionTitle } from "@/components";
 import SliderComponentsProps from "@/interfaces/SliderComponentsProps";
 

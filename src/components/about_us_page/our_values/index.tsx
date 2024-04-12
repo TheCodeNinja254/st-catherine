@@ -11,9 +11,9 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import ourMissionOne from "@/assets/images/ourValues1.jpg";
-import ourMissionTwo from "@/assets/images/ourValues2.jpg";
-import ourMissionThree from "@/assets/images/ourValues3.jpg";
+import ourMissionOne from "@/assets/images/values1.jpg";
+import ourMissionTwo from "@/assets/images/values2.jpg";
+import ourMissionThree from "@/assets/images/values3.jpg";
 import { SectionTitle } from "@/components";
 import ourValues from "@/static/our_values";
 import React from "react";
