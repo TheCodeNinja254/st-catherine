@@ -2,11 +2,9 @@ import { useState } from "react";
 import {
   Box,
   Button,
-  Chip,
   Container,
   ImageList,
   ImageListItem,
-  Stack,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -15,9 +13,6 @@ import photoGalleryContent, {
   PhotoGalleryContentType,
 } from "@/static/photo_gallery_content";
 import GalleryViewModal from "@/components/common/gallery_view_modal";
-import galleryCategories, {
-  GalleryCategoryType,
-} from "@/static/galleryCategories";
 
 interface PhotoGalleryProps {
   height?: number | string;
@@ -29,16 +24,16 @@ const PhotoGallery = ({ height }: PhotoGalleryProps) => {
 
   const [open, setOpen] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<PhotoGalleryContentType>();
-  const [imageCategory, setImageCategory] = useState("general");
+  const [imageCategory] = useState("general");
 
   const handleOpenSingleImage = (photoItem: PhotoGalleryContentType | any) => {
     setOpen(true);
     setSelectedImage(photoItem);
   };
 
-  const handleImageCategoryChange = (newCat: string) => {
-    setImageCategory(newCat);
-  };
+  // const handleImageCategoryChange = (newCat: string) => {
+  //   setImageCategory(newCat);
+  // };
 
   return (
     <Box sx={{ paddingBottom: theme.spacing(8), paddingTop: theme.spacing(8) }}>
@@ -46,36 +41,36 @@ const PhotoGallery = ({ height }: PhotoGalleryProps) => {
         <Box display="flex" justifyContent="right">
           <SectionTitle title="Photo Gallery" />
         </Box>
-        <Stack
-          sx={{
-            marginBottom: theme.spacing(1),
-            marginTop: theme.spacing(3),
-            display: "flex",
-            flexDirection: "row",
-            overflowX: "auto",
-            scrollbarWidth: "none",
-            "-ms-overflow-style": "none",
-            "&::-webkit-scrollbar": {
-              display: "none",
-            },
-          }}
-          direction="row"
-        >
-          {galleryCategories.map((galleryCategory: GalleryCategoryType) => (
-            <Chip
-              color={
-                imageCategory === galleryCategory.catName
-                  ? "primary"
-                  : "default"
-              }
-              clickable
-              onClick={() => handleImageCategoryChange(galleryCategory.catName)}
-              label={galleryCategory.name}
-              key={galleryCategory.id}
-              style={{ marginRight: theme.spacing(1) }}
-            />
-          ))}
-        </Stack>
+        {/* <Stack */}
+        {/*  sx={{ */}
+        {/*    marginBottom: theme.spacing(1), */}
+        {/*    marginTop: theme.spacing(3), */}
+        {/*    display: "flex", */}
+        {/*    flexDirection: "row", */}
+        {/*    overflowX: "auto", */}
+        {/*    scrollbarWidth: "none", */}
+        {/*    "-ms-overflow-style": "none", */}
+        {/*    "&::-webkit-scrollbar": { */}
+        {/*      display: "none", */}
+        {/*    }, */}
+        {/*  }} */}
+        {/*  direction="row" */}
+        {/* > */}
+        {/*  {galleryCategories.map((galleryCategory: GalleryCategoryType) => ( */}
+        {/*    <Chip */}
+        {/*      color={ */}
+        {/*        imageCategory === galleryCategory.catName */}
+        {/*          ? "primary" */}
+        {/*          : "default" */}
+        {/*      } */}
+        {/*      clickable */}
+        {/*      onClick={() => handleImageCategoryChange(galleryCategory.catName)} */}
+        {/*      label={galleryCategory.name} */}
+        {/*      key={galleryCategory.id} */}
+        {/*      style={{ marginRight: theme.spacing(1) }} */}
+        {/*    /> */}
+        {/*  ))} */}
+        {/* </Stack> */}
         <Box
           sx={{
             width: "100%",
