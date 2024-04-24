@@ -130,7 +130,7 @@ const MassScheduleCard: React.FC = () => {
           {massSchedule
             .filter((ms: MassScheduleInteface) => ms.day === "special")
             .map((ms) => (
-              <Grid item xs={8} key={ms.id}>
+              <Grid item xs={12} key={ms.id}>
                 <Typography
                   variant="h5"
                   sx={{

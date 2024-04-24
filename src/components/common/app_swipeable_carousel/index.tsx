@@ -37,7 +37,7 @@ const AppSwipeableCarousel: React.FC<AppSwipeableCarouselProps> = ({
       sx={{
         marginTop: theme.spacing(15),
         [theme.breakpoints.down("sm")]: {
-          marginTop: theme.spacing(20),
+          marginTop: theme.spacing(10),
         },
       }}
     >
