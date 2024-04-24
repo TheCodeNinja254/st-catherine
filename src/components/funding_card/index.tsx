@@ -154,10 +154,7 @@ const FundingCard: React.FC = () => {
                   sx={{ marginTop: theme.spacing(2) }}
                 >
                   {mpesaAccountOptions.map((item) => (
-                    <Chip
-                      label={item}
-                      // sx={{ marginRight: theme.spacing(0.5) }}
-                    />
+                    <Chip key={item} label={item} />
                   ))}
                 </Stack>
               </Box>

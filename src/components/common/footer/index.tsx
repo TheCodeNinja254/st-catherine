@@ -59,8 +59,7 @@ const Footer = () => {
               }}
             />
             <Typography variant="body2" sx={{ marginTop: theme.spacing(3) }}>
-              Always get the latest weekly bulletin and stay upto date before
-              the sabbath day
+              Always get the latest weekly bulletin and stay upto date.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>

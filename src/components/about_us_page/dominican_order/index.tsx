@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Container, Grid, useTheme } from "@mui/material";
 import background from "@/assets/images/dominicanOrder.jpg";
 import { SectionTitle } from "@/components";
+import ContentDisplay from "@/components/content_display";
+import dominicanOrder from "@/static/dominicanOrder";
 
 const DominicanOrder = () => {
   const theme = useTheme();
@@ -20,17 +22,7 @@ const DominicanOrder = () => {
             <Box sx={{ marginTop: theme.spacing(10) }}>
               <SectionTitle title="Dominican Order" />
             </Box>
-            <Typography sx={{ marginTop: theme.spacing(2) }}>
-              Dominican, byname Black Friar, member of the Order of Friars
-              Preachers, also called Order of Preachers (O.P.), one of the four
-              great mendicant orders of the Roman Catholic Church, founded by
-              St. Dominic in 1215. Its members include friars, nuns, active
-              sisters, and lay Dominicans. From the beginning the order has been
-              a synthesis of the contemplative life and the active ministry. The
-              members live a community life, and a careful balance is maintained
-              between democratically constituted chapters, or legislative
-              assemblies, and strong but elected superiors.....
-            </Typography>
+            <ContentDisplay content={dominicanOrder} />
             {/* <Link href="/"> */}
             {/*  <Stack direction="row"> */}
             {/*    <Typography */}

@@ -62,6 +62,16 @@ const massSchedule: MassScheduleInteface[] = [
         hour: "Thursdays 5:00 PM",
         serviceDesc: "Adoration",
       },
+      {
+        id: 2,
+        hour: "Sundays at 10.00am",
+        serviceDesc: "Sunday School",
+      },
+      {
+        id: 3,
+        hour: "Sundays at 12.00pm",
+        serviceDesc: "PMC",
+      },
     ],
   },
 ];

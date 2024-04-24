@@ -129,7 +129,11 @@ export const linkItems: LinkItem[] = [
         subMenus: [
           { id: 1, uri: "/", name: "Liturgy Committee" },
           { id: 2, uri: "/about-us/church-choir", name: "The Choir" },
-          { id: 3, uri: "/", name: "The Lectors" },
+          {
+            id: 3,
+            uri: "/ministries/2/the-lectors-and-cantors-ministry",
+            name: "The Lectors",
+          },
           { id: 4, uri: "/", name: "The Ushers" },
           { id: 5, uri: "/", name: "The Altar Servers" },
           { id: 6, uri: "/", name: "PMC" },

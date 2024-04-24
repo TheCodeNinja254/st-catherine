@@ -90,8 +90,10 @@ export const sccContent: ContentInterface[] = [
         id: 2,
         type: "paragraph",
         text: [
-          "The Church was named after its Patron saint, 'St. Martin De Porres', which is normally celebrated in November every year. It is located at Kangemi, 'Muciekwe' village, next to Loresho behind Nairobi school. It is an outstation affiliated to St. Catherine of Siena Parish. The Church sponsors St. Martin Primary and Secondary schools as well as housing the Assumption sisters.\n" +
-            "Mass is normally celebrated on every Sunday at 7:00am for school children mainly and 9:00am for other Christians. There is daily Mass also on the other days of the week at 7:30am.",
+          "The Church was named after its Patron saint, 'St. Martin De Porres'. His feast day is normally celebrated in November every year.",
+          "The church is located in Kangemi, 'Muciekwe' village, next to Loresho behind Nairobi school.",
+          "The church is an outstation of St. Catherine of Siena Parish. The Church sponsors St. Martin’s Primary and Secondary schools. It also houses the Assumption Sisters off Nairobi.",
+          "Mass is normally celebrated every Sunday at 7:00am for school children and at 9:00am for other Christians. There is also daily Mass on other days of the week at 7:30am.",
           "The Church has four Small Christian Communities (SCCs);",
         ],
       },

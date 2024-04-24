@@ -33,7 +33,14 @@ const AppSwipeableCarousel: React.FC<AppSwipeableCarouselProps> = ({
   }
 
   return (
-    <Box>
+    <Box
+      sx={{
+        marginTop: theme.spacing(15),
+        [theme.breakpoints.down("sm")]: {
+          marginTop: theme.spacing(20),
+        },
+      }}
+    >
       <Swiper
         className="swiper-common"
         modules={[Navigation, Autoplay]}
