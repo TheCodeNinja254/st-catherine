@@ -1,19 +1,41 @@
-import { Box, Container, Typography, useTheme } from "@mui/material";
-import { HeroSection, PopularLinks } from "@/components";
+import {
+  Box,
+  Container,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import { HeroSection } from "@/components";
 import Image from "next/image";
 import React from "react";
 import { MyButton } from "@/styled_components";
-import logo_icon from "@/assets/images/st-catherine.png";
+import logo_icon from "@/assets/images/st-catherine2.png";
 
 const IntroContent = () => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <HeroSection>
       <Container sx={{ paddingTop: "20vh" }}>
-        <Box display="flex" justifyContent="center" sx={{ padding: 6 }}>
-          <Image src={logo_icon} alt="St. Catherine" height={100} />
+        <Box display="flex" justifyContent="center" sx={{ padding: 2 }}>
+          <Image
+            src={logo_icon}
+            alt="St. Catherine"
+            height={isMobile ? 200 : 230}
+          />
         </Box>
+        <Typography
+          variant="h4"
+          textAlign="center"
+          sx={{
+            color: theme.palette.secondary.main,
+            marginTop: theme.spacing(0),
+            marginBottom: theme.spacing(1),
+          }}
+        >
+          Archdiocese of Nairobi
+        </Typography>
         <Typography
           variant="h1"
           textAlign="center"
@@ -24,17 +46,6 @@ const IntroContent = () => {
           Siena -{" "}
           <span style={{ color: theme.palette.secondary.main }}>Parish</span>
         </Typography>
-        <Typography
-          variant="h4"
-          textAlign="center"
-          sx={{
-            color: theme.palette.common.white,
-            marginTop: theme.spacing(2),
-            marginBottom: theme.spacing(3),
-          }}
-        >
-          Archdiocese of Nairobi, Kenya
-        </Typography>
         <Box display="flex" justifyContent="center" sx={{ padding: 4 }}>
           <MyButton
             variant="contained"
@@ -44,7 +55,7 @@ const IntroContent = () => {
             Welcome
           </MyButton>
         </Box>
-        <PopularLinks />
+        {/* <PopularLinks /> */}
       </Container>
     </HeroSection>
   );

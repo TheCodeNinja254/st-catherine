@@ -51,7 +51,7 @@ const GetInvolved = () => {
                       }}
                     >
                       <CardMedia
-                        sx={{ height: 290, borderRadius: 2 }}
+                        sx={{ height: 200, borderRadius: 2 }}
                         image={content.imageLink}
                         title="get involved"
                       />

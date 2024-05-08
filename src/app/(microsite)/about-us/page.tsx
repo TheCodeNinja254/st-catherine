@@ -2,8 +2,7 @@
 
 import {
   AboutIntroContent,
-  DominicanOrder,
-  Introduction,
+  AreasOfApostles,
   KeyFacts,
   LeadershipSection,
   OurValues,
@@ -18,15 +17,12 @@ const Home = () => {
     <>
       <AboutIntroContent />
       <Box sx={{ marginTop: theme.spacing(0) }}>
-        <Introduction />
-      </Box>
-      <Box sx={{ marginTop: theme.spacing(5) }}>
         <OurMission />
       </Box>
       <KeyFacts />
       <OurValues />
       <LeadershipSection />
-      <DominicanOrder />
+      <AreasOfApostles />
     </>
   );
 };

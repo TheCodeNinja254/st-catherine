@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { CascadingMenuItem, LinkItem, SubMenuLinkItem } from "@/static/links";
 import Link from "next/link";
+import { popoverClasses } from "@mui/material/Popover";
 
 const AppBarMenuItem = ({
   uniqueId,
@@ -42,13 +43,31 @@ const AppBarMenuItem = ({
     "&: hover": {
       borderRadius: 20,
       backgroundColor:
-        scrollYPosition > 200
+        scrollYPosition > 100
           ? theme.palette.common.white
           : theme.palette.primary.main,
       color:
-        scrollYPosition > 200
+        scrollYPosition > 100
           ? theme.palette.primary.main
           : theme.palette.common.white,
+    },
+  };
+
+  const popoverMenuClasses = {
+    mt: "45px",
+    [`&.${popoverClasses.root}`]: {
+      backgroundColor: "transparent",
+    },
+    [`& .${popoverClasses.paper}`]: {
+      boxShadow: "none",
+      elevation: 0,
+      // paddingY: theme.spacing(2),
+      borderRadius: 3,
+      marginTop: theme.spacing(2),
+      backgroundColor:
+        scrollYPosition > 100
+          ? theme.palette.primary.main
+          : `rgba(255, 255, 255, .2)`,
     },
   };
 
@@ -89,9 +108,7 @@ const AppBarMenuItem = ({
       {item?.subMenus && item?.subMenus?.length > 0 && (
         <Menu
           autoFocus
-          sx={{
-            mt: "45px",
-          }}
+          sx={popoverMenuClasses}
           keepMounted
           id="menu-appbar"
           anchorEl={anchorElUser}
@@ -106,13 +123,16 @@ const AppBarMenuItem = ({
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
           onClick={handleCloseUserMenu}
-          onBackdropClick={handleCloseUserMenu}
         >
           <Box
             p={1}
-            width={230}
+            width={300}
+            onMouseLeave={handleCloseUserMenu}
             sx={{
-              backgroundColor: theme.palette.primary.main,
+              backgroundColor:
+                scrollYPosition > 100
+                  ? theme.palette.primary.main
+                  : `rgba(0, 0, 0, .3)`,
               margin: theme.spacing(-1),
               elevation: 0,
             }}
@@ -150,9 +170,7 @@ const AppBarMenuItem = ({
       {item?.cascadingMenu && item?.cascadingMenu?.length > 0 && (
         <Menu
           autoFocus
-          sx={{
-            mt: "45px",
-          }}
+          sx={popoverMenuClasses}
           keepMounted
           id="menu-appbar-casc"
           anchorEl={anchorElUser}
@@ -167,13 +185,16 @@ const AppBarMenuItem = ({
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
           onClick={handleCloseUserMenu}
-          onBackdropClick={handleCloseUserMenu}
         >
           <Box
             p={1}
-            width={230}
+            width={300}
+            onMouseLeave={handleCloseUserMenu}
             sx={{
-              backgroundColor: theme.palette.primary.main,
+              backgroundColor:
+                scrollYPosition > 100
+                  ? theme.palette.primary.main
+                  : `rgba(0, 0, 0, .3)`,
               margin: theme.spacing(-1),
               elevation: 0,
             }}

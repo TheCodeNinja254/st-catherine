@@ -10,6 +10,7 @@ import {
   List,
   ListItem,
   ListItemButton,
+  ListItemIcon,
   ListItemText,
   Stack,
   Theme,
@@ -88,8 +89,15 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
   const list = (anchor: Anchor) => (
     <Box
       sx={{
+        paddingX: theme.spacing(4),
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+        // backgroundColor: theme.palette.primary.main,
         backgroundColor: theme.palette.primary.main,
+        backgroundImage: `radial-gradient(circle at 50% 50%, #700D3D 10%, transparent 15%),
+    radial-gradient(circle at 50% 50%, #D33D86 20%, transparent 25%);`,
+        backgroundSize: `10px 10px`,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
       }}
       role="presentation"
       onKeyDown={toggleDrawer(anchor, false)}
@@ -102,7 +110,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
         <Typography
           sx={{
             color: theme.palette.common.white,
-            marginTop: theme.spacing(1),
+            marginTop: theme.spacing(0),
           }}
         >
           Menu
@@ -112,15 +120,19 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
           edge="end"
           color="inherit"
           aria-label="menu"
-          sx={{ color: theme.palette.common.white }}
+          sx={{
+            color: theme.palette.common.white,
+            marginBottom: theme.spacing(0.5),
+            marginTop: theme.spacing(-2),
+          }}
           onClick={toggleDrawer(anchor, false)}
         >
           <Cancel />
         </IconButton>
       </Stack>
       <Divider
+        flexItem
         sx={{
-          width: "100%",
           height: 1,
           backgroundColor: theme.palette.secondary.light,
         }}
@@ -134,9 +146,10 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                   <ListItemButton
                     onClick={() => handleOpenSubMenu(linkItem.id)}
                   >
+                    <ListItemIcon>{linkItem.icon}</ListItemIcon>
                     <ListItemText
                       primary={
-                        <Stack direction="row" justifyContent="center">
+                        <Stack direction="row" justifyContent="space-between">
                           <Typography>{linkItem.name}</Typography>
                           {menuId === linkItem.id && openState ? (
                             <KeyboardArrowUp />
@@ -147,7 +160,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                       }
                       sx={{
                         color: theme.palette.common.white,
-                        textAlign: "center",
+                        textAlign: "left",
                       }}
                       color={theme.palette.common.white}
                     />
@@ -161,12 +174,13 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                       key={cascItem.id}
                     >
                       <Typography
-                        align="center"
+                        align="left"
                         color="secondary"
                         sx={{
                           marginTop: theme.spacing(2),
                           fontWeight: 700,
                           textTransform: "uppercase",
+                          marginLeft: theme.spacing(6),
                         }}
                       >
                         {cascItem.label}
@@ -177,14 +191,15 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                             <ListItem disablePadding key={cascItem.id}>
                               <ListItemButton
                                 onClick={() =>
-                                  handleRouteChange(cascSubItem.uri, "top")
+                                  handleRouteChange(cascSubItem.uri, "bottom")
                                 }
                               >
                                 <ListItemText
                                   primary={cascSubItem.name}
                                   sx={{
                                     color: theme.palette.common.white,
-                                    textAlign: "center",
+                                    textAlign: "left",
+                                    marginLeft: theme.spacing(6),
                                   }}
                                   color={theme.palette.common.white}
                                 />
@@ -205,9 +220,10 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                   <ListItemButton
                     onClick={() => handleOpenSubMenu(linkItem.id)}
                   >
+                    <ListItemIcon>{linkItem.icon}</ListItemIcon>
                     <ListItemText
                       primary={
-                        <Stack direction="row" justifyContent="center">
+                        <Stack direction="row" justifyContent="space-between">
                           <Typography>{linkItem.name}</Typography>
                           {menuId === linkItem.id && openState ? (
                             <KeyboardArrowUp />
@@ -218,7 +234,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                       }
                       sx={{
                         color: theme.palette.common.white,
-                        textAlign: "center",
+                        textAlign: "left",
                       }}
                       color={theme.palette.common.white}
                     />
@@ -230,13 +246,16 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                     {linkItem.subMenus.map((subItem: SubMenuLinkItem) => (
                       <ListItem disablePadding key={subItem.id}>
                         <ListItemButton
-                          onClick={() => handleRouteChange(subItem.uri, "top")}
+                          onClick={() =>
+                            handleRouteChange(subItem.uri, "bottom")
+                          }
                         >
                           <ListItemText
                             primary={subItem.name}
                             sx={{
                               color: theme.palette.common.white,
-                              textAlign: "center",
+                              textAlign: "left",
+                              marginLeft: theme.spacing(6),
                             }}
                             color={theme.palette.common.white}
                           />
@@ -249,22 +268,21 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
               </>
             )}
             {!linkItem?.subMenus && !linkItem?.cascadingMenu && (
-              <List>
-                <ListItem key={linkItem.id} disablePadding>
-                  <ListItemButton
-                    onClick={() => handleRouteChange(linkItem.uri, "top")}
-                  >
-                    <ListItemText
-                      primary={linkItem.name}
-                      sx={{
-                        color: theme.palette.common.white,
-                        textAlign: "center",
-                      }}
-                      color={theme.palette.common.white}
-                    />
-                  </ListItemButton>
-                </ListItem>
-              </List>
+              <ListItem key={linkItem.id} disablePadding>
+                <ListItemButton
+                  onClick={() => handleRouteChange(linkItem.uri, "bottom")}
+                >
+                  <ListItemIcon>{linkItem.icon}</ListItemIcon>
+                  <ListItemText
+                    primary={linkItem.name}
+                    sx={{
+                      color: theme.palette.common.white,
+                      textAlign: "left",
+                    }}
+                    color={theme.palette.common.white}
+                  />
+                </ListItemButton>
+              </ListItem>
             )}
           </React.Fragment>
         ))}
@@ -298,18 +316,26 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
   return (
     <>
       <Drawer
-        anchor="top"
-        open={state.top}
-        onClose={toggleDrawer("top", false)}
+        PaperProps={{
+          sx: {
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+          },
+        }}
+        anchor="bottom"
+        open={state.bottom}
+        onClose={toggleDrawer("bottom", false)}
       >
-        {list("top")}
+        {list("bottom")}
       </Drawer>
       <MyAppBar
         position="fixed"
         elevation={0}
         sx={{
           backgroundColor:
-            scrollYPosition > 100 ? theme.palette.primary.main : "transparent",
+            scrollYPosition > 100
+              ? theme.palette.primary.main
+              : `rgba(0, 0, 0, .3)`,
         }}
       >
         <MyToolbar>
@@ -397,7 +423,7 @@ const Appbar: React.FC<AppbarProps> = ({ showMenuIcon }) => {
                       edge="end"
                       color="inherit"
                       aria-label="menu"
-                      onClick={toggleDrawer("top", true)}
+                      onClick={toggleDrawer("bottom", true)}
                     >
                       <MenuIcon />
                     </IconButton>

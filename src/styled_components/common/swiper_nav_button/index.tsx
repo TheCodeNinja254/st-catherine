@@ -5,9 +5,9 @@ const SwiperNavButton = styled(ButtonBase)(({ theme }) => ({
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  height: "48px",
-  width: "56px",
-  borderRadius: "8px",
+  height: "25px",
+  width: "25px",
+  borderRadius: "50%",
   color: "white",
   backgroundColor: theme.palette.primary.main,
   "&.swiper-button-disabled": {

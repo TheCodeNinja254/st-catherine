@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Box,
   Container,
@@ -6,14 +5,12 @@ import {
   List,
   ListItem,
   ListItemText,
-  Stack,
   Typography,
-  useMediaQuery,
   useTheme,
 } from "@mui/material";
-import ourMissionOne from "@/assets/images/values1.jpg";
-import ourMissionTwo from "@/assets/images/values2.jpg";
-import ourMissionThree from "@/assets/images/values3.jpg";
+// import ourMissionOne from "@/assets/images/values1.jpg";
+// import ourMissionTwo from "@/assets/images/values2.jpg";
+// import ourMissionThree from "@/assets/images/values3.jpg";
 import { SectionTitle } from "@/components";
 import ourValues from "@/static/our_values";
 import React from "react";
@@ -21,7 +18,6 @@ import SliderComponentsProps from "@/interfaces/SliderComponentsProps";
 
 const OurValues: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box
@@ -34,29 +30,29 @@ const OurValues: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
     >
       <Container>
         <Grid container spacing={5}>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Stack direction="row" spacing={1}>
-              <Image
-                src={ourMissionOne}
-                alt="our mission"
-                height={isMobile ? 354 : 510}
-              />
-              <Box>
-                <Stack direction="column" spacing={1}>
-                  <Image
-                    src={ourMissionTwo}
-                    alt="our mission"
-                    height={isMobile ? 173 : 250}
-                  />
-                  <Image
-                    src={ourMissionThree}
-                    alt="our mission"
-                    height={isMobile ? 173 : 250}
-                  />
-                </Stack>
-              </Box>
-            </Stack>
-          </Grid>
+          {/* <Grid item xs={12} sm={12} md={6} lg={6} xl={6}> */}
+          {/*  <Stack direction="row" spacing={1}> */}
+          {/*    <Image */}
+          {/*      src={ourMissionOne} */}
+          {/*      alt="our mission" */}
+          {/*      height={isMobile ? 354 : 510} */}
+          {/*    /> */}
+          {/*    <Box> */}
+          {/*      <Stack direction="column" spacing={1}> */}
+          {/*        <Image */}
+          {/*          src={ourMissionTwo} */}
+          {/*          alt="our mission" */}
+          {/*          height={isMobile ? 173 : 250} */}
+          {/*        /> */}
+          {/*        <Image */}
+          {/*          src={ourMissionThree} */}
+          {/*          alt="our mission" */}
+          {/*          height={isMobile ? 173 : 250} */}
+          {/*        /> */}
+          {/*      </Stack> */}
+          {/*    </Box> */}
+          {/*  </Stack> */}
+          {/* </Grid> */}
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box
               sx={{

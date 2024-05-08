@@ -7,12 +7,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   height,
   imageHeight,
 }) => {
-  const bg = `rgba(19, 20, 102, 0.5)`;
+  // const bg = `rgba(19, 20, 102, 0.5)`;
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const calculatedHeight = isMobile ? "125vh" : "105vh";
+  const calculatedHeight = isMobile ? "90vh" : "85vh";
 
   return (
     <Box
@@ -32,9 +32,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           {
             position: "block",
             backgroundPosition: "center",
-            backgroundImage: "url(/st-catherine/images/bg_18.jpg)",
+            backgroundImage: isMobile
+              ? "url(/st-catherine/images/hero_background_new.JPG)"
+              : "url(/st-catherine/images/bg2.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            // backgroundColor: `rgba(255, 255, 255, .9)`,
             height: imageHeight || "90vh",
           },
           {
@@ -45,7 +48,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               left: 0,
               width: "100%",
               height: imageHeight || "90vh",
-              backgroundColor: bg,
+              // backgroundColor: bg,
+              backgroundColor: `rgba(255, 255, 255, .1)`,
               pointerEvents: "none",
             },
           },

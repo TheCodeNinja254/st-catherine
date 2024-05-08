@@ -1,4 +1,4 @@
-import { Container, Typography, useTheme } from "@mui/material";
+import { Box, Container, Typography, useTheme } from "@mui/material";
 import { HeroSection } from "@/components";
 import React from "react";
 
@@ -8,21 +8,31 @@ const AboutIntroContent = () => {
   return (
     <HeroSection height="50vh" imageHeight="50vh">
       <Container sx={{ paddingTop: "20vh" }}>
-        <Typography
-          variant="h4"
-          textAlign="left"
+        <Box
           sx={{
-            color: theme.palette.secondary.main,
-            marginTop: theme.spacing(2),
-            marginBottom: theme.spacing(3),
+            backgroundColor: `rgba(0, 0, 0, .3)`,
+            padding: theme.spacing(2),
           }}
         >
-          This week’s bible verse
-        </Typography>
-        <Typography textAlign="left" sx={{ color: theme.palette.common.white }}>
-          “Jesus looked at them and said, With man, its impossible But not with
-          God “
-        </Typography>
+          <Typography
+            variant="h4"
+            textAlign="left"
+            sx={{
+              color: theme.palette.secondary.main,
+              marginTop: theme.spacing(2),
+              marginBottom: theme.spacing(3),
+            }}
+          >
+            This week’s bible verse
+          </Typography>
+          <Typography
+            textAlign="left"
+            sx={{ color: theme.palette.common.white }}
+          >
+            “Jesus looked at them and said, With man, its impossible But not
+            with God “
+          </Typography>
+        </Box>
       </Container>
     </HeroSection>
   );

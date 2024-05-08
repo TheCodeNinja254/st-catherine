@@ -4,13 +4,15 @@ import GetInvolved from "@/components/landing_page/get_involved";
 import PhotoGallery from "@/components/landing_page/photo_gallery";
 import { ContactUS, Directions } from "@/components";
 import IntroContent from "@/components/landing_page/intro_content";
-import { MassSchedule, SliderSection, TithesOfferings } from "@/sections";
+import { MassSchedule, TithesOfferings } from "@/sections";
+import { Introduction } from "@/components/about_us_page";
 
 const Home = () => {
   return (
     <>
       <IntroContent />
-      <SliderSection />
+      <Introduction />
+      {/* <SliderSection /> */}
       <MassSchedule />
       <GetInvolved />
       <TithesOfferings />

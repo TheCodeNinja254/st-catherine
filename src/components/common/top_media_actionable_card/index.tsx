@@ -3,8 +3,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, useTheme } from "@mui/material";
+import { Box, CardActionArea, IconButton, useTheme } from "@mui/material";
 import TopMediaActionableInterface from "@/interfaces/TopMediaActionableInterface";
+import { ArrowOutward } from "@mui/icons-material";
 
 const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
   const theme = useTheme();
@@ -14,7 +15,6 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
     description,
     id,
     onClick,
-    action,
     active,
     variant = "default",
   } = props;
@@ -23,7 +23,7 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
     <Card
       elevation={0}
       sx={{
-        borderRadius: 4,
+        borderRadius: 3,
         backgroundColor:
           variant === "paper"
             ? theme.palette.background.paper
@@ -34,13 +34,31 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
       }}
     >
       <CardActionArea onClick={() => onClick(id)}>
-        <CardMedia component="img" height="100" image={image} alt={title} />
+        <CardMedia component="img" height="72" image={image} alt={title} />
         <CardContent>
+          <Box display="flex" justifyContent="space-between">
+            <Typography
+              color={active ? "secondary" : ""}
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{
+                display: "-webkit-box",
+                WebkitLineClamp: 1,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {title}
+            </Typography>
+            <IconButton size="small">
+              <ArrowOutward fontSize="small" />
+            </IconButton>
+          </Box>
           <Typography
-            color={active ? "secondary" : ""}
-            gutterBottom
-            variant="h5"
-            component="div"
+            variant="body2"
+            color="text.secondary"
             sx={{
               display: "-webkit-box",
               WebkitLineClamp: 1,
@@ -49,30 +67,8 @@ const TopMediaActionableCard = (props: TopMediaActionableInterface) => {
               textOverflow: "ellipsis",
             }}
           >
-            {title}
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-            }}
-          >
             {description}
           </Typography>
-          {action && (
-            <Typography
-              align="right"
-              color={active ? "secondary" : ""}
-              sx={{ marginTop: theme.spacing(2) }}
-            >
-              ...{action}
-            </Typography>
-          )}
         </CardContent>
       </CardActionArea>
     </Card>

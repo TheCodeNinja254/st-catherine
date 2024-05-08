@@ -1,3 +1,14 @@
+import React from "react";
+import {
+  Church,
+  LocationCity,
+  NaturePeople,
+  Newspaper,
+  Public,
+  VerifiedUser,
+  Water,
+} from "@mui/icons-material";
+
 export type SubMenuLinkItem = {
   id: number;
   name: string;
@@ -17,6 +28,7 @@ export type LinkItem = {
   row?: number;
   subMenus?: SubMenuLinkItem[];
   cascadingMenu?: CascadingMenuItem[];
+  icon?: React.ReactNode;
 };
 
 export const linkItems: LinkItem[] = [
@@ -25,12 +37,14 @@ export const linkItems: LinkItem[] = [
     name: "Home",
     uri: "/",
     row: 1,
+    icon: <Church sx={{ color: "#FFFFFF" }} />,
   },
   {
     id: 2,
     name: "About Us",
     uri: "/about-us",
     row: 1,
+    icon: <Public sx={{ color: "#FFFFFF" }} />,
     subMenus: [
       {
         id: 0,
@@ -49,12 +63,21 @@ export const linkItems: LinkItem[] = [
     name: "St. Martin De Porres",
     uri: "/scc/1/st.-martin-de-porres-kibagare-catholic-church:-outstation",
     row: 1,
+    icon: <LocationCity sx={{ color: "#FFFFFF" }} />,
+  },
+  {
+    id: 7,
+    name: "Dominican Frairs",
+    uri: "/dominican-frairs",
+    row: 1,
+    icon: <VerifiedUser sx={{ color: "#FFFFFF" }} />,
   },
   {
     id: 3,
     name: "Liturgy & Sacraments",
     uri: "/sacraments",
     row: 1,
+    icon: <Water sx={{ color: "#FFFFFF" }} />,
     cascadingMenu: [
       {
         id: 1,
@@ -93,6 +116,7 @@ export const linkItems: LinkItem[] = [
     name: "News & Events",
     uri: "/news",
     row: 1,
+    icon: <Newspaper sx={{ color: "#FFFFFF" }} />,
     cascadingMenu: [
       {
         id: 1,
@@ -122,6 +146,7 @@ export const linkItems: LinkItem[] = [
     name: "Parish Life",
     uri: "/parish",
     row: 1,
+    icon: <NaturePeople sx={{ color: "#FFFFFF" }} />,
     cascadingMenu: [
       {
         id: 1,

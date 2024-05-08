@@ -1,23 +1,10 @@
-import Image from "next/image";
 import React from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import ourMissionOne from "@/assets/images/vicar1.jpg";
-import ourMissionTwo from "@/assets/images/mission34.jpg";
-import ourMissionThree from "@/assets/images/mission4.jpg";
+import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import { SectionTitle } from "@/components";
 import SliderComponentsProps from "@/interfaces/SliderComponentsProps";
 
 const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box
@@ -25,35 +12,35 @@ const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
       sx={{
         backgroundColor: backgroundColor || theme.palette.background.default,
         [theme.breakpoints.down("sm")]: {
-          marginTop: theme.spacing(19),
+          marginTop: theme.spacing(0),
         },
       }}
     >
       <Container>
         <Grid container spacing={5}>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Stack direction="row" spacing={1}>
-              <Image
-                src={ourMissionOne}
-                alt="our mission"
-                height={isMobile ? 354 : 510}
-              />
-              <Box>
-                <Stack direction="column" spacing={1}>
-                  <Image
-                    src={ourMissionTwo}
-                    alt="our mission"
-                    height={isMobile ? 173 : 250}
-                  />
-                  <Image
-                    src={ourMissionThree}
-                    alt="our mission"
-                    height={isMobile ? 173 : 250}
-                  />
-                </Stack>
-              </Box>
-            </Stack>
-          </Grid>
+          {/* <Grid item xs={12} sm={12} md={6} lg={6} xl={6}> */}
+          {/*  <Stack direction="row" spacing={1}> */}
+          {/*    <Image */}
+          {/*      src={ourMissionOne} */}
+          {/*      alt="our mission" */}
+          {/*      height={isMobile ? 354 : 510} */}
+          {/*    /> */}
+          {/*    <Box> */}
+          {/*      <Stack direction="column" spacing={1}> */}
+          {/*        <Image */}
+          {/*          src={ourMissionTwo} */}
+          {/*          alt="our mission" */}
+          {/*          height={isMobile ? 173 : 250} */}
+          {/*        /> */}
+          {/*        <Image */}
+          {/*          src={ourMissionThree} */}
+          {/*          alt="our mission" */}
+          {/*          height={isMobile ? 173 : 250} */}
+          {/*        /> */}
+          {/*      </Stack> */}
+          {/*    </Box> */}
+          {/*  </Stack> */}
+          {/* </Grid> */}
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Box
               sx={{
@@ -65,7 +52,13 @@ const OurMission: React.FC<SliderComponentsProps> = ({ backgroundColor }) => {
             >
               <SectionTitle title="Our Mission" />
             </Box>
-            <Typography variant="body1" sx={{ marginTop: theme.spacing(4) }}>
+            <Typography
+              variant="body1"
+              sx={{
+                marginTop: theme.spacing(4),
+                marginBottom: theme.spacing(10),
+              }}
+            >
               We, the community of St. Catherine of Siena Parish- Kitisuru, in
               the Archdiocese of Nairobi, guided by our patroness Saint
               Catherine of Siena and amidst our multicultural diversity, are

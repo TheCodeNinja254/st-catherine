@@ -3,13 +3,16 @@ import {
   Card,
   Container,
   Grid,
-  Stack,
+  Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
 import ourMissionOne from "@/assets/images/churchPhoto.jpg";
 import { SectionTitle } from "@/components";
+import ourMissionTwo from "@/assets/images/values2.jpg";
+import prst from "@/assets/images/fr2.jpeg";
+import React from "react";
 import ParapgrapSectionText from "../../common/parapgraph_section";
 
 const introContent: string[] = [
@@ -24,6 +27,7 @@ const Introduction = () => {
   return (
     <Card
       sx={{
+        backgroundColor: theme.palette.background.default,
         paddingBottom: theme.spacing(8),
         [theme.breakpoints.down("sm")]: {
           marginTop: theme.spacing(0),
@@ -33,18 +37,10 @@ const Introduction = () => {
     >
       <Container>
         <Grid container spacing={5}>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Box sx={{ marginTop: theme.spacing(10) }}>
-              <SectionTitle title="A Welcome Message" />
-            </Box>
-            <Box sx={{ marginTop: theme.spacing(3) }}>
-              <ParapgrapSectionText content={introContent} />
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <Stack
-              direction="row"
-              spacing={1}
+          <Grid item xs={12} sm={12} md={3} lg={3} xl={3}>
+            <Box
+              display={isMobile ? "none" : "flex"}
+              justifyContent="center"
               sx={{ marginTop: isMobile ? theme.spacing(4) : theme.spacing(8) }}
             >
               <Image
@@ -52,7 +48,67 @@ const Introduction = () => {
                 alt="our mission"
                 height={isMobile ? 354 : 500}
               />
-            </Stack>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Box
+              sx={{
+                marginTop: isMobile ? theme.spacing(5) : theme.spacing(10),
+              }}
+            >
+              <SectionTitle title="A Welcome Message" />
+            </Box>
+            <Box sx={{ marginTop: theme.spacing(3) }}>
+              <ParapgrapSectionText content={introContent} />
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={12} md={3} lg={3} xl={3}>
+            <Grid container spacing={1}>
+              <Grid item xs={6} sm={6} md={12} lg={12} xl={12}>
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  sx={{
+                    marginTop: isMobile ? theme.spacing(2) : theme.spacing(8),
+                  }}
+                >
+                  <Box>
+                    <Image
+                      src={ourMissionTwo}
+                      alt="our mission"
+                      height={isMobile ? 200 : 250}
+                    />
+                    <Typography
+                      sx={{ fontSize: 12, marginTop: theme.spacing(2) }}
+                    >
+                      Father Cleophas Tesha - Parish Priest
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid item xs={6} sm={6} md={12} lg={12} xl={12}>
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  sx={{
+                    marginTop: isMobile ? theme.spacing(2) : theme.spacing(2),
+                  }}
+                >
+                  <Box>
+                    <Image
+                      src={prst}
+                      alt="our mission"
+                      height={isMobile ? 200 : 250}
+                    />
+                    <Typography
+                      sx={{ fontSize: 12, marginTop: theme.spacing(2) }}
+                    >
+                      Father Cleophas Tesha - Parish Priest
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

@@ -51,12 +51,12 @@ const SccSlider: React.FC<SliderContainerSwitcherProps> = ({
       <Container>
         <SectionTitle title="Small Christian Communities (SCC) and more" />
         <Typography
-          sx={{ marginTop: theme.spacing(4), marginBottom: theme.spacing(4) }}
+          sx={{ marginTop: theme.spacing(1), marginBottom: theme.spacing(0) }}
         >
           Connect with small Christian communities. Stay upto date. Beware of
           your communities farewell.
         </Typography>
-        <Box sx={{ marginTop: theme.spacing(4) }}>
+        <Box sx={{ marginTop: theme.spacing(0) }}>
           <AppSwipeableCarousel
             showNavButtons
             loop={false}

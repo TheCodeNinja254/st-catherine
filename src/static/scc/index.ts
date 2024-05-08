@@ -66,6 +66,14 @@ const sccInfo = [
       "St Vincent de Paul SCC was formed in the year 2014 by Catholics living along Lower Kabete Road and\n" +
       "initially comprised 6 families.",
   },
+  {
+    id: 9,
+    showOnSlider: true,
+    name: "St. Dominic",
+    imageURL: "/images/scc/st-dominic.jpeg",
+    description:
+      "St. Dominic Jumuiya covers Kitisuru Springs, Mwimuto and Kibichiku localities. We hold our Jumuiya Prayer meetings every 2nd Wednesday of the month at 6:00 pm. A member usually volunteers to host and we invite a Priest to celebrate Mass with us.",
+  },
 ];
 
 export default sccInfo;
@@ -362,6 +370,29 @@ export const sccContent: ContentInterface[] = [
           "Charity: Make contributions towards charitable causes within and outside St. Catherine of Siena Parish.",
           "Church functions: Assist in organizing and participate in church functions.",
           "Report: Give quarterly reports to PPC.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 9,
+    relationId: 9,
+    content: [
+      {
+        id: 1,
+        type: "title",
+        text: "St. Dominic",
+      },
+      {
+        id: 2,
+        type: "paragraph",
+        text: [
+          "St. Dominic Jumuiya covers Kitisuru Springs, Mwimuto and Kibichiku localities. We hold our Jumuiya Prayer meetings every 2nd Wednesday of the month at 6:00 pm. A member usually volunteers to host and we invite a Priest to celebrate Mass with us.",
+          'St. Vincent de Paul (24 April 1581-27 September 1660) was a French Roman Catholic priest who dedicated himself to serving the poor. He was canonized in 1737 and is renowned for his compassion, humility and generosity and is known as the "Great Apostle of Charity". his feast day is celebrated on 27th September; the day of his death.',
+          "Saint Dominic, OP (Spanish: Santo Domingo; 8 August 1170 – 6 August 1221), also known as Dominic de Guzmán (Spanish: [ɡuθˈman]), was a Castilian Catholic priest, mystic, the founder of the Dominican Order and is the patron saint of astronomers and natural scientists. He is alternatively called Dominic of Osma, Dominic of Caleruega, and Domingo Félix de Guzmán.",
+          "For centuries the Rosary has been at the heart of the Dominican Order.",
+          "Pope Pius XI stated, 'The Rosary of Mary is the principle and foundation on which the very Order of Saint Dominic rests for making perfect the life of its members and obtaining the salvation of others.'",
+          "For more information please feel free to contact the parish office. Thank you and God bless!",
         ],
       },
     ],

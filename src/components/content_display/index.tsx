@@ -17,7 +17,7 @@ const ContentDisplay: React.FC<ContentDisplayProps> = ({ title, content }) => {
     <Box>
       {title && <SectionTitle title={title} />}
       {content && (
-        <Box sx={{ marginTop: theme.spacing(4) }}>
+        <Box sx={{ marginTop: theme.spacing(0) }}>
           {content.map((item: ContentWriteUpInterface) => (
             <React.Fragment key={item.id}>
               {item.type === "image" && (

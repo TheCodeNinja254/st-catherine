@@ -33,14 +33,7 @@ const AppSwipeableCarousel: React.FC<AppSwipeableCarouselProps> = ({
   }
 
   return (
-    <Box
-      sx={{
-        marginTop: theme.spacing(15),
-        [theme.breakpoints.down("sm")]: {
-          marginTop: theme.spacing(10),
-        },
-      }}
-    >
+    <Box>
       <Swiper
         className="swiper-common"
         modules={[Navigation, Autoplay]}
@@ -70,14 +63,14 @@ const AppSwipeableCarousel: React.FC<AppSwipeableCarouselProps> = ({
         >
           <Box>
             <SwiperNavButton className="swiper-common-prev-button">
-              <ArrowBack />
+              <ArrowBack fontSize="small" />
             </SwiperNavButton>
 
             <SwiperNavButton
               className="swiper-common-next-button"
               sx={{ ml: "16px" }}
             >
-              <ArrowForward />
+              <ArrowForward fontSize="small" />
             </SwiperNavButton>
           </Box>
         </Box>
