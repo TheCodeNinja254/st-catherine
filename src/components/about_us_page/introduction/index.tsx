@@ -76,7 +76,7 @@ const Introduction = () => {
                     <Image
                       src={ourMissionTwo}
                       alt="our mission"
-                      height={isMobile ? 200 : 250}
+                      height={isMobile ? 180 : 250}
                     />
                     <Typography
                       sx={{ fontSize: 12, marginTop: theme.spacing(2) }}
@@ -98,12 +98,12 @@ const Introduction = () => {
                     <Image
                       src={prst}
                       alt="our mission"
-                      height={isMobile ? 200 : 250}
+                      height={isMobile ? 180 : 250}
                     />
                     <Typography
                       sx={{ fontSize: 12, marginTop: theme.spacing(2) }}
                     >
-                      Father Cleophas Tesha - Parish Priest
+                      Father Thomas Odhiambo - Assistant Parish Priest
                     </Typography>
                   </Box>
                 </Box>
