@@ -196,6 +196,11 @@ export const linkItems: LinkItem[] = [
           },
           {
             id: 3,
+            uri: "/scc/9/st.-dominic",
+            name: "St. Elizabeth",
+          },
+          {
+            id: 4,
             uri: "/scc/3/st.-elizabeth",
             name: "St. Elizabeth",
           },
@@ -218,6 +223,16 @@ export const linkItems: LinkItem[] = [
             id: 8,
             uri: "/scc/8/st.-vincent-de-paul",
             name: "St. Vincent de Paul",
+          },
+          {
+            id: 9,
+            uri: "/scc/9/st.-dominic",
+            name: "St. Dominic",
+          },
+          {
+            id: 10,
+            uri: "/scc/10/st.-bakhita",
+            name: "St. Bakhita",
           },
         ],
       },

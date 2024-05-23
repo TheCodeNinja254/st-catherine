@@ -74,6 +74,14 @@ const sccInfo = [
     description:
       "St. Dominic Jumuiya covers Kitisuru Springs, Mwimuto and Kibichiku localities. We hold our Jumuiya Prayer meetings every 2nd Wednesday of the month at 6:00 pm. A member usually volunteers to host and we invite a Priest to celebrate Mass with us.",
   },
+  {
+    id: 10,
+    showOnSlider: true,
+    name: "St. Bakhita",
+    imageURL: "/images/scc/st-bakhita.jpeg",
+    description:
+      "Her life was marked by tragedy and hardship from a young age. While working in the fields with her mother at  age 8 she was captured and sold into slavery. She is now recognised as a Patron Saint of Human trafficking.",
+  },
 ];
 
 export default sccInfo;
@@ -393,6 +401,59 @@ export const sccContent: ContentInterface[] = [
           "For centuries the Rosary has been at the heart of the Dominican Order.",
           "Pope Pius XI stated, 'The Rosary of Mary is the principle and foundation on which the very Order of Saint Dominic rests for making perfect the life of its members and obtaining the salvation of others.'",
           "For more information please feel free to contact the parish office. Thank you and God bless!",
+        ],
+      },
+    ],
+  },
+  {
+    id: 10,
+    relationId: 10,
+    content: [
+      {
+        id: 1,
+        type: "title",
+        text: "St. Bakhita",
+      },
+      {
+        id: 2,
+        type: "paragraph",
+        text: [
+          "Her life was marked by tragedy and hardship from a young age. While working in the fields with her mother at  age 8 she was captured and sold into slavery. She is now recognised as a Patron Saint of Human trafficking.",
+          "The trauma of being forced into slavery,affected her memory ,she couldn't remember her name. Her captors called her Bakita which means ,\"the fortunate  one. She was baptised Josephine in 1890. ",
+          "St.Josephine Bakita accepted to carry her cross and by so doing met Our Lord in the process.",
+        ],
+      },
+      {
+        id: 3,
+        type: "subTitle2",
+        text: "Virtues of St. Bakhita",
+      },
+      {
+        id: 4,
+        type: "list",
+        text: [
+          "Humility",
+          "Courage",
+          "Fortitude",
+          "Meakness",
+          "Faith",
+          "Patience",
+          "Charity",
+          "Forgiveness.",
+        ],
+      },
+      {
+        id: 5,
+        type: "subTitle2",
+        text: "St. Bakhita Motto",
+      },
+      {
+        id: 6,
+        type: "paragraph",
+        text: [
+          "St. Bakitha died in 1947.",
+          "She was beautified on May 17th  1992 by St. Pope John Paul II.",
+          " St. Bakita small Christian community is located in New Kitsuru and we meet every 2nd Tuesday  of the month.Thank you.",
         ],
       },
     ],
