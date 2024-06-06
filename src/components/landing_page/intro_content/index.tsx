@@ -1,30 +1,22 @@
-import {
-  Box,
-  Container,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Container, Typography, useTheme } from "@mui/material";
 import { HeroSection } from "@/components";
-import Image from "next/image";
 import React from "react";
 import { MyButton } from "@/styled_components";
-import logo_icon from "@/assets/images/st-catherine2.png";
 
 const IntroContent = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <HeroSection>
-      <Container sx={{ paddingTop: "20vh" }}>
-        <Box display="flex" justifyContent="center" sx={{ padding: 2 }}>
-          <Image
-            src={logo_icon}
-            alt="St. Catherine"
-            height={isMobile ? 200 : 230}
-          />
-        </Box>
+      <Container sx={{ paddingTop: "40vh" }}>
+        {/* <Box display="flex" justifyContent="center" sx={{ padding: 2 }}> */}
+        {/*  <Image */}
+        {/*    src={logo_icon} */}
+        {/*    alt="St. Catherine" */}
+        {/*    height={isMobile ? 200 : 230} */}
+        {/*  /> */}
+        {/* </Box> */}
         <Typography
           variant="h4"
           textAlign="center"

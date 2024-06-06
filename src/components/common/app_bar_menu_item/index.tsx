@@ -67,7 +67,7 @@ const AppBarMenuItem = ({
       backgroundColor:
         scrollYPosition > 100
           ? theme.palette.primary.main
-          : `rgba(255, 255, 255, .2)`,
+          : `rgba(0, 0, 0, .4)`,
     },
   };
 

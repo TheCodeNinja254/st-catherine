@@ -12,59 +12,45 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const calculatedHeight = isMobile ? "90vh" : "85vh";
+  // const calculatedHeight = isMobile ? "90vh" : "95vh";
 
   return (
     <Box
-      sx={[
-        {
-          position: "block",
-          backgroundPosition: "center",
-          height: height || calculatedHeight,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundColor: theme.palette.common.white,
-        },
-      ]}
+      sx={{
+        position: "relative",
+        width: "100%",
+        height: height || "95vh",
+        overflow: "hidden", // Ensures no overflow
+        backgroundColor: theme.palette.common.white,
+      }}
     >
       <Box
-        sx={[
-          {
-            position: "block",
-            backgroundPosition: "center",
-            backgroundImage: isMobile
-              ? "url(/st-catherine/images/hero_background_new.JPG)"
-              : "url(/st-catherine/images/bg2.jpg)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            // backgroundColor: `rgba(255, 255, 255, .9)`,
-            height: imageHeight || "90vh",
-          },
-          {
-            "&:before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: imageHeight || "90vh",
-              // backgroundColor: bg,
-              backgroundColor: `rgba(255, 255, 255, .1)`,
-              pointerEvents: "none",
-            },
-          },
-        ]}
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: imageHeight || "100%",
+          backgroundImage: `url(${
+            isMobile
+              ? "/st-catherine/images/hero_background_new.JPG"
+              : "/st-catherine/images/img.png"
+          })`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: imageHeight ? "" : "100% 100%",
+          zIndex: 0, // Places the background behind the content
+        }}
+      />
+      <Box
+        sx={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          zIndex: 1, // Ensures the children are above the background image
+        }}
       >
-        <Box
-          sx={{
-            position: "relative",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: height || "125vh",
-          }}
-        >
-          {children}
-        </Box>
+        {children}
       </Box>
     </Box>
   );
