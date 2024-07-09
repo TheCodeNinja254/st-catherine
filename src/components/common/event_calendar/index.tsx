@@ -148,6 +148,7 @@ const EventCalendar = () => {
           onMonthChange={handleMonthChange}
           renderLoading={() => <DayCalendarSkeleton />}
           slots={{
+            // @ts-ignore
             day: ServerDay,
           }}
           slotProps={{
