@@ -1,4 +1,3 @@
-import { Dayjs } from "dayjs";
 import * as React from "react";
 import Dialog from "@mui/material/Dialog";
 import {
@@ -17,11 +16,11 @@ import { FiberManualRecordRounded } from "@mui/icons-material";
 const EventModal = ({
   open,
   handleClose,
-  date,
-}: {
+}: // date,
+{
   open: boolean;
   handleClose: () => any;
-  date: Dayjs | undefined;
+  // date: Dayjs | undefined;
 }) => {
   // console.log(date?.date());
   const theme = useTheme();
