@@ -16,6 +16,7 @@ const SectionSubTitle = ({
         sx={{
           color: theme.palette.primary.main,
           marginBottom: theme.spacing(1),
+          marginTop: theme.spacing(1),
         }}
       >
         {text}

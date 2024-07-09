@@ -2,7 +2,7 @@ import { HeroSection } from "@/components";
 import React from "react";
 
 const MinistriesIntro = () => {
-  return <HeroSection height="25vh" imageHeight="25vh" />;
+  return <HeroSection height="45vh" imageHeight="45vh" />;
 };
 
 export default MinistriesIntro;

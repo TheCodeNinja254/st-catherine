@@ -9,3 +9,4 @@ export { default as ParapgrapSectionText } from "./parapgraph_section";
 export { default as ListSectionText } from "./list_section_text";
 export { default as AppSwipeableCarousel } from "./app_swipeable_carousel";
 export { default as TopMediaActionableCard } from "./top_media_actionable_card";
+export { default as EventCalendar } from "./event_calendar";

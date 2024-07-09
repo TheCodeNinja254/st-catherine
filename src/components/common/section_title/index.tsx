@@ -1,6 +1,12 @@
 import { Box, Divider, Typography, useTheme } from "@mui/material";
 
-const SectionTitle = ({ title }: { title: string }) => {
+const SectionTitle = ({
+  title,
+  variant,
+}: {
+  title: string;
+  variant?: "small" | "large";
+}) => {
   const theme = useTheme();
 
   return (
@@ -17,9 +23,9 @@ const SectionTitle = ({ title }: { title: string }) => {
           fontFamily: "Futura Std Bold",
           color: theme.palette.primary.main,
           marginBottom: theme.spacing(1),
-          fontSize: 35,
+          fontSize: variant === "small" ? 18 : 35,
           [theme.breakpoints.down("sm")]: {
-            fontSize: 18,
+            fontSize: variant === "small" ? 14 : 18,
           },
         }}
       >

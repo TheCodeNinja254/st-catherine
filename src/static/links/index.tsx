@@ -131,7 +131,7 @@ export const linkItems: LinkItem[] = [
         id: 1,
         label: "Events",
         subMenus: [
-          { id: 8, uri: "/", name: "Parish Calendar" },
+          { id: 8, uri: "/parish-calendar", name: "Parish Calendar" },
           {
             id: 9,
             uri: "/",
@@ -161,10 +161,18 @@ export const linkItems: LinkItem[] = [
           },
           { id: 4, uri: "/", name: "The Ushers" },
           { id: 5, uri: "/", name: "The Altar Servers" },
-          { id: 6, uri: "/", name: "PMC" },
-          { id: 7, uri: "/", name: "YCA" },
-          { id: 8, uri: "/", name: "MYM" },
-          { id: 9, uri: "/about-us/our-youth", name: "Youth" },
+        ],
+      },
+      {
+        id: 2.1,
+        label: "Ecclesial groups",
+        subMenus: [
+          { id: 1, uri: "/", name: "PMC" },
+          { id: 2, uri: "/", name: "YCA" },
+          { id: 3, uri: "/", name: "MYM" },
+          { id: 4, uri: "/", name: "CMA" },
+          { id: 5, uri: "/about-us/cwa", name: "CWA" },
+          { id: 6, uri: "/about-us/our-youth", name: "Youth" },
         ],
       },
       {
