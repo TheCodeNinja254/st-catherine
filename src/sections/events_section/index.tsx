@@ -16,7 +16,7 @@ const EventsSection = () => {
   const theme = useTheme();
 
   const [open, setOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = React.useState<Dayjs>();
+  const [, setSelectedDate] = React.useState<Dayjs>();
 
   const handleOpen = (passedDay: any) => {
     setOpen(true);
@@ -115,7 +115,7 @@ const EventsSection = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <EventModal open={open} handleClose={handleClose} date={selectedDate} />
+      <EventModal open={open} handleClose={handleClose} />
     </Box>
   );
 };
