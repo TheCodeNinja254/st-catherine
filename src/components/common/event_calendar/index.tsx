@@ -88,7 +88,7 @@ const EventCalendar = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 8]);
 
-  const [selectedDate, setSelectedDate] = React.useState<Dayjs>();
+  const [, setSelectedDate] = React.useState<Dayjs>();
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = (passedDay: Dayjs) => {
@@ -159,7 +159,7 @@ const EventCalendar = () => {
           }}
         />
       </LocalizationProvider>
-      <EventModal open={open} handleClose={handleClose} date={selectedDate} />
+      <EventModal open={open} handleClose={handleClose} />
     </div>
   );
 };
