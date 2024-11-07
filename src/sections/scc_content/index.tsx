@@ -1,10 +1,19 @@
 import React from "react";
-import { Chip, Container, Divider, Grid, useTheme } from "@mui/material";
+import {
+  Box,
+  Chip,
+  Container,
+  Divider,
+  Grid,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import WrapperContainer from "@/containers";
 import ContentDisplay from "@/components/content_display";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
 import sccInfo, { sccContent } from "@/static/scc";
-import { EventCalendar, SectionTitle } from "@/components";
+import { EventCalendar, SectionSubTitle, SectionTitle } from "@/components";
+import { EventsSection } from "@/sections";
 
 const SccContent: React.FC<
   Omit<SliderContainerSwitcherProps, "setContentTypeID">
@@ -42,13 +51,26 @@ const SccContent: React.FC<
               variant="default"
               sx={{ borderRadius: 3, paddingBottom: theme.spacing(4) }}
             >
-              <SectionTitle
-                title={`${
+              <SectionSubTitle
+                text={`${
                   sccInfo.find((min) => min.id === contentTypeID)?.name ||
                   "Unknown"
-                }'s Events`}
+                }'s Calendar`}
               />
               <EventCalendar />
+            </WrapperContainer>
+            <WrapperContainer
+              variant="paper"
+              sx={{ borderRadius: 3, paddingBottom: theme.spacing(4) }}
+            >
+              <Box sx={{ marginBottom: theme.spacing(2) }}>
+                <SectionSubTitle
+                  text={`${
+                    sccInfo.find((min) => min.id === contentTypeID)?.name
+                  }'s Events Summary`}
+                />
+              </Box>
+              <EventsSection />
             </WrapperContainer>
           </Grid>
         </Grid>

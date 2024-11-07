@@ -1,22 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
-import { MinistriesContent, MinistriesSlider } from "@/sections";
+import { MinistriesContent, NavigationSlider } from "@/sections";
 import { Box } from "@mui/material";
-import MinistriesPageProps from "@/interfaces/MinistriesPageProps";
+import ContentPagesProps from "@/interfaces/ContentPagesProps";
 import MinistriesIntro from "@/components/ministries_page";
+import ministries from "@/static/ministries";
 
-const MinistriesPage: React.FC<MinistriesPageProps> = ({
-  defaultContentId,
-}) => {
+const MinistriesPage: React.FC<ContentPagesProps> = ({ defaultContentId }) => {
   const [contentTypeID, setContentTypeID] = useState(defaultContentId);
 
   return (
     <Box>
       <MinistriesIntro />
-      <MinistriesSlider
+      <NavigationSlider
         contentTypeID={contentTypeID}
         setContentTypeID={setContentTypeID}
+        baseURL="ministries"
+        description="Read about or ministries, keep up with what the ministries are doing and see their impact."
+        content={ministries}
       />
       <MinistriesContent contentTypeID={contentTypeID} />
     </Box>

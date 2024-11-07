@@ -7,7 +7,7 @@ import IntroContent from "@/components/landing_page/intro_content";
 import { MassSchedule, TithesOfferings } from "@/sections";
 import { Introduction } from "@/components/about_us_page";
 
-const Home = () => {
+const Page = () => {
   return (
     <>
       <IntroContent />
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;

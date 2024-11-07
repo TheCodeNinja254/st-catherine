@@ -15,12 +15,15 @@ import {
   useTheme,
 } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
-import ministries from "@/static/ministries";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
 
-const MinistriesSlider: React.FC<SliderContainerSwitcherProps> = ({
+const NavigationSlider: React.FC<SliderContainerSwitcherProps> = ({
   contentTypeID,
   setContentTypeID,
+  title,
+  description,
+  baseURL,
+  content,
 }) => {
   const theme = useTheme();
 
@@ -31,7 +34,7 @@ const MinistriesSlider: React.FC<SliderContainerSwitcherProps> = ({
     const lowerCaseName: string = name.toLowerCase();
     const nameArray: string[] = lowerCaseName.split(" ");
     const urlAppendix: string = nameArray.join("-");
-    router.push(`/ministries/${id}/${urlAppendix}`, { scroll: false });
+    router.push(`/${baseURL}/${id}/${urlAppendix}`, { scroll: false });
   };
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -49,18 +52,17 @@ const MinistriesSlider: React.FC<SliderContainerSwitcherProps> = ({
   return (
     <WrapperContainer variant="paper" fullWidth>
       <Container>
-        <SectionTitle title="Our Ministries" />
+        <SectionTitle title={title || "Our Ministries"} />
         <Typography
           sx={{ marginTop: theme.spacing(4), marginBottom: theme.spacing(4) }}
         >
-          Read about or ministries, keep up with what the ministries are doing
-          and see their impact.
+          {description}
         </Typography>
         <Box sx={{ marginTop: theme.spacing(4) }}>
           <AppSwipeableCarousel showNavButtons loop slidesPerPage={slidesCount}>
-            {ministries.map((ministry) => (
+            {content.map((item) => (
               <SwiperSlide
-                key={ministry.id}
+                key={item.id}
                 style={{
                   // height: "100%",
                   display: "flex",
@@ -69,15 +71,13 @@ const MinistriesSlider: React.FC<SliderContainerSwitcherProps> = ({
               >
                 <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
                   <TopMediaActionableCard
-                    onClick={() =>
-                      handleContentChange(ministry.id, ministry.name)
-                    }
-                    description={ministry.description}
-                    id={ministry.id}
+                    onClick={() => handleContentChange(item.id, item.name)}
+                    description={item.description}
+                    id={item.id}
                     action="see more"
-                    image={ministry.imageURL}
-                    title={ministry.name}
-                    active={contentTypeID === ministry.id}
+                    image={item.imageURL}
+                    title={item.name}
+                    active={contentTypeID === item.id}
                   />
                 </Grid>
               </SwiperSlide>
@@ -89,4 +89,4 @@ const MinistriesSlider: React.FC<SliderContainerSwitcherProps> = ({
   );
 };
 
-export default MinistriesSlider;
+export default NavigationSlider;

@@ -45,25 +45,71 @@ export const linkItems: LinkItem[] = [
     uri: "/about-us",
     row: 1,
     icon: <Public sx={{ color: "#FFFFFF" }} />,
-    subMenus: [
+    // subMenus: [
+    //   {
+    //     id: 0,
+    //     name: "About St. Catherine",
+    //     uri: "/about-us",
+    //   },
+    //   { id: 1, uri: "/about-us#mission", name: "Parish History" },
+    //   // { id: 2, uri: "/", name: "Parish Leadership" },
+    //   // { id: 3, uri: "/", name: "Parish Registration" },
+    //   { id: 4, uri: "/about-us#dominican-order", name: "Online Giving" },
+    //   { id: 5, uri: "/contact-us", name: "Contact Us" },
+    // ],
+    cascadingMenu: [
       {
-        id: 0,
-        name: "About St. Catherine",
-        uri: "/about-us",
+        id: 1,
+        label: "",
+        subMenus: [
+          { id: 1, uri: "/about-us", name: "About Us" },
+          { id: 2, uri: "/about-us#mission", name: "Parish History" },
+          {
+            id: 3,
+            uri: "/",
+            name: "Online Giving",
+          },
+        ],
       },
-      { id: 1, uri: "/about-us#mission", name: "Parish History" },
-      { id: 2, uri: "/", name: "Clergy & Staff" },
-      { id: 3, uri: "/", name: "Parish Registration" },
-      { id: 4, uri: "/about-us#dominican-order", name: "Online Giving" },
-      { id: 5, uri: "/contact-us", name: "Contact Us" },
+      {
+        id: 2,
+        label: "Parish Leadership",
+        subMenus: [
+          { id: 1, uri: "/", name: "Pastoral Council" },
+          { id: 2, uri: "/", name: "Finance Committee" },
+          { id: 3, uri: "/", name: "Development Committee" },
+          {
+            id: 4,
+            uri: "/ministries/1/ministry-of-charity",
+            name: "Charity Committee",
+          },
+          {
+            id: 5,
+            uri: "/",
+            name: "Fundraising Committee",
+          },
+        ],
+      },
+      {
+        id: 3,
+        label: "",
+        subMenus: [{ id: 32, uri: "/contact-us", name: "Contact Us" }],
+      },
     ],
   },
   {
     id: 6,
-    name: "St. Martin De Porres",
+    name: "Parish Outstations",
     uri: "/scc/1/st.-martin-de-porres-kibagare-catholic-church:-outstation",
     row: 1,
     icon: <LocationCity sx={{ color: "#FFFFFF" }} />,
+    subMenus: [
+      {
+        id: 0,
+        name: "St. Martin De Porres",
+        uri: "/scc/1/st.-martin-de-porres-kibagare-catholic-church:-outstation",
+      },
+    ],
   },
   {
     id: 7,
@@ -124,7 +170,7 @@ export const linkItems: LinkItem[] = [
         subMenus: [
           { id: 1, uri: "/announcements", name: "Bulletins" },
           { id: 2, uri: "/gallery", name: "Photo Gallery" },
-          { id: 3, uri: "/", name: "Parish Registration" },
+          // { id: 3, uri: "/", name: "Parish Registration" },
         ],
       },
       {
@@ -132,11 +178,11 @@ export const linkItems: LinkItem[] = [
         label: "Events",
         subMenus: [
           { id: 8, uri: "/parish-calendar", name: "Parish Calendar" },
-          {
-            id: 9,
-            uri: "/",
-            name: "Main Harambee",
-          },
+          // {
+          //   id: 9,
+          //   uri: "/",
+          //   name: "Main Harambee",
+          // },
         ],
       },
     ],
@@ -161,6 +207,11 @@ export const linkItems: LinkItem[] = [
           },
           { id: 4, uri: "/", name: "The Ushers" },
           { id: 5, uri: "/", name: "The Altar Servers" },
+          {
+            id: 6,
+            uri: "/ministries/1/ministry-of-charity",
+            name: "Ministry of Charity",
+          },
         ],
       },
       {
@@ -168,31 +219,39 @@ export const linkItems: LinkItem[] = [
         label: "Ecclesial groups",
         subMenus: [
           { id: 1, uri: "/", name: "PMC" },
-          { id: 2, uri: "/", name: "YCA" },
-          { id: 3, uri: "/", name: "MYM" },
-          { id: 4, uri: "/", name: "CMA" },
-          { id: 5, uri: "/about-us/cwa", name: "CWA" },
-          { id: 6, uri: "/about-us/our-youth", name: "Youth" },
-        ],
-      },
-      {
-        id: 2,
-        label: "Consultative Groups",
-        subMenus: [
-          { id: 1, uri: "/", name: "Parish Pastoral Council" },
           {
             id: 2,
-            uri: "/",
-            name: "Parish Finance Council",
+            uri: "/ecclesial-groups/1/young-catholic-adults-(yca)",
+            name: "YCA",
           },
-
+          { id: 3, uri: "/", name: "MYM" },
+          { id: 4, uri: "/", name: "CMA" },
           {
-            id: 3,
-            uri: "/scc/4/development-committee",
-            name: "Development Committee",
+            id: 5,
+            uri: "/ecclesial-groups/3/catholic-women-association",
+            name: "CWA",
           },
+          { id: 6, uri: "/ecclesial-groups/2/the-youth", name: "Youth" },
         ],
       },
+      // {
+      //   id: 2,
+      //   label: "Consultative Groups",
+      //   subMenus: [
+      //     { id: 1, uri: "/", name: "Parish Pastoral Council" },
+      //     {
+      //       id: 2,
+      //       uri: "/",
+      //       name: "Parish Finance Council",
+      //     },
+      //
+      //     {
+      //       id: 3,
+      //       uri: "/scc/4/development-committee",
+      //       name: "Development Committee",
+      //     },
+      //   ],
+      // },
       {
         id: 3,
         label: "Small Christian Communities",

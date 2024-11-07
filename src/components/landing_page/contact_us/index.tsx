@@ -14,9 +14,14 @@ import { CustomInputNoBorder, SectionTitle } from "@/components/common";
 import EmailUsIcon from "@/assets/svgs/emailUs.png";
 import ScheduleIcon from "@/assets/svgs/clock.png";
 import Image from "next/image";
+import { useState } from "react";
 
 const ContactUs = () => {
   const theme = useTheme();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <Card sx={{ paddingTop: theme.spacing(8) }} elevation={0}>
@@ -103,22 +108,27 @@ const ContactUs = () => {
               >
                 <CardContent sx={{ padding: theme.spacing(5) }}>
                   <CustomInputNoBorder
+                    variant="outlined"
                     type="text"
                     label="Name"
                     style={{
                       marginBlock: "16px",
                     }}
                     name="name"
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <CustomInputNoBorder
+                    variant="outlined"
                     type="email"
                     label="Email"
                     style={{
                       marginBlock: "16px",
                     }}
                     name="email"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <CustomInputNoBorder
+                    variant="outlined"
                     multiline
                     rows={5}
                     type="text"
@@ -127,15 +137,20 @@ const ContactUs = () => {
                       marginBlock: "16px",
                     }}
                     name="message"
+                    onChange={(e) => setMessage(e.target.value)}
                   />
-                  <MyButton
-                    disableElevation
-                    fullWidth
-                    variant="contained"
-                    sx={{ marginTop: theme.spacing(2) }}
+                  <a
+                    href={`mailto:info@example.com?subject=Enquiry from ${name}&cc=${email}&body=${message}`}
                   >
-                    Send Message
-                  </MyButton>
+                    <MyButton
+                      disableElevation
+                      fullWidth
+                      variant="contained"
+                      sx={{ marginTop: theme.spacing(2) }}
+                    >
+                      Send Message
+                    </MyButton>
+                  </a>
                 </CardContent>
               </Card>
             </Grid>

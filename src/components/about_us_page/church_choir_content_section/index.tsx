@@ -8,7 +8,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import choirPositions from "@/static/choir_positions";
 
 const achievements = [
   "We acquired musical equipment ie. Keyboard donated by the Couples of Christ group. This has helped uplift the songs in the Church",
@@ -36,16 +35,8 @@ const ChurchChoirContentSection = () => {
           The choir’s mission is to serve God and the congregational community
           through the joyous gift of music. The choir’s structure includes a
           council whose rolesand responsibilities are described in the St.
-          Catherine of Siena Choir Handbook. The council includes the following
-          posts:
+          Catherine of Siena Choir Handbook.
         </Typography>
-        <List dense>
-          {choirPositions?.map((val: string) => (
-            <ListItem key={val}>
-              <ListItemText primary={val} />
-            </ListItem>
-          ))}
-        </List>
         <Box
           sx={{ marginTop: theme.spacing(3), marginBottom: theme.spacing(3) }}
         >

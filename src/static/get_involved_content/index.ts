@@ -33,7 +33,7 @@ const getInvolvedContent: GetInvolvedContentType[] = [
     title: "Ecclesial Groups",
     content:
       "The ecclesial groups encompass a variety of associations within the Church, including lay movements like Opus Dei and the Neocatechumenal Way, religious orders such as the Jesuits and Franciscans, and third orders for laypeople inspired by these religious traditions. Additionally, parish-based groups, like prayer and Bible study groups, and charitable organizations, as well as youth and family ministries, play significant roles. These groups foster spiritual growth, community engagement, and service, contributing to the vitality and mission of the Catholic Church.",
-    learnMoreLink: "/about-us/our-youth",
+    learnMoreLink: undefined,
     imageLink: "/st-catherine/images/ecc.png",
   },
   {

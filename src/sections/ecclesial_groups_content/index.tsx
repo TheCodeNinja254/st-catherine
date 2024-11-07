@@ -3,7 +3,7 @@ import { Chip, Container, Divider, useTheme } from "@mui/material";
 import WrapperContainer from "@/containers";
 import ContentDisplay from "@/components/content_display";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
-import ministries, { ministriesContent } from "@/static/ministries";
+import ecclesial_groups, { ecclesialContent } from "@/static/ecclesial_groups";
 
 type OmittableProperties =
   | "setContentTypeID"
@@ -12,12 +12,12 @@ type OmittableProperties =
   | "baseURL"
   | "content";
 
-const MinistriesContent: React.FC<
+const EcclesialContent: React.FC<
   Omit<SliderContainerSwitcherProps, OmittableProperties>
 > = ({ contentTypeID }) => {
   const theme = useTheme();
 
-  const renderedContent = ministriesContent.filter(
+  const renderedContent = ecclesialContent.filter(
     (min) => min.relationId === contentTypeID
   );
 
@@ -29,7 +29,7 @@ const MinistriesContent: React.FC<
         >
           <Chip
             label={
-              ministries.find((min) => min.id === contentTypeID)?.name ||
+              ecclesial_groups.find((min) => min.id === contentTypeID)?.name ||
               "Unknown"
             }
             size="small"
@@ -46,4 +46,4 @@ const MinistriesContent: React.FC<
   );
 };
 
-export default MinistriesContent;
+export default EcclesialContent;
