@@ -5,7 +5,7 @@ import { Box, Grid, useTheme } from "@mui/material";
 import React from "react";
 import WrapperContainer from "@/containers";
 import MinistriesIntro from "@/components/ministries_page";
-import { EventsSection } from "@/sections";
+import EventsSection from "@/sections/events_section";
 
 const Page = () => {
   const theme = useTheme();
