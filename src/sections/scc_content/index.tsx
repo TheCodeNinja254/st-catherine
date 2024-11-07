@@ -1,22 +1,21 @@
 import React from "react";
-import {
-  Box,
-  Chip,
-  Container,
-  Divider,
-  Grid,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Chip, Container, Divider, Grid, useTheme } from "@mui/material";
 import WrapperContainer from "@/containers";
 import ContentDisplay from "@/components/content_display";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
 import sccInfo, { sccContent } from "@/static/scc";
-import { EventCalendar, SectionSubTitle, SectionTitle } from "@/components";
+import { EventCalendar, SectionSubTitle } from "@/components";
 import { EventsSection } from "@/sections";
 
+type OmittableProperties =
+  | "setContentTypeID"
+  | "title"
+  | "description"
+  | "baseURL"
+  | "content";
+
 const SccContent: React.FC<
-  Omit<SliderContainerSwitcherProps, "setContentTypeID">
+  Omit<SliderContainerSwitcherProps, OmittableProperties>
 > = ({ contentTypeID }) => {
   const theme = useTheme();
 
