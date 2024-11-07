@@ -3,7 +3,7 @@ import { Chip, Container, Divider, useTheme } from "@mui/material";
 import WrapperContainer from "@/containers";
 import ContentDisplay from "@/components/content_display";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
-import ecclesial_groups, { ecclesialContent } from "@/static/ecclesial_groups";
+import ecclesialGroups, { ecclesialContent } from "@/static/ecclesial_groups";
 
 type OmittableProperties =
   | "setContentTypeID"
@@ -29,7 +29,7 @@ const EcclesialContent: React.FC<
         >
           <Chip
             label={
-              ecclesial_groups.find((min) => min.id === contentTypeID)?.name ||
+              ecclesialGroups.find((min) => min.id === contentTypeID)?.name ||
               "Unknown"
             }
             size="small"

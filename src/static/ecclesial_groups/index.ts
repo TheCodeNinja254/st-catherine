@@ -1,6 +1,6 @@
 import { ContentInterface } from "@/static/ministries";
 
-const ecclesial_groups = [
+const ecclesialGroups = [
   {
     id: 1,
     name: "Young Catholic Adults (YCA)",
@@ -24,7 +24,7 @@ const ecclesial_groups = [
   },
 ];
 
-export default ecclesial_groups;
+export default ecclesialGroups;
 
 export const ecclesialContent: ContentInterface[] = [
   {

@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { NavigationSlider, SccContent, SccSlider } from "@/sections";
+import { NavigationSlider } from "@/sections";
 import { Box } from "@mui/material";
 import ContentPagesProps from "@/interfaces/ContentPagesProps";
 import MinistriesIntro from "@/components/ministries_page";
 import sccInfo from "@/static/scc";
+import SccContent from "@/sections/scc_content";
 
 const SccPage: React.FC<ContentPagesProps> = ({ defaultContentId }) => {
   const [contentTypeID, setContentTypeID] = useState(defaultContentId);

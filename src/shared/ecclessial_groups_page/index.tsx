@@ -5,7 +5,7 @@ import { EcclesialContent, NavigationSlider } from "@/sections";
 import { Box } from "@mui/material";
 import ContentPagesProps from "@/interfaces/ContentPagesProps";
 import Intro from "@/components/ecclesial_page/Intro";
-import ecclesial_groups from "@/static/ecclesial_groups";
+import ecclesialGroups from "@/static/ecclesial_groups";
 
 const EcclesialGroupsPage: React.FC<ContentPagesProps> = ({
   defaultContentId,
@@ -21,7 +21,7 @@ const EcclesialGroupsPage: React.FC<ContentPagesProps> = ({
         baseURL="ecclesial-groups"
         title="Ecclesial Groups"
         description="Read about or Ecclesial groups, keep up with what the groups are doing and see their impact."
-        content={ecclesial_groups}
+        content={ecclesialGroups}
       />
       <EcclesialContent contentTypeID={contentTypeID} />
     </Box>

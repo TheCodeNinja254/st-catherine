@@ -5,7 +5,7 @@ import ContentDisplay from "@/components/content_display";
 import SliderContainerSwitcherProps from "@/interfaces/SliderContainerSwitcherProps";
 import sccInfo, { sccContent } from "@/static/scc";
 import { EventCalendar, SectionSubTitle } from "@/components";
-import { EventsSection } from "@/sections";
+import EventsSection from "@/sections/events_section";
 
 type OmittableProperties =
   | "setContentTypeID"
